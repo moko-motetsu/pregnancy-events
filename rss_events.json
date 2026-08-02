@@ -1,0 +1,5 @@
+{
+ "_comment": "pregnancy-events/scripts/fetch_rss_events.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。自治体・商業施設等のイベントRSSフィードから取得した今後のイベントが入ります。events.json（手動メンテナンス分）とは別に管理し、アプリ側で両方をマージして表示します。",
+ "updatedAt": "",
+ "events": []
+}

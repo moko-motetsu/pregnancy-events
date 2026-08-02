@@ -371,6 +371,7 @@
 const DATA_URL = "events.json";
 const VENUE_SCHEDULE_URL = "venue_schedules.json";
 const EVENT_CONFIRMATIONS_URL = "event_confirmations.json";
+const RSS_EVENTS_URL = "rss_events.json";
 
 // events.json を file:// で開けない・取得できない場合の最小フォールバック
 const FALLBACK_DATA = {
@@ -627,6 +628,16 @@ async function loadEvents() {
     // 未取得でもevents.json記載の日程のまま動く
   }
 
+  try {
+    const rres = await fetch(RSS_EVENTS_URL, { cache: "no-cache" });
+    if (rres.ok) {
+      const rdata = await rres.json();
+      mergeRssEvents((rdata && rdata.events) || []);
+    }
+  } catch (e) {
+    // 未取得でもevents.json記載分だけで動く
+  }
+
   buildCategoryChips();
   renderAll();
 }
@@ -640,6 +651,19 @@ function applyEventConfirmations(confirmations) {
     ev.startDate = c.confirmedStartDate;
     ev.endDate = c.confirmedEndDate || c.confirmedStartDate;
     ev.officialConfirmedAt = c.fetchedAt;
+  }
+}
+
+// 自治体・商業施設のイベントRSSフィードから自動取得したイベントを、
+// events.json（手動メンテナンス分）の一覧に追加する。既存のidと重複する
+// 場合は手動データを優先し、上書きしない。
+function mergeRssEvents(rssEvents) {
+  if (!Array.isArray(rssEvents) || rssEvents.length === 0) return;
+  const existingIds = new Set((eventData.events || []).map(e => e.id));
+  for (const ev of rssEvents) {
+    if (!ev || !ev.id || existingIds.has(ev.id)) continue;
+    eventData.events.push(ev);
+    existingIds.add(ev.id);
   }
 }
 
