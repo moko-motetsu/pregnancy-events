@@ -1,0 +1,489 @@
+{
+  "_comment": "このファイルは手動でメンテナンスするイベント一覧です。各項目の意味は README.md の「events.json の書き方」を参照してください。lat/lng はGoogleマップで会場を右クリック→表示された座標をコピーして入力します。",
+  "categories": [
+    "祭り・花火",
+    "マルシェ・フリマ",
+    "子育て支援",
+    "体験・ワークショップ",
+    "音楽・ライブ",
+    "スポーツ",
+    "展示会・博覧会",
+    "自然・公園",
+    "グルメ",
+    "アウトドア・レジャー"
+  ],
+  "events": [
+    {
+      "id": "showa-kinen-park-flower-2026",
+      "name": "国営昭和記念公園 花とみどりのフェスタ",
+      "category": "自然・公園",
+      "description": "広大な芝生広場でコスモス畑が見頃を迎えるシーズンイベント。ベビーカーで回れる舗装路が多く、休憩スポットも豊富。",
+      "venue": "国営昭和記念公園",
+      "address": "東京都立川市緑町3173",
+      "lat": 35.7056,
+      "lng": 139.4103,
+      "startDate": "2026-09-19",
+      "endDate": "2026-10-18",
+      "startTime": "09:30",
+      "endTime": "17:00",
+      "price": { "type": "paid", "note": "入園料 大人¥450（中学生以下無料）", "purchaseUrl": "https://www.showakinen-koen.jp/" },
+      "officialUrl": "https://www.showakinen-koen.jp/",
+      "source": "国営昭和記念公園 公式サイト",
+      "updatedAt": "2026-07-20",
+      "pregnancyRecommend": { "weekMin": 14, "weekMax": 33, "note": "安定期〜後期前半向け。園内は起伏が少なく、ベンチも多いのでこまめに休憩しながら楽しめます。" },
+      "season": ["秋"],
+      "seasonNote": "コスモスが見頃を迎える秋のお出かけの定番。",
+      "tags": ["屋外", "ベビーカーOK", "子連れ歓迎"],
+      "reviews": [
+        { "source": "Googleマップ", "rating": 4.5, "comment": "コスモス畑が広くて写真映えする。売店の飲食も充実。", "url": "https://www.google.com/maps/search/?api=1&query=国営昭和記念公園" }
+      ],
+      "trafficTips": {
+        "summary": "土日は立川口駐車場が午前中で満車になりやすいので、電車利用がおすすめ。",
+        "car": "中央自動車道 国立府中ICから約10分。立川口駐車場は9時台で満車になることが多い。",
+        "train": "JR立川駅・西立川駅・JR青梅線東中神駅から徒歩2〜10分。",
+        "parking": "立川口/昭島口/西立川口の3駐車場あり（有料）。",
+        "congestion": "土日祝の10〜13時が最も混雑。開園直後の9:30〜10:30が比較的空いている。"
+      },
+      "deals": [
+        { "title": "前売り割引券", "description": "コンビニ端末で購入すると当日券より¥100安い。", "url": "https://www.showakinen-koen.jp/" }
+      ]
+    },
+    {
+      "id": "yokohama-akarenga-marche-2026",
+      "name": "横浜赤レンガ倉庫 秋のマルシェ",
+      "category": "マルシェ・フリマ",
+      "description": "全国の食品・雑貨が集まる屋外マルシェ。海を見ながらのんびり回れる。",
+      "venue": "横浜赤レンガ倉庫イベント広場",
+      "address": "神奈川県横浜市中区新港1-1",
+      "lat": 35.4518,
+      "lng": 139.6425,
+      "startDate": "2026-09-05",
+      "endDate": "2026-09-06",
+      "startTime": "10:00",
+      "endTime": "18:00",
+      "price": { "type": "free", "note": "入場無料（飲食・物販は個別購入）" },
+      "officialUrl": "https://www.yokohama-akarenga.jp/",
+      "source": "横浜赤レンガ倉庫 公式サイト",
+      "updatedAt": "2026-07-18",
+      "pregnancyRecommend": { "weekMin": 1, "weekMax": 36, "note": "会場がフラットで座れる場所も多く、全期間通して行きやすいイベント。夏場は水分補給を忘れずに。" },
+      "tags": ["屋外", "ベビーカーOK", "グルメ"],
+      "reviews": [
+        { "source": "Googleマップ", "rating": 4.3, "comment": "雰囲気が良くデートにも子連れにも良い。混雑時はベビーカーが通りにくい通路もある。", "url": "https://www.google.com/maps/search/?api=1&query=横浜赤レンガ倉庫" },
+        { "source": "食べログ", "rating": 3.9, "comment": "屋台の種類が豊富。行列ができる店もあるので早めの時間が狙い目。", "url": "https://tabelog.com/" }
+      ],
+      "trafficTips": {
+        "summary": "みなとみらい周辺は土日夕方から渋滞しやすい。みなとみらい線が最も確実。",
+        "car": "首都高speedway横羽線みなとみらいICから約5分だが、周辺道路は土日16時以降混雑。",
+        "train": "みなとみらい線 馬車道駅・日本大通り駅から徒歩6分。",
+        "parking": "赤レンガ倉庫駐車場あり（台数少なめ、満車注意）。",
+        "congestion": "土曜の15〜19時が最混雑。午前中が狙い目。"
+      },
+      "deals": []
+    },
+    {
+      "id": "saitama-super-arena-babyfair-2026",
+      "name": "さいたま子育てグッズフェア",
+      "category": "子育て支援",
+      "description": "ベビー用品メーカーが集まる展示即売会。試着・試乗コーナーやマタニティ相談ブースあり。",
+      "venue": "さいたまスーパーアリーナ",
+      "address": "埼玉県さいたま市中央区新都心8",
+      "lat": 35.8969,
+      "lng": 139.6306,
+      "startDate": "2026-08-22",
+      "endDate": "2026-08-23",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "price": { "type": "paid", "note": "前売り¥800 / 当日¥1,000（妊婦・未就学児は無料）", "purchaseUrl": "https://www.saitamaarena.co.jp/" },
+      "officialUrl": "https://www.saitamaarena.co.jp/",
+      "source": "さいたまスーパーアリーナ 公式サイト",
+      "updatedAt": "2026-07-25",
+      "pregnancyRecommend": { "weekMin": 20, "weekMax": 40, "note": "出産準備を始める時期に特におすすめ。助産師によるマタニティ相談ブースあり。" },
+      "tags": ["屋内", "空調あり", "助産師相談"],
+      "reviews": [
+        { "source": "Googleマップ", "rating": 4.1, "comment": "ベビーカーの試乗ができて助かった。会場内は広いので歩きやすい靴で。", "url": "https://www.google.com/maps/search/?api=1&query=さいたまスーパーアリーナ" }
+      ],
+      "trafficTips": {
+        "summary": "屋内イベントなので雨天でも安心。さいたま新都心駅から屋根付き通路で直結。",
+        "car": "首都高速埼玉新都心線新都心西出口すぐ。周辺駐車場は昼前後で満車になりやすい。",
+        "train": "JR京浜東北線 さいたま新都心駅西口から徒歩3分（屋根付き）。",
+        "parking": "アリーナ駐車場は台数限定。けやきひろば地下駐車場の利用が確実。",
+        "congestion": "土日の11〜14時が混雑ピーク。開場直後が比較的空いている。"
+      },
+      "deals": [
+        { "title": "妊婦・未就学児 入場無料", "description": "母子手帳の提示で本人分の入場料が無料になる。", "url": "https://www.saitamaarena.co.jp/" }
+      ]
+    },
+    {
+      "id": "makuhari-messe-kids-expo-2026",
+      "name": "幕張メッセ キッズ&ベビーEXPO",
+      "category": "展示会・博覧会",
+      "description": "知育玩具・絵本・ベビーフードなど子育て関連の展示会。妊娠中の来場者向けの休憩ラウンジを常設。",
+      "venue": "幕張メッセ 国際展示場",
+      "address": "千葉県千葉市美浜区中瀬2-1",
+      "lat": 35.6474,
+      "lng": 140.0349,
+      "startDate": "2026-10-03",
+      "endDate": "2026-10-04",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "price": { "type": "paid", "note": "前売り¥1,000 / 当日¥1,300", "purchaseUrl": "https://www.m-messe.co.jp/" },
+      "officialUrl": "https://www.m-messe.co.jp/",
+      "source": "幕張メッセ 公式サイト",
+      "updatedAt": "2026-07-15",
+      "pregnancyRecommend": { "weekMin": 16, "weekMax": 38, "note": "妊婦向け休憩ラウンジがあり、長時間の来場でも安心。" },
+      "tags": ["屋内", "空調あり", "授乳室あり"],
+      "reviews": [],
+      "trafficTips": {
+        "summary": "海浜幕張駅から徒歩5分と近く、電車利用が最も楽。",
+        "car": "京葉道路 湾岸習志野ICから約10分。周辺駐車場は開催日午前中に満車になりやすい。",
+        "train": "JR京葉線 海浜幕張駅から徒歩5分。",
+        "parking": "幕張メッセ駐車場（有料・台数限定）。",
+        "congestion": "土日の開場直後〜12時が最も混雑。"
+      },
+      "deals": [
+        { "title": "公式サイト前売り券", "description": "当日券より¥300お得。", "url": "https://www.m-messe.co.jp/" }
+      ]
+    },
+    {
+      "id": "hakone-gora-park-2026",
+      "name": "箱根強羅公園 ローズフェスティバル",
+      "category": "自然・公園",
+      "description": "フランス式整型庭園でバラが見頃を迎える。温泉街も近く、日帰りお出かけに人気。",
+      "venue": "箱根強羅公園",
+      "address": "神奈川県足柄下郡箱根町強羅1300",
+      "lat": 35.2323,
+      "lng": 139.0298,
+      "startDate": "2026-09-12",
+      "endDate": "2026-09-27",
+      "startTime": "09:00",
+      "endTime": "17:00",
+      "price": { "type": "paid", "note": "入園料 大人¥550", "purchaseUrl": "https://www.hakone-tozan.co.jp/gorapark/" },
+      "officialUrl": "https://www.hakone-tozan.co.jp/gorapark/",
+      "source": "箱根登山鉄道 公式サイト",
+      "updatedAt": "2026-07-10",
+      "pregnancyRecommend": { "weekMin": 14, "weekMax": 27, "note": "園内に坂や階段があるため、体調が安定している時期向け。長距離移動になるので無理のない日程で。" },
+      "season": ["秋"],
+      "seasonNote": "バラが見頃を迎える秋限定の見頃シーズンイベント。",
+      "tags": ["屋外", "坂道あり", "気温差注意"],
+      "reviews": [
+        { "source": "Googleマップ", "rating": 4.4, "comment": "バラが綺麗。ただし高低差があるので歩きやすい靴が必須。", "url": "https://www.google.com/maps/search/?api=1&query=箱根強羅公園" }
+      ],
+      "trafficTips": {
+        "summary": "箱根登山鉄道が渋滞の影響を受けず確実。国道1号は行楽シーズンの土日午前が大渋滞。",
+        "car": "東名高速 御殿場ICから約40分。ただし土日午前は国道1号・138号が渋滞しやすい。",
+        "train": "箱根登山ケーブルカー 公園上駅・公園下駅からすぐ。",
+        "parking": "公園専用駐車場あり（台数少）。強羅駅周辺の有料駐車場が確実。",
+        "congestion": "土日の10〜15時、特に紅葉シーズンの週末は大渋滞。平日または早朝が狙い目。"
+      },
+      "deals": []
+    },
+    {
+      "id": "tokyo-bigsight-handmade-2026",
+      "name": "東京ビッグサイト ハンドメイド&手仕事マルシェ",
+      "category": "マルシェ・フリマ",
+      "description": "全国の作家によるハンドメイド作品の展示即売会。ベビーグッズやマタニティ小物のブースも多い。",
+      "venue": "東京ビッグサイト",
+      "address": "東京都江東区有明3-11-1",
+      "lat": 35.6298,
+      "lng": 139.7942,
+      "startDate": "2026-08-29",
+      "endDate": "2026-08-30",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "price": { "type": "paid", "note": "前売り¥700 / 当日¥900", "purchaseUrl": "https://www.bigsight.jp/" },
+      "officialUrl": "https://www.bigsight.jp/",
+      "source": "東京ビッグサイト 公式サイト",
+      "updatedAt": "2026-07-22",
+      "pregnancyRecommend": { "weekMin": 1, "weekMax": 40, "note": "屋内でエレベーター・休憩スペースが多く、どの時期でも来場しやすい。" },
+      "tags": ["屋内", "空調あり", "ベビーカーOK"],
+      "reviews": [
+        { "source": "Googleマップ", "rating": 4.0, "comment": "作品のクオリティが高い。混雑時は通路が狭く感じることも。", "url": "https://www.google.com/maps/search/?api=1&query=東京ビッグサイト" }
+      ],
+      "trafficTips": {
+        "summary": "りんかい線・ゆりかもめが確実。首都高湾岸線は搬入日と重なると渋滞しやすい。",
+        "car": "首都高速湾岸線 有明ICからすぐ。周辺駐車場は開催日昼前後に満車になりやすい。",
+        "train": "りんかい線 国際展示場駅、ゆりかもめ 東京ビッグサイト駅から徒歩3分。",
+        "parking": "東京ビッグサイト駐車場（有料・満車になりやすい）。",
+        "congestion": "土日の11〜15時が最混雑。"
+      },
+      "deals": [
+        { "title": "公式Webチケット割引", "description": "事前購入で当日券より¥200安い。", "url": "https://www.bigsight.jp/" }
+      ]
+    },
+    {
+      "id": "yomiuriland-illumination-2026",
+      "name": "よみうりランド ジュエルミネーション",
+      "category": "音楽・ライブ",
+      "description": "遊園地全体を彩る冬のイルミネーションイベント。プロジェクションマッピングや音楽演出あり。",
+      "venue": "よみうりランド",
+      "address": "東京都稲城市矢野口4015-1",
+      "lat": 35.6247,
+      "lng": 139.5109,
+      "startDate": "2026-11-14",
+      "endDate": "2027-01-31",
+      "startTime": "16:00",
+      "endTime": "21:00",
+      "price": { "type": "paid", "note": "入園料 大人¥1,800（イルミネーション観覧のみ）", "purchaseUrl": "https://www.yomiuriland.com/illumination/" },
+      "officialUrl": "https://www.yomiuriland.com/illumination/",
+      "source": "よみうりランド 公式サイト",
+      "updatedAt": "2026-07-05",
+      "pregnancyRecommend": { "weekMin": 1, "weekMax": 27, "note": "夜間で気温が下がりやすいため、後期は体調と相談を。アトラクションには乗らず観覧だけでも楽しめる。" },
+      "season": ["冬"],
+      "seasonNote": "冬のイルミネーションシーズンの定番スポット。",
+      "tags": ["屋外", "夜間", "防寒対策"],
+      "reviews": [
+        { "source": "Googleマップ", "rating": 4.6, "comment": "規模が大きく写真映えする。冬は冷えるので防寒必須。", "url": "https://www.google.com/maps/search/?api=1&query=よみうりランド" }
+      ],
+      "trafficTips": {
+        "summary": "点灯直後の17〜19時台は最寄り駅・駐車場ともに大混雑。",
+        "car": "中央自動車道 稲城ICから約5分。周辺道路は点灯直後から混雑。",
+        "train": "京王よみうりランド駅からゴンドラ「スカイシャトル」で約4分。",
+        "parking": "よみうりランド駐車場あり（土日は早めの到着が無難）。",
+        "congestion": "土日の点灯直後(16〜18時)が最混雑。19時以降は比較的空いてくる。"
+      },
+      "deals": [
+        { "title": "夕方以降割引チケット", "description": "17時以降入園の割引券が公式サイトにあり。", "url": "https://www.yomiuriland.com/illumination/" }
+      ]
+    },
+    {
+      "id": "utsunomiya-gyoza-fes-2026",
+      "name": "宇都宮餃子祭り",
+      "category": "グルメ",
+      "description": "市内の人気餃子店が集結するご当地グルメイベント。100km圏のギリギリ、遠出になるので体調と相談。",
+      "venue": "宇都宮城址公園",
+      "address": "栃木県宇都宮市本丸町",
+      "lat": 36.5658,
+      "lng": 139.8836,
+      "startDate": "2026-09-20",
+      "endDate": "2026-09-21",
+      "startTime": "10:00",
+      "endTime": "18:00",
+      "price": { "type": "free", "note": "入場無料（飲食は個別購入）" },
+      "officialUrl": "https://www.utsunomiya-gyoza.com/",
+      "source": "宇都宮餃子会 公式サイト",
+      "updatedAt": "2026-07-12",
+      "pregnancyRecommend": { "weekMin": 14, "weekMax": 27, "note": "移動距離が長いため安定期向け。会場は屋外で座席が限られるので混雑時間を避けたい。" },
+      "tags": ["屋外", "グルメ", "遠出"],
+      "reviews": [
+        { "source": "Googleマップ", "rating": 4.2, "comment": "餃子の食べ比べが楽しい。行列必至なので開場直後が狙い目。", "url": "https://www.google.com/maps/search/?api=1&query=宇都宮城址公園" }
+      ],
+      "trafficTips": {
+        "summary": "東北新幹線利用が最も確実。東北道は行楽シーズンの土日午前に渋滞しやすい。",
+        "car": "東北自動車道 宇都宮ICから約15分。土日午前は渋滞しやすい。",
+        "train": "JR宇都宮駅からバス約10分、または徒歩25分。",
+        "parking": "周辺コインパーキング利用（イベント時は満車になりやすい）。",
+        "congestion": "土日11〜14時が最混雑。開場直後(10〜11時)が狙い目。"
+      },
+      "deals": []
+    },
+    {
+      "id": "nagoya-castle-autumn-fes-2026",
+      "name": "名古屋城 秋の陣まつり",
+      "category": "祭り・花火",
+      "description": "名古屋城を舞台にした秋祭り。東京から100km圏外のため参考情報として掲載。",
+      "venue": "名古屋城",
+      "address": "愛知県名古屋市中区本丸1-1",
+      "lat": 35.1856,
+      "lng": 136.8994,
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-12",
+      "startTime": "09:00",
+      "endTime": "16:30",
+      "price": { "type": "paid", "note": "入場料 大人¥500", "purchaseUrl": "https://www.nagoyajo.city.nagoya.jp/" },
+      "officialUrl": "https://www.nagoyajo.city.nagoya.jp/",
+      "source": "名古屋城 公式サイト",
+      "updatedAt": "2026-07-08",
+      "pregnancyRecommend": { "weekMin": 14, "weekMax": 27, "note": "新幹線での長距離移動になるため、安定期でも医師に相談のうえ計画を。" },
+      "season": ["秋"],
+      "seasonNote": "秋の実り・紅葉シーズンに合わせた祭り。",
+      "tags": ["屋外", "遠出", "新幹線移動"],
+      "reviews": [],
+      "trafficTips": {
+        "summary": "新幹線+地下鉄が最も現実的。",
+        "car": "名古屋高速 丸の内出口からすぐ。城周辺は祭り期間中終日混雑。",
+        "train": "地下鉄名城線 市役所駅から徒歩5分。",
+        "parking": "城周辺駐車場は祭り期間中満車が続く。",
+        "congestion": "祭り期間中は終日混雑。"
+      },
+      "deals": []
+    },
+    {
+      "id": "osaka-expo-park-flower-2026",
+      "name": "万博記念公園 コスモスの丘",
+      "category": "自然・公園",
+      "description": "太陽の塔を望む広大な公園でコスモスが見頃に。東京から100km圏外のため参考情報として掲載。",
+      "venue": "万博記念公園",
+      "address": "大阪府吹田市千里万博公園1-1",
+      "lat": 34.8039,
+      "lng": 135.5250,
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-25",
+      "startTime": "09:30",
+      "endTime": "17:00",
+      "price": { "type": "paid", "note": "入園料 大人¥260", "purchaseUrl": "https://www.expo70-park.jp/" },
+      "officialUrl": "https://www.expo70-park.jp/",
+      "source": "万博記念公園 公式サイト",
+      "updatedAt": "2026-07-02",
+      "pregnancyRecommend": { "weekMin": 14, "weekMax": 27, "note": "長距離移動を伴うため無理のない日程で。園内は広く舗装路が多い。" },
+      "season": ["秋"],
+      "seasonNote": "コスモスが見頃を迎える秋のお出かけの定番。",
+      "tags": ["屋外", "遠出", "ベビーカーOK"],
+      "reviews": [
+        { "source": "Googleマップ", "rating": 4.5, "comment": "コスモス畑が見事。園内が広いので歩きやすい靴で。", "url": "https://www.google.com/maps/search/?api=1&query=万博記念公園" }
+      ],
+      "trafficTips": {
+        "summary": "大阪モノレールが最も確実。園内は広いので園内バスの利用も検討を。",
+        "car": "中国自動車道 中国吹田ICから約5分。土日は駐車場が満車になりやすい。",
+        "train": "大阪モノレール 万博記念公園駅からすぐ。",
+        "parking": "公園駐車場あり（有料・土日は満車になりやすい）。",
+        "congestion": "土日の10〜15時が混雑。"
+      },
+      "deals": []
+    },
+    {
+      "id": "ariake-garden-summer-fes-2026",
+      "name": "有明ガーデン サマーファミリー縁日",
+      "category": "マルシェ・フリマ",
+      "description": "商業施設「有明ガーデン」の屋外広場で開催される夏祭り。屋台・盆踊り・キッズ縁日コーナーがあり、隣接する屋内モールですぐ涼めるのが特徴。",
+      "venue": "有明ガーデン ガーデンズプレイス",
+      "address": "東京都江東区有明2-1-8",
+      "lat": 35.6321,
+      "lng": 139.7816,
+      "startDate": "2026-08-08",
+      "endDate": "2026-08-16",
+      "startTime": "15:00",
+      "endTime": "20:00",
+      "price": { "type": "free", "note": "入場無料（屋台は個別購入）" },
+      "officialUrl": "https://ariake-garden.com/",
+      "source": "有明ガーデン 公式サイト",
+      "updatedAt": "2026-07-28",
+      "pregnancyRecommend": { "weekMin": 1, "weekMax": 36, "note": "隣接する商業施設に空調の効いた休憩スペースやベビールームがあり、暑い時期でも無理なく楽しめます。" },
+      "season": ["夏"],
+      "seasonNote": "夏祭り・縁日シーズンの屋外イベント。隣接モールで涼めるのが強み。",
+      "tags": ["屋外", "屋内モール隣接", "ベビールームあり"],
+      "reviews": [
+        { "source": "Googleマップ", "rating": 4.2, "comment": "屋台の種類が多く、隣のモールで涼めるので夏でも行きやすい。", "url": "https://www.google.com/maps/search/?api=1&query=有明ガーデン" }
+      ],
+      "trafficTips": {
+        "summary": "りんかい線・ゆりかもめが確実。周辺道路は夕方から混雑しやすい。",
+        "car": "首都高速湾岸線 有明ICから約5分。夕方以降は周辺道路が混雑しやすい。",
+        "train": "りんかい線 国際展示場駅から徒歩7分、ゆりかもめ 有明テニスの森駅から徒歩3分。",
+        "parking": "有明ガーデン駐車場あり（有料・イベント時は混雑）。",
+        "congestion": "土日の17〜19時が最も混雑。"
+      },
+      "deals": [
+        { "title": "有明ガーデン公式アプリクーポン", "description": "屋台で使える割引クーポンを公式アプリで配布。", "url": "https://ariake-garden.com/" }
+      ]
+    },
+    {
+      "id": "yuigahama-beach-2026",
+      "name": "由比ヶ浜海水浴場",
+      "category": "アウトドア・レジャー",
+      "description": "鎌倉の定番ビーチ。海の家が立ち並び遠浅で家族連れにも人気。海開き期間中は監視員が常駐。",
+      "venue": "由比ヶ浜海水浴場",
+      "address": "神奈川県鎌倉市由比ガ浜",
+      "lat": 35.3097,
+      "lng": 139.5334,
+      "startDate": "2026-07-01",
+      "endDate": "2026-08-31",
+      "startTime": "09:00",
+      "endTime": "17:00",
+      "price": { "type": "free", "note": "遊泳無料（海の家の飲食・浮き輪レンタルは有料）" },
+      "officialUrl": "https://www.city.kamakura.kanagawa.jp/",
+      "source": "鎌倉市 公式サイト",
+      "updatedAt": "2026-07-01",
+      "pregnancyRecommend": { "weekMin": 1, "weekMax": 27, "note": "暑さと人混みで体調を崩しやすいため、後期は無理をせず日陰でゆっくり過ごすのがおすすめ。遊泳の可否は医師に相談を。" },
+      "season": ["夏"],
+      "seasonNote": "海開き期間中の定番ビーチ。朝の涼しい時間帯が狙い目。",
+      "tags": ["屋外", "水着なしの散策も可", "熱中症注意"],
+      "reviews": [
+        { "source": "Googleマップ", "rating": 4.0, "comment": "遠浅で子供連れに安心。夏休みは激混み。", "url": "https://www.google.com/maps/search/?api=1&query=由比ヶ浜海水浴場" }
+      ],
+      "trafficTips": {
+        "summary": "夏の週末は国道134号が大渋滞。江ノ電の利用が確実。",
+        "car": "横浜横須賀道路 逗子ICから約20分。夏の週末は国道134号が大渋滞。",
+        "train": "江ノ電 由比ヶ浜駅から徒歩5分、またはJR鎌倉駅から徒歩約15分。",
+        "parking": "周辺駐車場は夏季料金で高騰、満車も多い。",
+        "congestion": "夏休み期間の土日は終日混雑、特に11〜15時。"
+      },
+      "deals": []
+    },
+    {
+      "id": "mt-takao-summer-hike-2026",
+      "name": "高尾山 サマーナイトハイク",
+      "category": "アウトドア・レジャー",
+      "description": "ケーブルカー・リフトを使えば高低差を抑えて登れる高尾山。夏は日没後に涼しくなる時間帯のナイトハイクイベントを開催し、山頂からの夜景も楽しめる。",
+      "venue": "高尾山",
+      "address": "東京都八王子市高尾町",
+      "lat": 35.6259,
+      "lng": 139.2431,
+      "startDate": "2026-07-18",
+      "endDate": "2026-08-30",
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "price": { "type": "paid", "note": "ケーブルカー往復 大人¥1,100", "purchaseUrl": "https://www.takaotozan.co.jp/" },
+      "officialUrl": "https://www.takaotozan.co.jp/",
+      "source": "高尾登山電鉄 公式サイト",
+      "updatedAt": "2026-07-15",
+      "pregnancyRecommend": { "weekMin": 1, "weekMax": 20, "note": "ケーブルカーで山頂近くまで行けますが徒歩区間もあるため、初期〜中期前半の体調が良い日に。後期は避けてください。" },
+      "season": ["夏", "秋"],
+      "seasonNote": "夏は夜の涼しさ、秋は紅葉ハイキングが楽しめる定番スポット。",
+      "tags": ["屋外", "坂道あり", "ケーブルカーで一部楽できる"],
+      "reviews": [
+        { "source": "Googleマップ", "rating": 4.3, "comment": "ケーブルカーを使えば体力に自信がなくても山頂まで行ける。夜は涼しくて快適。", "url": "https://www.google.com/maps/search/?api=1&query=高尾山" }
+      ],
+      "trafficTips": {
+        "summary": "京王高尾山口駅からすぐ。土日は登山口周辺の駐車場が早朝から満車。",
+        "car": "圏央道 高尾山ICから約5分。土日は駐車場が早朝で満車になりやすい。",
+        "train": "京王線 高尾山口駅から徒歩5分でケーブルカー清滝駅。",
+        "parking": "高尾山口駅周辺の民間駐車場（土日は早朝満車）。",
+        "congestion": "土日の登山道は10〜15時が混雑。ナイトハイクは比較的空いている。"
+      },
+      "deals": [
+        { "title": "ケーブルカー・リフト往復割引", "description": "公式サイトのWeb割引クーポンあり。", "url": "https://www.takaotozan.co.jp/" }
+      ]
+    }
+  ],
+  "_venuesComment": "venues は、コンサート・興行が週替わりで開催される会場のディレクトリです。公演内容は頻繁に変わり手動メンテナンスでは追いきれないため、個別の公演情報は載せず公式スケジュールページへのリンクのみを表示します。",
+  "venues": [
+    {
+      "id": "tokyo-garden-theater",
+      "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
+      "category": "音楽・ライブ",
+      "lat": 35.6323,
+      "lng": 139.7822,
+      "address": "東京都江東区有明2-1-6",
+      "officialUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/",
+      "scheduleUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
+      "source": "TOKYO GARDEN THEATER 公式サイト（住友不動産）",
+      "updatedAt": "2026-08-02",
+      "note": "コンサート・舞台などが週替わりで開催されます。個別の公演情報は公式サイトでご確認ください。"
+    },
+    {
+      "id": "ariake-arena",
+      "name": "有明アリーナ",
+      "category": "スポーツ",
+      "lat": 35.6427,
+      "lng": 139.7936,
+      "address": "東京都江東区有明1-3-1",
+      "officialUrl": "https://ariake-arena.tokyo/",
+      "scheduleUrl": "https://ariake-arena.tokyo/event/",
+      "source": "有明アリーナ 公式サイト",
+      "updatedAt": "2026-08-02",
+      "note": "バレーボールなどのスポーツ興行やコンサートが週替わりで開催されます。最新の試合・公演スケジュールは公式サイトでご確認ください。"
+    },
+    {
+      "id": "ariake-gym-ex",
+      "name": "有明GYM-EX",
+      "category": "展示会・博覧会",
+      "lat": 35.6404,
+      "lng": 139.7930,
+      "address": "東京都江東区有明1-10-1",
+      "officialUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/",
+      "scheduleUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
+      "source": "東京ビッグサイト 公式サイト（有明GYM-EX案内ページ）",
+      "updatedAt": "2026-08-02",
+      "note": "eスポーツ大会や展示会、ライブイベントが週替わりで開催されます。最新のイベント情報は公式サイトでご確認ください。"
+    }
+  ]
+}

@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マタニティおでかけイベントガイド</title>
+<style>
+  :root {
+    --surface-1: #fcfcfb;
+    --page: #f9f9f7;
+    --text-primary: #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted: #898781;
+    --hairline: #e1e0d9;
+    --border: rgba(11,11,11,0.10);
+    --accent: #d6538a;
+    --accent-weak: #fbdcea;
+    --good: #0a7a3d;
+    --warn: #b3690a;
+    --free-badge: #0a7a3d;
+    --paid-badge: #b3690a;
+    --season-badge: #2a78d6;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --surface-1: #1a1a19;
+      --page: #0d0d0d;
+      --text-primary: #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted: #898781;
+      --hairline: #2c2c2a;
+      --border: rgba(255,255,255,0.10);
+      --accent: #ea78a8;
+      --accent-weak: #4a2436;
+      --good: #2fbf72;
+      --warn: #e0a13c;
+      --free-badge: #2fbf72;
+      --paid-badge: #e0a13c;
+      --season-badge: #3987e5;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    background: var(--page);
+    color: var(--text-primary);
+    line-height: 1.5;
+  }
+  .container { max-width: 1080px; margin: 0 auto; padding: 16px; }
+
+  header.app-header {
+    display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+    padding: 8px 0 16px;
+  }
+  header.app-header h1 { font-size: 20px; font-weight: 700; }
+  header.app-header .sub { font-size: 12px; color: var(--text-muted); }
+  .header-actions { margin-left: auto; display: flex; gap: 8px; }
+
+  .btn {
+    padding: 8px 14px; border-radius: 8px; border: 1px solid var(--hairline);
+    background: var(--surface-1); color: var(--text-primary); font-size: 13px; cursor: pointer;
+  }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn.small { padding: 5px 10px; font-size: 12px; }
+
+  /* ---- location bar ---- */
+  .location-bar {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px;
+    padding: 10px 14px; margin-bottom: 14px; font-size: 13px; box-shadow: var(--card-shadow);
+  }
+  .location-bar .status { color: var(--text-secondary); flex: 1 1 auto; }
+  .location-bar .status strong { color: var(--text-primary); }
+  .banner-warn {
+    background: var(--accent-weak); border: 1px solid var(--accent); color: var(--text-primary);
+    border-radius: 10px; padding: 10px 14px; margin-bottom: 14px; font-size: 13px;
+  }
+
+  /* ---- stats ---- */
+  .stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px; margin-bottom: 16px;
+  }
+  .tile {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 10px; padding: 12px 16px; box-shadow: var(--card-shadow);
+  }
+  .tile .label { font-size: 12px; color: var(--text-secondary); }
+  .tile .value { font-size: 24px; font-weight: 700; }
+  .tile .value small { font-size: 13px; font-weight: 400; color: var(--text-secondary); }
+  .tile.hero .value { color: var(--accent); }
+
+  /* ---- venues ---- */
+  .venue-section { margin-bottom: 16px; }
+  .venue-section h2 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .venue-section .sub { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; }
+  .venue-list { display: flex; flex-direction: column; gap: 8px; }
+  .venue-card {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px;
+    padding: 10px 14px; box-shadow: var(--card-shadow);
+  }
+  .venue-card .venue-name { font-size: 13.5px; font-weight: 600; }
+  .venue-card .venue-meta { font-size: 11.5px; color: var(--text-secondary); margin-top: 2px; }
+  .venue-card .venue-note { font-size: 11.5px; color: var(--text-muted); margin-top: 4px; max-width: 460px; }
+  .venue-card .venue-upcoming { margin-top: 6px; }
+  .venue-card .venue-upcoming-item { font-size: 12px; color: var(--text-primary); }
+  .venue-card .venue-fetched { font-size: 10.5px; color: var(--text-muted); margin-top: 4px; }
+
+  /* ---- recommend ---- */
+  .recommend-section { margin-bottom: 18px; }
+  .recommend-section h2 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+  .recommend-section .sub { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; }
+  .recommend-scroll {
+    display: flex; gap: 10px; overflow-x: auto; padding-bottom: 6px;
+  }
+  .recommend-card {
+    flex: 0 0 220px; background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 10px; padding: 10px 12px; cursor: pointer; box-shadow: var(--card-shadow);
+  }
+  .recommend-card .name { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+  .recommend-card .meta { font-size: 11px; color: var(--text-secondary); }
+
+  /* ---- filters ---- */
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 10px; }
+  .filters input[type="search"] {
+    flex: 1 1 200px; padding: 8px 12px; border: 1px solid var(--hairline); border-radius: 8px;
+    background: var(--surface-1); color: var(--text-primary); font-size: 14px;
+  }
+  .filters select {
+    padding: 8px 10px; border: 1px solid var(--hairline); border-radius: 8px;
+    background: var(--surface-1); color: var(--text-primary); font-size: 13px;
+  }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+  .chip {
+    padding: 5px 12px; border-radius: 999px; border: 1px solid var(--hairline);
+    background: var(--surface-1); color: var(--text-secondary); font-size: 12px; cursor: pointer;
+  }
+  .chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  /* ---- grid ---- */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+    overflow: hidden; cursor: pointer; box-shadow: var(--card-shadow);
+    display: flex; flex-direction: column; position: relative;
+    transition: transform .1s;
+  }
+  .card:hover { transform: translateY(-2px); }
+  .card .thumb {
+    height: 90px; display: flex; align-items: center; justify-content: center;
+    font-size: 40px; background: var(--page); border-bottom: 1px solid var(--hairline);
+  }
+  .card .body { padding: 10px 12px 12px; flex: 1; display: flex; flex-direction: column; gap: 5px; }
+  .card .cat { font-size: 11px; color: var(--text-muted); }
+  .card .name { font-size: 14px; font-weight: 600; }
+  .card .meta { font-size: 11.5px; color: var(--text-secondary); }
+  .card .badges { display: flex; gap: 5px; flex-wrap: wrap; margin-top: auto; padding-top: 4px; }
+  .badge {
+    font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; color: #fff;
+  }
+  .badge.free { background: var(--free-badge); }
+  .badge.paid { background: var(--paid-badge); }
+  .badge.official { background: var(--text-muted); }
+  .badge.recommend { background: var(--accent); }
+  .badge.season { background: var(--season-badge); }
+
+  .empty { text-align: center; color: var(--text-muted); padding: 40px 0; }
+
+  /* ---- modal ---- */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 50;
+    display: flex; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 24px 12px;
+  }
+  .modal {
+    background: var(--surface-1); border-radius: 14px; max-width: 560px; width: 100%;
+    max-height: 88vh; display: flex; flex-direction: column; overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  }
+  .modal-header {
+    display: flex; align-items: flex-start; gap: 12px; justify-content: space-between;
+    padding: 18px 20px 14px; border-bottom: 1px solid var(--hairline);
+    position: sticky; top: 0; background: var(--surface-1); z-index: 1;
+  }
+  .modal .close-btn {
+    flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%;
+    border: 1px solid var(--hairline); background: var(--page); color: var(--text-secondary);
+    font-size: 18px; line-height: 1; cursor: pointer;
+  }
+  .modal-body { overflow-y: auto; padding: 16px 20px 20px; }
+  .modal h2 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .modal .modal-cat { font-size: 12px; color: var(--text-muted); }
+  .modal section { margin-bottom: 16px; }
+  .modal section h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-secondary);
+    text-transform: uppercase; letter-spacing: .03em; margin-bottom: 6px;
+  }
+  .modal p { font-size: 13.5px; color: var(--text-primary); }
+  .modal .row { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; padding: 4px 0; border-bottom: 1px dashed var(--hairline); }
+  .modal .row:last-child { border-bottom: none; }
+  .modal .row .k { color: var(--text-secondary); flex: 0 0 auto; }
+  .modal .row .v { text-align: right; }
+  .modal .link-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+  .modal .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+  .modal .tag { font-size: 11px; padding: 2px 8px; border-radius: 999px; background: var(--page); border: 1px solid var(--hairline); color: var(--text-secondary); }
+  .review-item { padding: 8px 0; border-bottom: 1px solid var(--hairline); font-size: 13px; }
+  .review-item:last-child { border-bottom: none; }
+  .review-item .stars { color: var(--warn); font-size: 12px; }
+  .review-item .src { color: var(--text-muted); font-size: 11px; }
+  .deal-item { padding: 8px 10px; background: var(--accent-weak); border-radius: 8px; font-size: 13px; margin-bottom: 6px; }
+  .deal-item .title { font-weight: 700; font-size: 12.5px; }
+  .official-note { font-size: 11.5px; color: var(--text-muted); border-top: 1px solid var(--hairline); padding-top: 10px; margin-top: 4px; }
+
+  .field { margin-bottom: 12px; }
+  .field label { display: block; font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .field input, .field select {
+    width: 100%; padding: 8px 10px; border: 1px solid var(--hairline); border-radius: 8px;
+    background: var(--page); color: var(--text-primary); font-size: 14px;
+  }
+  .footer-note { text-align: center; color: var(--text-muted); font-size: 11.5px; margin: 24px 0 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="app-header">
+    <h1>🤰 マタニティおでかけイベントガイド</h1>
+    <span class="sub">現在地から100km圏内のおでかけイベントを探せます</span>
+    <div class="header-actions">
+      <button class="btn" id="settingsBtn">⚙ 設定</button>
+    </div>
+  </header>
+
+  <div id="fallbackBanner" class="banner-warn" style="display:none">
+    events.json を読み込めませんでした。サンプルデータを表示しています。ローカルサーバー経由（<code>python3 -m http.server</code> など）または GitHub Pages で開くと最新データが読み込まれます。
+  </div>
+
+  <div class="location-bar">
+    <div class="status" id="locationStatus">現在地が未取得です。「現在地を取得」を押すと、100km圏内のイベントに絞り込めます。</div>
+    <button class="btn small" id="getLocationBtn">📍 現在地を取得</button>
+  </div>
+
+  <section class="venue-section" id="venueSection" style="display:none">
+    <h2>🎤 近くの定期イベント会場</h2>
+    <div class="sub">公演・興行は週替わりで変わるため、個別情報ではなく公式スケジュールへのリンクを表示しています。</div>
+    <div class="venue-list" id="venueList"></div>
+  </section>
+
+  <div class="stats" id="statsRow"></div>
+
+  <section class="recommend-section" id="seasonSection" style="display:none">
+    <h2 id="seasonHeading">🌤 今の季節のオススメ</h2>
+    <div class="sub" id="seasonSub"></div>
+    <div class="recommend-scroll" id="seasonScroll"></div>
+  </section>
+
+  <section class="recommend-section" id="recommendSection" style="display:none">
+    <h2>👶 あなたの妊娠週数にオススメ</h2>
+    <div class="sub" id="recommendSub"></div>
+    <div class="recommend-scroll" id="recommendScroll"></div>
+  </section>
+
+  <div class="filters">
+    <input type="search" id="searchInput" placeholder="イベント名・会場名で検索">
+    <select id="priceFilter">
+      <option value="all">料金: すべて</option>
+      <option value="free">無料のみ</option>
+      <option value="paid">有料のみ</option>
+    </select>
+    <select id="distanceFilter">
+      <option value="10">10km圏内</option>
+      <option value="30">30km圏内</option>
+      <option value="50">50km圏内</option>
+      <option value="100" selected>100km圏内</option>
+      <option value="99999">距離を問わない</option>
+    </select>
+    <select id="sortSelect">
+      <option value="distance">近い順</option>
+      <option value="date">開催日が近い順</option>
+    </select>
+  </div>
+  <div class="chips" id="categoryChips"></div>
+
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="emptyMsg" style="display:none">条件に合うイベントが見つかりませんでした。フィルタを変更してみてください。</div>
+
+  <div class="footer-note">
+    掲載情報は手動でメンテナンスしています。日程・料金は変更される場合があるため、必ず公式サイトで最新情報をご確認ください。
+  </div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay" style="display:none"></div>
+<div class="modal-overlay" id="settingsOverlay" style="display:none"></div>
+
+<script>
+/* ============================================================
+ * データ層
+ * ============================================================ */
+const DATA_URL = "events.json";
+const VENUE_SCHEDULE_URL = "venue_schedules.json";
+
+// events.json を file:// で開けない・取得できない場合の最小フォールバック
+const FALLBACK_DATA = {
+  categories: ["祭り・花火", "マルシェ・フリマ", "子育て支援", "体験・ワークショップ", "音楽・ライブ", "スポーツ", "展示会・博覧会", "自然・公園", "グルメ"],
+  events: [
+    { id: "sample-1", name: "（サンプル）公園マルシェ", category: "マルシェ・フリマ",
+      description: "events.json が読み込めなかったため表示しているサンプルです。",
+      venue: "サンプル公園", address: "", lat: 35.6895, lng: 139.6917,
+      startDate: "2026-09-01", endDate: "2026-09-01", startTime: "10:00", endTime: "16:00",
+      price: { type: "free", note: "入場無料" }, officialUrl: "", source: "サンプルデータ", updatedAt: "",
+      pregnancyRecommend: null, tags: [], reviews: [], trafficTips: null, deals: [] },
+  ],
+  venues: [],
+};
+
+const CATEGORY_EMOJI = {
+  "祭り・花火": "🎆", "マルシェ・フリマ": "🛍️", "子育て支援": "🍼",
+  "体験・ワークショップ": "🎨", "音楽・ライブ": "🎵", "スポーツ": "🏃",
+  "展示会・博覧会": "🏛️", "自然・公園": "🌳", "グルメ": "🍽️", "アウトドア・レジャー": "🏖️",
+};
+
+// 現在地の代わりに調べたい地点（現在地にいなくても、行き先候補の周辺イベントを先に確認できる）
+const SPOT_PRESETS = [
+  ["有明ガーデン", 35.6321, 139.7816],
+  ["有明ガーデンシアター", 35.6323, 139.7822],
+  ["有明アリーナ", 35.6427, 139.7936],
+  ["有明GYM-EX", 35.6404, 139.7930],
+  ["東京駅", 35.6812, 139.7671],
+  ["横浜駅", 35.4658, 139.6220],
+  ["大宮駅", 35.9066, 139.6238],
+];
+
+const PREF_LOCATIONS = [
+  ["北海道(札幌市)", 43.0642, 141.3469], ["青森県", 40.8244, 140.7400], ["岩手県", 39.7036, 141.1527],
+  ["宮城県", 38.2688, 140.8721], ["秋田県", 39.7186, 140.1024], ["山形県", 38.2404, 140.3633],
+  ["福島県", 37.7503, 140.4676], ["茨城県", 36.3418, 140.4468], ["栃木県", 36.5658, 139.8836],
+  ["群馬県", 36.3911, 139.0608], ["埼玉県", 35.8569, 139.6489], ["千葉県", 35.6047, 140.1233],
+  ["東京都", 35.6895, 139.6917], ["神奈川県", 35.4478, 139.6425], ["新潟県", 37.9026, 139.0236],
+  ["富山県", 36.6953, 137.2113], ["石川県", 36.5947, 136.6256], ["福井県", 36.0652, 136.2216],
+  ["山梨県", 35.6642, 138.5686], ["長野県", 36.6513, 138.1810], ["岐阜県", 35.3912, 136.7223],
+  ["静岡県", 34.9769, 138.3831], ["愛知県", 35.1802, 136.9066], ["三重県", 34.7303, 136.5086],
+  ["滋賀県", 35.0045, 135.8686], ["京都府", 35.0212, 135.7556], ["大阪府", 34.6863, 135.5200],
+  ["兵庫県", 34.6913, 135.1830], ["奈良県", 34.6851, 135.8330], ["和歌山県", 34.2261, 135.1675],
+  ["鳥取県", 35.5039, 134.2381], ["島根県", 35.4723, 133.0505], ["岡山県", 34.6618, 133.9344],
+  ["広島県", 34.3966, 132.4596], ["山口県", 34.1859, 131.4714], ["徳島県", 34.0658, 134.5593],
+  ["香川県", 34.3401, 134.0434], ["愛媛県", 33.8417, 132.7657], ["高知県", 33.5597, 133.5311],
+  ["福岡県", 33.6064, 130.4181], ["佐賀県", 33.2494, 130.2988], ["長崎県", 32.7448, 129.8737],
+  ["熊本県", 32.7898, 130.7417], ["大分県", 33.2382, 131.6126], ["宮崎県", 31.9111, 131.4239],
+  ["鹿児島県", 31.5602, 130.5581], ["沖縄県", 26.2124, 127.6809],
+];
+
+const SETTINGS_KEY = "pregnancyEventsGuide_v1";
+
+function loadSettings() {
+  let s;
+  try { s = JSON.parse(localStorage.getItem(SETTINGS_KEY)); } catch (e) { s = null; }
+  if (!s || typeof s !== "object") s = {};
+  if (!s.location) s.location = null; // { lat, lng, source }
+  if (!s.dueDate) s.dueDate = "";
+  if (!s.fixedWeek) s.fixedWeek = 20;
+  return s;
+}
+function saveSettings() { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); }
+
+let settings = loadSettings();
+let eventData = { categories: [], events: [] };
+let venueSchedules = {}; // venueId -> { fetchedAt, sourceUrl, events: [...] }（GitHub Actionsが自動生成）
+let usingFallback = false;
+let filter = { q: "", cats: new Set(), price: "all", maxDist: 100, sort: "distance" };
+
+/* ============================================================
+ * ユーティリティ
+ * ============================================================ */
+function esc(str) {
+  return String(str ?? "").replace(/[&<>"']/g, c =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+function haversineKm(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dLat / 2) ** 2 +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLng / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+// 妊娠週数の計算（JST基準）。出産予定日(EDD)から逆算し、未設定なら固定値。
+function todayJST() {
+  const now = new Date();
+  const utcMs = now.getTime() + now.getTimezoneOffset() * 60000;
+  return new Date(utcMs + 9 * 3600000);
+}
+function currentWeek() {
+  if (!settings.dueDate) return settings.fixedWeek;
+  const edd = new Date(settings.dueDate + "T00:00:00+09:00");
+  if (isNaN(edd.getTime())) return settings.fixedWeek;
+  const diffDays = Math.floor((edd - todayJST()) / 86400000);
+  const week = 40 - Math.floor(diffDays / 7);
+  return Math.max(1, Math.min(42, week));
+}
+function trimesterLabel(week) {
+  if (week < 14) return "妊娠初期";
+  if (week < 28) return "妊娠中期";
+  return "妊娠後期";
+}
+
+// 季節の判定（JST基準の月から単純に四分割）
+function currentSeason() {
+  const month = todayJST().getMonth() + 1;
+  if (month >= 3 && month <= 5) return "春";
+  if (month >= 6 && month <= 8) return "夏";
+  if (month >= 9 && month <= 11) return "秋";
+  return "冬";
+}
+function seasonEmoji(season) {
+  return { "春": "🌸", "夏": "🌊", "秋": "🍁", "冬": "❄️" }[season] || "🌤";
+}
+function isSeasonRecommended(ev) {
+  return Array.isArray(ev.season) && ev.season.includes(currentSeason());
+}
+
+function dateRangeLabel(ev) {
+  if (!ev.startDate) return "";
+  if (!ev.endDate || ev.endDate === ev.startDate) return ev.startDate;
+  return ev.startDate + " 〜 " + ev.endDate;
+}
+
+function distanceOf(ev) {
+  if (!settings.location || ev.lat == null || ev.lng == null) return null;
+  return haversineKm(settings.location.lat, settings.location.lng, ev.lat, ev.lng);
+}
+
+function isRecommended(ev, week) {
+  const r = ev.pregnancyRecommend;
+  if (!r) return false;
+  const min = r.weekMin ?? 1, max = r.weekMax ?? 42;
+  return week >= min && week <= max;
+}
+
+/* ============================================================
+ * データ読み込み
+ * ============================================================ */
+async function loadEvents() {
+  try {
+    const res = await fetch(DATA_URL, { cache: "no-cache" });
+    if (!res.ok) throw new Error("status " + res.status);
+    const data = await res.json();
+    if (!data || !Array.isArray(data.events)) throw new Error("invalid shape");
+    eventData = data;
+    usingFallback = false;
+  } catch (e) {
+    eventData = FALLBACK_DATA;
+    usingFallback = true;
+  }
+  document.getElementById("fallbackBanner").style.display = usingFallback ? "block" : "none";
+
+  try {
+    const vres = await fetch(VENUE_SCHEDULE_URL, { cache: "no-cache" });
+    if (vres.ok) {
+      const vdata = await vres.json();
+      venueSchedules = (vdata && vdata.venues) || {};
+    }
+  } catch (e) {
+    venueSchedules = {}; // 未取得でもアプリ自体は動く（公式リンクのみ表示にフォールバック）
+  }
+
+  buildCategoryChips();
+  renderAll();
+}
+
+/* ============================================================
+ * 現在地・設定
+ * ============================================================ */
+function setLocation(lat, lng, source) {
+  settings.location = { lat, lng, source };
+  saveSettings();
+  renderLocationBar();
+  renderAll();
+}
+
+function getLocation() {
+  if (!navigator.geolocation) {
+    alert("この端末・ブラウザは位置情報取得に対応していません。設定画面から手動で地域を選んでください。");
+    return;
+  }
+  const btn = document.getElementById("getLocationBtn");
+  btn.disabled = true;
+  btn.textContent = "取得中…";
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      setLocation(pos.coords.latitude, pos.coords.longitude, "gps");
+      btn.disabled = false;
+      btn.textContent = "📍 現在地を取得";
+    },
+    err => {
+      btn.disabled = false;
+      btn.textContent = "📍 現在地を取得";
+      alert("現在地を取得できませんでした（" + err.message + "）。設定画面から手動で地域を選ぶこともできます。");
+    },
+    { enableHighAccuracy: false, timeout: 10000 }
+  );
+}
+
+function renderLocationBar() {
+  const el = document.getElementById("locationStatus");
+  if (!settings.location) {
+    el.innerHTML = "現在地が未取得です。「現在地を取得」を押すか、設定画面から地点を指定すると、100km圏内のイベントに絞り込めます。";
+    return;
+  }
+  const src = settings.location.source === "manual" ? "手動設定" : "GPS取得";
+  const label = settings.location.label
+    ? `${esc(settings.location.label)} 付近（緯度 ${settings.location.lat.toFixed(3)} / 経度 ${settings.location.lng.toFixed(3)}）`
+    : `緯度 ${settings.location.lat.toFixed(3)} / 経度 ${settings.location.lng.toFixed(3)}`;
+  el.innerHTML = `基準地点: <strong>${label}</strong>（${src}）`;
+}
+
+/* ============================================================
+ * フィルタ・並び替え
+ * ============================================================ */
+function buildCategoryChips() {
+  const wrap = document.getElementById("categoryChips");
+  const cats = eventData.categories || [];
+  wrap.innerHTML = `<div class="chip ${filter.cats.size === 0 ? "active" : ""}" data-cat="__all__">すべて</div>` +
+    cats.map(c => `<div class="chip ${filter.cats.has(c) ? "active" : ""}" data-cat="${esc(c)}">${CATEGORY_EMOJI[c] || ""} ${esc(c)}</div>`).join("");
+  wrap.querySelectorAll(".chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      const cat = chip.dataset.cat;
+      if (cat === "__all__") {
+        filter.cats.clear();
+      } else if (filter.cats.has(cat)) {
+        filter.cats.delete(cat);
+      } else {
+        filter.cats.add(cat);
+      }
+      buildCategoryChips();
+      renderAll();
+    });
+  });
+}
+
+function filteredEvents() {
+  const q = filter.q.trim().toLowerCase();
+  return (eventData.events || []).filter(ev => {
+    if (filter.cats.size > 0 && !filter.cats.has(ev.category)) return false;
+    if (filter.price === "free" && ev.price?.type !== "free") return false;
+    if (filter.price === "paid" && ev.price?.type !== "paid") return false;
+    if (q) {
+      const hay = [ev.name, ev.venue, ev.description].join(" ").toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    const dist = distanceOf(ev);
+    if (settings.location && dist != null && dist > filter.maxDist) return false;
+    return true;
+  });
+}
+
+function sortEvents(list) {
+  const arr = [...list];
+  if (filter.sort === "distance" && settings.location) {
+    arr.sort((a, b) => (distanceOf(a) ?? Infinity) - (distanceOf(b) ?? Infinity));
+  } else {
+    arr.sort((a, b) => (a.startDate || "").localeCompare(b.startDate || ""));
+  }
+  return arr;
+}
+
+/* ============================================================
+ * 描画
+ * ============================================================ */
+function renderStats() {
+  const list = filteredEvents();
+  const free = list.filter(e => e.price?.type === "free").length;
+  const paid = list.length - free;
+  const week = currentWeek();
+  document.getElementById("statsRow").innerHTML = `
+    <div class="tile hero"><div class="label">表示中のイベント</div><div class="value">${list.length}<small>件</small></div></div>
+    <div class="tile"><div class="label">無料 / 有料</div><div class="value">${free}<small> / ${paid}</small></div></div>
+    <div class="tile"><div class="label">あなたの妊娠週数</div><div class="value">${week}<small>週（${trimesterLabel(week)}）</small></div></div>
+  `;
+}
+
+function renderVenues() {
+  const section = document.getElementById("venueSection");
+  if (!settings.location) {
+    section.style.display = "none";
+    return;
+  }
+  const list = (eventData.venues || [])
+    .map(v => ({ ...v, _dist: distanceOf(v) }))
+    .filter(v => v._dist == null || v._dist <= filter.maxDist)
+    .sort((a, b) => (a._dist ?? Infinity) - (b._dist ?? Infinity));
+  if (list.length === 0) {
+    section.style.display = "none";
+    return;
+  }
+  section.style.display = "block";
+  document.getElementById("venueList").innerHTML = list.map(v => {
+    const sched = venueSchedules[v.id];
+    const upcoming = (sched && sched.events) || [];
+    const upcomingHtml = upcoming.length
+      ? `<div class="venue-upcoming">
+          ${upcoming.slice(0, 3).map(e => `<div class="venue-upcoming-item">・${esc(e.startDate || "")} ${esc(e.name || "")}</div>`).join("")}
+        </div>
+        <div class="venue-fetched">自動取得: ${esc(sched.fetchedAt || "")}時点</div>`
+      : `<div class="venue-note">${esc(v.note || "")}</div>`;
+    return `<div class="venue-card">
+      <div>
+        <div class="venue-name">${CATEGORY_EMOJI[v.category] || "🎤"} ${esc(v.name)}</div>
+        <div class="venue-meta">${esc(v.category)}${v._dist != null ? " ・ 基準地点から約" + v._dist.toFixed(1) + "km" : ""}</div>
+        ${upcomingHtml}
+      </div>
+      <a class="btn small primary" href="${esc(v.scheduleUrl || v.officialUrl)}" target="_blank" rel="noopener">公式サイトで見る</a>
+    </div>`;
+  }).join("");
+}
+
+function renderRecommendSection(sectionId, subId, scrollId, list, subtitle) {
+  const section = document.getElementById(sectionId);
+  if (list.length === 0) {
+    section.style.display = "none";
+    return;
+  }
+  section.style.display = "block";
+  document.getElementById(subId).textContent = subtitle;
+  document.getElementById(scrollId).innerHTML = list.map(ev => {
+    const dist = distanceOf(ev);
+    return `<div class="recommend-card" data-id="${esc(ev.id)}">
+      <div class="name">${CATEGORY_EMOJI[ev.category] || "📍"} ${esc(ev.name)}</div>
+      <div class="meta">${esc(dateRangeLabel(ev))}${dist != null ? " ・ 基準地点から約" + dist.toFixed(0) + "km" : ""}</div>
+    </div>`;
+  }).join("");
+  section.querySelectorAll(".recommend-card").forEach(card => {
+    card.addEventListener("click", () => openModal(card.dataset.id));
+  });
+}
+
+function renderRecommend() {
+  const week = currentWeek();
+  const list = sortEvents(filteredEvents().filter(ev => isRecommended(ev, week)));
+  renderRecommendSection("recommendSection", "recommendSub", "recommendScroll", list,
+    `妊娠${week}週（${trimesterLabel(week)}）のあなたにおすすめの表示中イベント`);
+}
+
+function renderSeasonRecommend() {
+  const season = currentSeason();
+  document.getElementById("seasonHeading").textContent = `${seasonEmoji(season)} 今の季節（${season}）のオススメ`;
+  const list = sortEvents(filteredEvents().filter(isSeasonRecommended));
+  renderRecommendSection("seasonSection", "seasonSub", "seasonScroll", list,
+    `${season}にぴったりの表示中イベント`);
+}
+
+function renderGrid() {
+  const list = sortEvents(filteredEvents());
+  const week = currentWeek();
+  const grid = document.getElementById("grid");
+  document.getElementById("emptyMsg").style.display = list.length === 0 ? "block" : "none";
+  grid.innerHTML = list.map(ev => {
+    const dist = distanceOf(ev);
+    const priceType = ev.price?.type;
+    return `<div class="card" data-id="${esc(ev.id)}">
+      <div class="thumb">${CATEGORY_EMOJI[ev.category] || "📍"}</div>
+      <div class="body">
+        <div class="cat">${esc(ev.category)}${dist != null ? " ・ 約" + dist.toFixed(0) + "km" : ""}</div>
+        <div class="name">${esc(ev.name)}</div>
+        <div class="meta">${esc(dateRangeLabel(ev))}</div>
+        <div class="meta">${esc(ev.venue || "")}</div>
+        <div class="badges">
+          ${priceType === "free" ? '<span class="badge free">無料</span>' : priceType === "paid" ? '<span class="badge paid">有料</span>' : ""}
+          ${ev.source ? '<span class="badge official">公式情報</span>' : ""}
+          ${isRecommended(ev, week) ? '<span class="badge recommend">今の週数にオススメ</span>' : ""}
+          ${isSeasonRecommended(ev) ? `<span class="badge season">${esc(currentSeason())}にオススメ</span>` : ""}
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+  grid.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("click", () => openModal(card.dataset.id));
+  });
+}
+
+function renderAll() {
+  renderLocationBar();
+  renderVenues();
+  renderStats();
+  renderSeasonRecommend();
+  renderRecommend();
+  renderGrid();
+}
+
+/* ============================================================
+ * 詳細モーダル
+ * ============================================================ */
+function starString(rating) {
+  const full = Math.round(rating);
+  return "★".repeat(Math.max(0, Math.min(5, full))) + "☆".repeat(5 - Math.max(0, Math.min(5, full)));
+}
+
+function openModal(id) {
+  const ev = (eventData.events || []).find(e => e.id === id);
+  if (!ev) return;
+  const week = currentWeek();
+  const dist = distanceOf(ev);
+  const overlay = document.getElementById("modalOverlay");
+
+  const priceRow = ev.price
+    ? `<div class="row"><span class="k">料金</span><span class="v">${ev.price.type === "free" ? "無料" : "有料"}${ev.price.note ? "（" + esc(ev.price.note) + "）" : ""}</span></div>`
+    : "";
+
+  const seasonBlock = (ev.season || []).length
+    ? `<section><h3>${seasonEmoji(currentSeason())} 季節のおすすめ度</h3><p>${isSeasonRecommended(ev) ? `<strong>今の季節（${esc(currentSeason())}）にオススメ！</strong> ` : ""}
+        対象季節: ${ev.season.join("・")}<br>${esc(ev.seasonNote || "")}</p></section>`
+    : "";
+
+  const recommendBlock = ev.pregnancyRecommend
+    ? `<section><h3>👶 妊娠週数のおすすめ度</h3><p>${isRecommended(ev, week) ? `<strong>今の妊娠${week}週にオススメ！</strong> ` : ""}
+        対象目安: ${ev.pregnancyRecommend.weekMin ?? "-"}〜${ev.pregnancyRecommend.weekMax ?? "-"}週<br>${esc(ev.pregnancyRecommend.note || "")}</p></section>`
+    : "";
+
+  const reviews = (ev.reviews || []);
+  const reviewsBlock = reviews.length
+    ? `<section><h3>💬 口コミ</h3>${reviews.map(r => `
+        <div class="review-item">
+          <span class="stars">${starString(r.rating)}</span> ${r.rating != null ? r.rating.toFixed(1) : ""}
+          <div>${esc(r.comment || "")}</div>
+          <div class="src">${esc(r.source || "")}${r.url ? ` ・ <a href="${esc(r.url)}" target="_blank" rel="noopener">元の口コミを見る</a>` : ""}</div>
+        </div>`).join("")}</section>`
+    : "";
+
+  const tt = ev.trafficTips;
+  const trafficBlock = tt
+    ? `<section><h3>🚗 渋滞回避・アクセス情報</h3>
+        ${tt.summary ? `<p><strong>${esc(tt.summary)}</strong></p>` : ""}
+        ${tt.car ? `<div class="row"><span class="k">車</span><span class="v">${esc(tt.car)}</span></div>` : ""}
+        ${tt.train ? `<div class="row"><span class="k">電車</span><span class="v">${esc(tt.train)}</span></div>` : ""}
+        ${tt.parking ? `<div class="row"><span class="k">駐車場</span><span class="v">${esc(tt.parking)}</span></div>` : ""}
+        ${tt.congestion ? `<div class="row"><span class="k">混雑時間帯</span><span class="v">${esc(tt.congestion)}</span></div>` : ""}
+      </section>`
+    : "";
+
+  const deals = (ev.deals || []);
+  const dealsBlock = deals.length
+    ? `<section><h3>🎁 お得情報</h3>${deals.map(d => `
+        <div class="deal-item"><div class="title">${esc(d.title)}</div><div>${esc(d.description || "")}</div>
+          ${d.url ? `<a href="${esc(d.url)}" target="_blank" rel="noopener">詳細を見る</a>` : ""}
+        </div>`).join("")}</section>`
+    : "";
+
+  const mapUrl = ev.lat != null && ev.lng != null
+    ? `https://www.google.com/maps/search/?api=1&query=${ev.lat},${ev.lng}`
+    : (ev.address ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ev.address)}` : "");
+
+  overlay.innerHTML = `<div class="modal">
+    <div class="modal-header">
+      <div>
+        <h2>${CATEGORY_EMOJI[ev.category] || "📍"} ${esc(ev.name)}</h2>
+        <div class="modal-cat">${esc(ev.category)}${dist != null ? " ・ 基準地点から約" + dist.toFixed(0) + "km" : ""}</div>
+      </div>
+      <button class="close-btn" id="modalCloseBtn" aria-label="閉じる">✕</button>
+    </div>
+    <div class="modal-body">
+    <section><p>${esc(ev.description || "")}</p>
+      ${(ev.tags || []).length ? `<div class="tags">${ev.tags.map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>` : ""}
+    </section>
+
+    <section>
+      <div class="row"><span class="k">開催日</span><span class="v">${esc(dateRangeLabel(ev))}${ev.startTime ? "　" + esc(ev.startTime) + (ev.endTime ? "〜" + esc(ev.endTime) : "") : ""}</span></div>
+      <div class="row"><span class="k">会場</span><span class="v">${esc(ev.venue || "")}</span></div>
+      <div class="row"><span class="k">住所</span><span class="v">${esc(ev.address || "")}</span></div>
+      ${priceRow}
+      <div class="link-row">
+        ${ev.officialUrl ? `<a class="btn small" href="${esc(ev.officialUrl)}" target="_blank" rel="noopener">公式サイト</a>` : ""}
+        ${mapUrl ? `<a class="btn small" href="${mapUrl}" target="_blank" rel="noopener">地図を開く</a>` : ""}
+        ${ev.price?.type === "paid" && ev.price.purchaseUrl ? `<a class="btn small primary" href="${esc(ev.price.purchaseUrl)}" target="_blank" rel="noopener">チケット購入サイトへ</a>` : ""}
+      </div>
+    </section>
+
+    ${seasonBlock}
+    ${recommendBlock}
+    ${reviewsBlock}
+    ${trafficBlock}
+    ${dealsBlock}
+
+    <div class="official-note">情報源: ${esc(ev.source || "不明")}${ev.updatedAt ? " ・ 最終更新: " + esc(ev.updatedAt) : ""}。日程・料金は変更される場合があるため、必ず公式サイトでご確認ください。</div>
+    </div>
+  </div>`;
+  overlay.style.display = "flex";
+  document.getElementById("modalCloseBtn").addEventListener("click", closeModal);
+  overlay.addEventListener("click", e => { if (e.target === overlay) closeModal(); });
+}
+function closeModal() { document.getElementById("modalOverlay").style.display = "none"; }
+
+/* ============================================================
+ * 設定モーダル
+ * ============================================================ */
+function openSettings() {
+  const overlay = document.getElementById("settingsOverlay");
+  const prefOptions = PREF_LOCATIONS.map(([name, lat, lng]) =>
+    `<option value="${lat},${lng}">${esc(name)}</option>`).join("");
+  overlay.innerHTML = `<div class="modal">
+    <div class="modal-header">
+      <h2>⚙ 設定</h2>
+      <button class="close-btn" id="settingsCloseBtn" aria-label="閉じる">✕</button>
+    </div>
+    <div class="modal-body">
+    <section>
+      <h3>妊娠週数</h3>
+      <div class="field">
+        <label>出産予定日（設定すると自動計算されます）</label>
+        <input type="date" id="dueDateInput" value="${esc(settings.dueDate || "")}">
+      </div>
+      <div class="field">
+        <label>出産予定日が未設定の場合の週数</label>
+        <input type="number" id="fixedWeekInput" min="1" max="42" value="${esc(settings.fixedWeek)}">
+      </div>
+    </section>
+    <section>
+      <h3>地点を指定</h3>
+      <p style="font-size:12.5px; color:var(--text-secondary); margin-bottom:8px;">今いる場所と関係なく、行き先候補の地点周辺のイベントを先に調べられます。</p>
+      <div class="field">
+        <label>よく使うスポット（タップですぐ反映）</label>
+        <div class="chips" id="spotChips"></div>
+      </div>
+      <div class="field">
+        <label>都道府県から選ぶ</label>
+        <select id="prefSelect"><option value="">選択してください</option>${prefOptions}</select>
+      </div>
+      <div class="field">
+        <label>緯度・経度を直接入力（任意の地点を指定できます。Googleマップで地点を右クリック→表示された数値をコピー）</label>
+        <div style="display:flex; gap:8px;">
+          <input type="number" step="0.0001" id="manualLatInput" placeholder="緯度 例: 35.6321">
+          <input type="number" step="0.0001" id="manualLngInput" placeholder="経度 例: 139.7816">
+        </div>
+      </div>
+    </section>
+    <div class="link-row">
+      <button class="btn primary" id="settingsSaveBtn">保存する</button>
+    </div>
+    </div>
+  </div>`;
+  overlay.style.display = "flex";
+  document.getElementById("settingsCloseBtn").addEventListener("click", closeSettings);
+  overlay.addEventListener("click", e => { if (e.target === overlay) closeSettings(); });
+
+  const spotChipsWrap = document.getElementById("spotChips");
+  spotChipsWrap.innerHTML = SPOT_PRESETS.map(([name]) =>
+    `<div class="chip ${settings.location && settings.location.label === name ? "active" : ""}" data-spot="${esc(name)}">${esc(name)}</div>`).join("");
+  spotChipsWrap.querySelectorAll(".chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      const spot = SPOT_PRESETS.find(([name]) => name === chip.dataset.spot);
+      if (!spot) return;
+      const [name, lat, lng] = spot;
+      settings.location = { lat, lng, source: "manual", label: name };
+      saveSettings();
+      renderAll();
+      openSettings();
+    });
+  });
+
+  document.getElementById("settingsSaveBtn").addEventListener("click", () => {
+    settings.dueDate = document.getElementById("dueDateInput").value || "";
+    const fw = parseInt(document.getElementById("fixedWeekInput").value, 10);
+    settings.fixedWeek = isNaN(fw) ? 20 : Math.max(1, Math.min(42, fw));
+
+    const manualLat = parseFloat(document.getElementById("manualLatInput").value);
+    const manualLng = parseFloat(document.getElementById("manualLngInput").value);
+    const prefSelect = document.getElementById("prefSelect");
+    if (!isNaN(manualLat) && !isNaN(manualLng)) {
+      settings.location = { lat: manualLat, lng: manualLng, source: "manual", label: null };
+    } else if (prefSelect.value) {
+      const [lat, lng] = prefSelect.value.split(",").map(Number);
+      settings.location = { lat, lng, source: "manual", label: prefSelect.selectedOptions[0].textContent };
+    }
+    saveSettings();
+    closeSettings();
+    renderAll();
+  });
+}
+function closeSettings() { document.getElementById("settingsOverlay").style.display = "none"; }
+
+/* ============================================================
+ * イベント登録・初期化
+ * ============================================================ */
+document.getElementById("settingsBtn").addEventListener("click", openSettings);
+document.getElementById("getLocationBtn").addEventListener("click", getLocation);
+document.getElementById("searchInput").addEventListener("input", e => { filter.q = e.target.value; renderAll(); });
+document.getElementById("priceFilter").addEventListener("change", e => { filter.price = e.target.value; renderAll(); });
+document.getElementById("distanceFilter").addEventListener("change", e => { filter.maxDist = Number(e.target.value); renderAll(); });
+document.getElementById("sortSelect").addEventListener("change", e => { filter.sort = e.target.value; renderAll(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") { closeModal(); closeSettings(); } });
+
+loadEvents();
+</script>
+</body>
+</html>
