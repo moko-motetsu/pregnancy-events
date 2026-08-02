@@ -358,7 +358,7 @@
  * ============================================================ */
 const DATA_URL = "events.json";
 const VENUE_SCHEDULE_URL = "venue_schedules.json";
-const HANABI_EVENTS_URL = "hanabi_events.json";
+const EVENT_CONFIRMATIONS_URL = "event_confirmations.json";
 
 // events.json を file:// で開けない・取得できない場合の最小フォールバック
 const FALLBACK_DATA = {
@@ -606,10 +606,10 @@ async function loadEvents() {
   }
 
   try {
-    const hres = await fetch(HANABI_EVENTS_URL, { cache: "no-cache" });
-    if (hres.ok) {
-      const hdata = await hres.json();
-      applyHanabiConfirmations((hdata && hdata.events) || {});
+    const cres = await fetch(EVENT_CONFIRMATIONS_URL, { cache: "no-cache" });
+    if (cres.ok) {
+      const cdata = await cres.json();
+      applyEventConfirmations((cdata && cdata.events) || {});
     }
   } catch (e) {
     // 未取得でもevents.json記載の日程のまま動く
@@ -619,9 +619,9 @@ async function loadEvents() {
   renderAll();
 }
 
-// 花火大会の開催日を公式サイトで自動確認できた分だけ、events.json の日程に上書きする。
+// イベントの開催日を公式サイトで自動確認できた分だけ、events.json の日程に上書きする。
 // 取得できていないイベントはevents.jsonの手動入力値がそのまま使われる。
-function applyHanabiConfirmations(confirmations) {
+function applyEventConfirmations(confirmations) {
   for (const ev of eventData.events || []) {
     const c = confirmations[ev.id];
     if (!c || !c.confirmedStartDate) continue;
