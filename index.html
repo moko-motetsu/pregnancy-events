@@ -769,7 +769,7 @@ function renderVenues() {
     const upcoming = (sched && sched.events) || [];
     const upcomingHtml = upcoming.length
       ? `<div class="venue-upcoming">
-          ${upcoming.slice(0, 3).map(e => `<div class="venue-upcoming-item">
+          ${upcoming.map(e => `<div class="venue-upcoming-item">
               ${e.image ? `<img class="venue-upcoming-thumb" src="${esc(e.image)}" alt="" loading="lazy" onerror="this.remove();">` : ""}
               <span>・${esc(e.startDate || "")} ${esc(e.name || "")}</span>
             </div>`).join("")}
