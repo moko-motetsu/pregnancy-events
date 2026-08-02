@@ -282,6 +282,12 @@
   </div>
   <div class="chips" id="categoryChips"></div>
 
+  <div id="hanabiBanner" class="banner-warn" style="display:none">
+    🎆 花火大会は夏の間、関東だけでも毎週99件以上開催されます。ここに載っているのは一部の代表例のみです。近くの全ての花火大会を探すには
+    <a href="https://hanabi.walkerplus.com/list/ar0300/" target="_blank" rel="noopener">ウォーカープラス 関東の花火大会一覧</a>
+    もあわせてご覧ください。
+  </div>
+
   <div class="grid" id="grid"></div>
   <div class="empty" id="emptyMsg" style="display:none">条件に合うイベントが見つかりませんでした。フィルタを変更してみてください。</div>
 
@@ -547,7 +553,7 @@ function filteredEvents() {
     if (filter.price === "free" && ev.price?.type !== "free") return false;
     if (filter.price === "paid" && ev.price?.type !== "paid") return false;
     if (q) {
-      const hay = [ev.name, ev.venue, ev.description].join(" ").toLowerCase();
+      const hay = [ev.name, ev.venue, ev.description, ev.category, ...(ev.tags || [])].join(" ").toLowerCase();
       if (!hay.includes(q)) return false;
     }
     const dist = distanceOf(ev);
@@ -651,6 +657,12 @@ function renderSeasonRecommend() {
     `${season}にぴったりの表示中イベント`);
 }
 
+function renderHanabiBanner() {
+  const q = filter.q.trim().toLowerCase();
+  const show = filter.cats.has("祭り・花火") || q.includes("花火");
+  document.getElementById("hanabiBanner").style.display = show ? "block" : "none";
+}
+
 function renderGrid() {
   const list = sortEvents(filteredEvents());
   const week = currentWeek();
@@ -686,6 +698,7 @@ function renderAll() {
   renderStats();
   renderSeasonRecommend();
   renderRecommend();
+  renderHanabiBanner();
   renderGrid();
 }
 

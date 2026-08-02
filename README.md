@@ -13,6 +13,8 @@
 - **季節のオススメ表示** — 現在の月から春夏秋冬を判定し、海水浴・ハイキングなど季節に合うイベント（`season`）をおすすめセクションと専用バッジで表示。
 - **地点の指定** — GPSでの現在地取得に加え、設定画面から「よく使うスポット」（有明ガーデンなど）をワンタップで選択、または緯度経度を直接入力して任意の地点周辺のイベントを確認可能。現在地にいなくても、行き先候補のスポット周辺を先に調べられる。
 - **近くの定期イベント会場** — 有明ガーデンシアター・有明アリーナ・有明GYM-EXのように、コンサートや興行が週替わりで開催される会場をディレクトリとして持つ（`venues`）。個別の公演情報は `pregnancy-events/scripts/fetch_venue_schedules.mjs` が各施設の公式サイトから自動取得し（GitHub Actions `watch_ariake_venues.yml`）、`venue_schedules.json` に保存する。取得できていない施設は公式スケジュールページへの直リンクにフォールバックする。
+- **検索** — イベント名・会場名・説明文に加えて、カテゴリ名とタグ（`tags`）も検索対象。
+- **花火大会シーズンの案内** — 花火大会は夏の間だけで関東全域で毎週100件近く開催され、手動データで全件を網羅するのは非現実的なため、代表例を数件`events`に掲載しつつ、カテゴリ「祭り・花火」を選択または「花火」で検索すると、全件を検索できる外部の花火大会一覧サイトへの案内バナーを表示する。
 - **公式情報の表示** — 各イベントに情報源(`source`)と最終更新日(`updatedAt`)を明記し、詳細画面に「必ず公式サイトでご確認ください」の注記を表示。
 - **口コミ・渋滞回避・お得情報** — イベント詳細モーダルに、口コミ（評点・コメント・出典）、渋滞回避／アクセス情報（車・電車・駐車場・混雑時間帯）、お得情報（割引券など）を表示。
 
@@ -28,13 +30,18 @@ python3 -m http.server 8080
 
 ## 公開する（GitHub Pages）
 
-`zukan-seal-collection` と同様に、公開用の別リポジトリへ自動デプロイする構成にできます。
+`zukan-seal-collection` と同じ構成で、公開用リポジトリ `moko-motetsu/pregnancy-events` へ自動デプロイしています（`https://moko-motetsu.github.io/pregnancy-events/`）。
 
-1. `moko-motetsu/pregnancy-events` のような公開用リポジトリを作成し、GitHub Pages を有効化
-2. そのリポジトリへの書き込み権限を持つ Fine-grained PAT を発行し、`test` リポジトリのシークレットに登録（例: `PREGNANCY_EVENTS_DEPLOY_TOKEN`）
-3. `.github/workflows/deploy_zukan_app.yml` を参考に、`pregnancy-events/**` の変更を検知して `index.html` と `events.json` を公開用リポジトリへ push するワークフローを追加
+- `.github/workflows/deploy_pregnancy_events.yml` — `pregnancy-events/**` が `main` に push されたら `index.html`・`README.md`・`events.json`・`venue_schedules.json` を公開用リポジトリへ反映
+- `.github/workflows/watch_ariake_venues.yml` — 有明会場スケジュールの日次更新は `[skip ci]` でコミットするため上記の push トリガーが発火しない。そのためこのワークフロー自身が直接デプロイまで行う
 
-上記のリポジトリ作成・シークレット登録は手動作業が必要なため、このプロジェクトには未セットアップです。運用を始める際に対応してください。
+どちらも公開用リポジトリへの書き込み権限を持つ Fine-grained PAT を、`test` リポジトリのシークレット **`PREGNANCY_EVENTS_DEPLOY_TOKEN`** として必要とする。未設定の場合、`deploy_pregnancy_events.yml` はエラーで失敗し、`watch_ariake_venues.yml` 側は反映だけスキップして取得自体は続行する。
+
+PATの発行手順:
+1. GitHubの `https://github.com/settings/personal-access-tokens/new` でFine-grained PATを発行
+2. Repository access で `moko-motetsu/pregnancy-events` のみを選択
+3. Permissions の Contents を **Read and write** に設定
+4. 発行したトークンを `test` リポジトリの Settings > Secrets and variables > Actions で `PREGNANCY_EVENTS_DEPLOY_TOKEN` として登録
 
 ## `events.json` の書き方
 

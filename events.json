@@ -442,6 +442,68 @@
       "deals": [
         { "title": "ケーブルカー・リフト往復割引", "description": "公式サイトのWeb割引クーポンあり。", "url": "https://www.takaotozan.co.jp/" }
       ]
+    },
+    {
+      "id": "jingu-gaien-hanabi-2026",
+      "name": "神宮外苑花火大会",
+      "category": "祭り・花火",
+      "description": "都心で楽しめる大型花火大会。明治神宮外苑内の神宮軟式野球場から打ち上げられる。荒天の場合は翌日に順延。",
+      "venue": "明治神宮外苑（神宮軟式野球場）",
+      "address": "東京都新宿区霞ヶ丘町1-1",
+      "lat": 35.6746,
+      "lng": 139.7157,
+      "startDate": "2026-08-08",
+      "endDate": "2026-08-08",
+      "startTime": "19:30",
+      "endTime": "20:30",
+      "price": { "type": "free", "note": "見学は基本無料。料金の詳細は公式サイトをご確認ください。" },
+      "officialUrl": "https://www.jinguhanabi.com/",
+      "source": "神宮外苑花火大会 公式サイト",
+      "updatedAt": "2026-08-02",
+      "pregnancyRecommend": { "weekMin": 1, "weekMax": 27, "note": "夜間の人混みと暑さで体調を崩しやすいため、後期は無理をせず。荒天の場合は翌8/9に順延されるため予定に余裕を。" },
+      "season": ["夏"],
+      "seasonNote": "都心で見られる夏の定番花火大会。",
+      "tags": ["屋外", "夜間", "花火", "人混み"],
+      "reviews": [],
+      "trafficTips": {
+        "summary": "会場周辺は当日大混雑。公共交通機関の利用が確実。",
+        "car": "周辺道路は打ち上げ前後で大渋滞・交通規制あり。車での来場は非推奨。",
+        "train": "都営大江戸線 国立競技場駅、JR中央線 千駄ヶ谷駅・信濃町駅などから徒歩。",
+        "parking": "会場周辺の一般駐車場は利用非推奨（交通規制あり）。",
+        "congestion": "打ち上げ前後（19時〜21時）は周辺一帯が非常に混雑。"
+      },
+      "deals": []
+    },
+    {
+      "id": "okutama-noryo-hanabi-2026",
+      "name": "第49回 奥多摩納涼花火大会",
+      "category": "祭り・花火",
+      "description": "奥多摩駅すぐの愛宕山広場から打ち上げられる、山あいの静かな花火大会。都心より人混みが少なめ。",
+      "venue": "愛宕山広場",
+      "address": "東京都西多摩郡奥多摩町氷川",
+      "lat": 35.8090,
+      "lng": 139.0972,
+      "startDate": "2026-08-08",
+      "endDate": "2026-08-08",
+      "startTime": "19:45",
+      "endTime": "20:20",
+      "price": { "type": "free", "note": "見学無料" },
+      "officialUrl": "https://www.town.okutama.tokyo.jp/1/kankosangyoka/kankojoho/1/2758.html",
+      "source": "奥多摩町 公式サイト",
+      "updatedAt": "2026-08-02",
+      "pregnancyRecommend": { "weekMin": 1, "weekMax": 27, "note": "駅からすぐで移動は少ないが、夜間で気温が下がることもあるため羽織るものを。荒天の場合は翌8/9に順延。" },
+      "season": ["夏"],
+      "seasonNote": "都心の花火大会より人混みが少なく、山あいの静かな雰囲気を楽しめる。",
+      "tags": ["屋外", "夜間", "花火", "駅近"],
+      "reviews": [],
+      "trafficTips": {
+        "summary": "駅からすぐだが、駐車場は無いため電車が確実。",
+        "car": "奥多摩駅周辺に無料駐車場はなし。公共交通機関の利用が必須。",
+        "train": "JR青梅線 奥多摩駅から徒歩すぐ。",
+        "parking": "会場周辺に無料駐車場なし。",
+        "congestion": "18:30〜21:00は会場周辺で交通規制あり。"
+      },
+      "deals": []
     }
   ],
   "_venuesComment": "venues は、コンサート・興行が週替わりで開催される会場のディレクトリです。公演内容は頻繁に変わり手動メンテナンスでは追いきれないため、個別の公演情報は載せず公式スケジュールページへのリンクのみを表示します。",
