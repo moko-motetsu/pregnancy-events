@@ -748,6 +748,72 @@
         "congestion": "土日祝のパレード時間帯が最混雑。平日午前が比較的空いている。"
       },
       "deals": []
+    },
+    {
+      "id": "andersen-park-halloween-2026",
+      "name": "ふなばしアンデルセン公園 ハロウィン装飾",
+      "category": "自然・公園",
+      "description": "デンマークの田園風景をテーマにした県立公園。園内がハロウィンの装飾で彩られる。芝生広場が広く、ベビーカーで回れる舗装路が多い。",
+      "venue": "ふなばしアンデルセン公園",
+      "address": "千葉県船橋市金堀町525",
+      "lat": 35.7648,
+      "lng": 140.0562,
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-31",
+      "startTime": "09:30",
+      "endTime": "16:00",
+      "price": { "type": "paid", "note": "入園料 大人¥900・小中学生¥200・4歳以上¥100", "purchaseUrl": "https://www.park-funabashi.or.jp/and/" },
+      "officialUrl": "https://www.park-funabashi.or.jp/and/aevents/event_halloween.html",
+      "source": "ふなばしアンデルセン公園 公式サイト",
+      "updatedAt": "2026-08-02",
+      "pregnancyRecommend": { "weekMin": 1, "weekMax": 36, "note": "園内は舗装路が多くベビーカーでも回りやすい。休憩できる東屋やベンチも多いので、こまめに休みながら楽しめる。" },
+      "season": ["秋"],
+      "seasonNote": "ハロウィン装飾が楽しめる秋の定番イベント。",
+      "tags": ["屋外", "ベビーカーOK", "子連れ歓迎"],
+      "reviews": [
+        { "source": "Googleマップ", "rating": 4.4, "comment": "広々していて子連れでも歩きやすい。ハロウィンの飾り付けが写真映えする。", "url": "https://www.google.com/maps/search/?api=1&query=ふなばしアンデルセン公園" }
+      ],
+      "trafficTips": {
+        "summary": "電車の場合は新京成線三咲駅からバス。車の場合は北千葉道路小室ICが近い。",
+        "car": "北千葉道路 小室ICから約10分。土日は駐車場が午前中で満車になりやすい。",
+        "train": "新京成線 三咲駅からバスで約15分。",
+        "parking": "第1〜第3駐車場あり（有料・土日は早めに満車）。",
+        "congestion": "土日祝の10〜14時が最も混雑。開園直後が比較的空いている。"
+      },
+      "deals": []
+    },
+    {
+      "id": "kawagoe-matsuri-2026",
+      "name": "川越まつり",
+      "category": "祭り・花火",
+      "description": "「小江戸川越」の蔵造りの町並みを、絢爛豪華な山車が練り歩く川越氷川祭の例大祭。国の重要無形民俗文化財にも指定されている。",
+      "venue": "川越氷川神社・蔵造りの町並み（一番街）周辺",
+      "address": "埼玉県川越市幸町（蔵造りの町並み・一番街周辺）",
+      "lat": 35.9247,
+      "lng": 139.4847,
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-18",
+      "startTime": "10:00",
+      "endTime": "22:00",
+      "price": { "type": "free", "note": "見学無料（有料観覧席の設定がある場合あり）" },
+      "officialUrl": "https://kawagoematsuri.jp/",
+      "source": "川越まつり 公式サイト",
+      "updatedAt": "2026-08-02",
+      "pregnancyRecommend": { "weekMin": 1, "weekMax": 27, "note": "町並み全体が人混みになるため、後期は無理をせず。山車の巡行時間帯を避けて日中の早い時間に町並みを散策するのがおすすめ。" },
+      "season": ["秋"],
+      "seasonNote": "小江戸川越を代表する秋の例大祭。",
+      "tags": ["屋外", "人混み", "伝統行事"],
+      "reviews": [
+        { "source": "Googleマップ", "rating": 4.5, "comment": "山車の迫力がすごい。混雑がかなり激しいので子連れは時間帯を選んだ方がいい。", "url": "https://www.google.com/maps/search/?api=1&query=川越氷川神社" }
+      ],
+      "trafficTips": {
+        "summary": "祭り期間中は町並み周辺で交通規制あり。電車利用が確実。",
+        "car": "会場周辺は祭り期間中終日交通規制。車での来場は非推奨。",
+        "train": "東武東上線・JR川越線・西武新宿線 川越駅、または東武東上線 川越市駅から徒歩約15分。",
+        "parking": "会場周辺の一般駐車場は祭り期間中利用不可の場所が多い。",
+        "congestion": "山車の巡行時間帯（夕方〜夜）は身動きが取れないほど混雑。"
+      },
+      "deals": []
     }
   ],
   "_venuesComment": "venues は、コンサート・興行が週替わりで開催される会場のディレクトリです。公演内容は頻繁に変わり手動メンテナンスでは追いきれないため、個別の公演情報は載せず公式スケジュールページへのリンクのみを表示します。",
