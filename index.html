@@ -110,6 +110,13 @@
   .venue-card .venue-upcoming { margin-top: 6px; display: flex; flex-direction: column; gap: 4px; }
   .venue-card .venue-upcoming-item { font-size: 12px; color: var(--text-primary); display: flex; align-items: center; gap: 6px; }
   .venue-card .venue-upcoming-thumb { width: 28px; height: 28px; border-radius: 4px; object-fit: cover; flex: 0 0 auto; }
+  .venue-card .venue-upcoming-more { margin-top: 2px; }
+  .venue-card .venue-upcoming-more summary {
+    font-size: 12px; color: var(--accent); cursor: pointer; list-style: none;
+  }
+  .venue-card .venue-upcoming-more summary::-webkit-details-marker { display: none; }
+  .venue-card .venue-upcoming-more[open] summary { margin-bottom: 4px; }
+  .venue-card .venue-upcoming-more > .venue-upcoming-item { margin-top: 4px; }
   .venue-card .venue-fetched { font-size: 10.5px; color: var(--text-muted); margin-top: 4px; }
 
   /* ---- recommend ---- */
@@ -767,12 +774,19 @@ function renderVenues() {
   document.getElementById("venueList").innerHTML = list.map(v => {
     const sched = venueSchedules[v.id];
     const upcoming = (sched && sched.events) || [];
+    const renderUpcomingItem = e => `<div class="venue-upcoming-item">
+        ${e.image ? `<img class="venue-upcoming-thumb" src="${esc(e.image)}" alt="" loading="lazy" onerror="this.remove();">` : ""}
+        <span>・${esc(e.startDate || "")} ${esc(e.name || "")}</span>
+      </div>`;
+    const visible = upcoming.slice(0, 3);
+    const rest = upcoming.slice(3);
     const upcomingHtml = upcoming.length
       ? `<div class="venue-upcoming">
-          ${upcoming.map(e => `<div class="venue-upcoming-item">
-              ${e.image ? `<img class="venue-upcoming-thumb" src="${esc(e.image)}" alt="" loading="lazy" onerror="this.remove();">` : ""}
-              <span>・${esc(e.startDate || "")} ${esc(e.name || "")}</span>
-            </div>`).join("")}
+          ${visible.map(renderUpcomingItem).join("")}
+          ${rest.length ? `<details class="venue-upcoming-more">
+              <summary>もっと見る（+${rest.length}件）</summary>
+              ${rest.map(renderUpcomingItem).join("")}
+            </details>` : ""}
         </div>
         <div class="venue-fetched">自動取得: ${esc(sched.fetchedAt || "")}時点</div>`
       : `<div class="venue-note">${esc(v.note || "")}</div>`;
