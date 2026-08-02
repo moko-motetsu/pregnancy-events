@@ -62,6 +62,7 @@
   .btn {
     padding: 8px 14px; border-radius: 8px; border: 1px solid var(--hairline);
     background: var(--surface-1); color: var(--text-primary); font-size: 13px; cursor: pointer;
+    font-family: inherit; display: inline-block; text-decoration: none;
   }
   .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
   .btn.small { padding: 5px 10px; font-size: 12px; }
@@ -504,6 +505,67 @@ function dateRangeLabel(ev) {
   return ev.startDate + " 〜 " + ev.endDate;
 }
 
+/* ============================================================
+ * カレンダー登録（.ics）
+ * ============================================================ */
+function icsEscape(s) {
+  return String(s || "").replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
+}
+function addDaysToYmd8(ymd8, days) {
+  const y = parseInt(ymd8.slice(0, 4), 10), m = parseInt(ymd8.slice(4, 6), 10) - 1, d = parseInt(ymd8.slice(6, 8), 10);
+  const dt = new Date(Date.UTC(y, m, d));
+  dt.setUTCDate(dt.getUTCDate() + days);
+  return `${dt.getUTCFullYear()}${String(dt.getUTCMonth() + 1).padStart(2, "0")}${String(dt.getUTCDate()).padStart(2, "0")}`;
+}
+function buildIcsForEvent(ev) {
+  if (!ev.startDate) return null;
+  const uid = `${ev.id}@pregnancy-events.moko-motetsu`;
+  const dtstamp = new Date().toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+  const sd = ev.startDate.replace(/-/g, "");
+  const ed = (ev.endDate || ev.startDate).replace(/-/g, "");
+  let dtStartLine, dtEndLine;
+  if (ev.startTime) {
+    const st = ev.startTime.replace(":", "") + "00";
+    dtStartLine = `DTSTART;TZID=Asia/Tokyo:${sd}T${st}`;
+    const et = ev.endTime ? ev.endTime.replace(":", "") + "00" : st;
+    dtEndLine = `DTEND;TZID=Asia/Tokyo:${ed}T${et}`;
+  } else {
+    dtStartLine = `DTSTART;VALUE=DATE:${sd}`;
+    dtEndLine = `DTEND;VALUE=DATE:${addDaysToYmd8(ed, 1)}`;
+  }
+  const lines = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//pregnancy-events//JP",
+    "CALSCALE:GREGORIAN",
+    "BEGIN:VEVENT",
+    `UID:${uid}`,
+    `DTSTAMP:${dtstamp}`,
+    dtStartLine,
+    dtEndLine,
+    `SUMMARY:${icsEscape(ev.name)}`,
+    ev.venue ? `LOCATION:${icsEscape([ev.venue, ev.address].filter(Boolean).join(" "))}` : "",
+    ev.description ? `DESCRIPTION:${icsEscape(ev.description)}` : "",
+    ev.officialUrl ? `URL:${icsEscape(ev.officialUrl)}` : "",
+    "END:VEVENT",
+    "END:VCALENDAR",
+  ].filter(Boolean);
+  return lines.join("\r\n");
+}
+function downloadIcs(ev) {
+  const ics = buildIcsForEvent(ev);
+  if (!ics) return;
+  const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `${ev.id}.ics`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
 function distanceOf(ev) {
   if (!settings.location || ev.lat == null || ev.lng == null) return null;
   return haversineKm(settings.location.lat, settings.location.lng, ev.lat, ev.lng);
@@ -894,6 +956,7 @@ function openModal(id) {
       <div class="link-row">
         ${ev.officialUrl ? `<a class="btn small" href="${esc(ev.officialUrl)}" target="_blank" rel="noopener">公式サイト</a>` : ""}
         ${mapUrl ? `<a class="btn small" href="${mapUrl}" target="_blank" rel="noopener">地図を開く</a>` : ""}
+        ${ev.startDate ? `<button class="btn small" id="modalIcsBtn">📅 カレンダーに追加</button>` : ""}
         ${ev.price?.type === "paid" && ev.price.purchaseUrl ? `<a class="btn small primary" href="${esc(ev.price.purchaseUrl)}" target="_blank" rel="noopener">チケット購入サイトへ</a>` : ""}
       </div>
     </section>
@@ -914,6 +977,8 @@ function openModal(id) {
     openModal(ev.id);
     renderGrid();
   });
+  const icsBtn = document.getElementById("modalIcsBtn");
+  if (icsBtn) icsBtn.addEventListener("click", () => downloadIcs(ev));
   overlay.addEventListener("click", e => { if (e.target === overlay) closeModal(); });
 }
 function closeModal() { document.getElementById("modalOverlay").style.display = "none"; }
