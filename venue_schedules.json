@@ -64,6 +64,132 @@
      "location": ""
     }
    ]
+  },
+  "ariake-arena": {
+   "name": "有明アリーナ",
+   "sourceUrl": "https://ariake-arena.tokyo/event/",
+   "fetchedAt": "2026-08-02",
+   "events": [
+    {
+     "name": "パリ・サン＝ジェルマン ハンドボールジャパンツアー2026",
+     "startDate": "2026-08-04",
+     "endDate": "2026-08-05",
+     "url": "https://ariake-arena.tokyo/event/",
+     "location": ""
+    },
+    {
+     "name": "CANNONBALL外伝",
+     "startDate": "2026-08-09",
+     "endDate": "2026-08-10",
+     "url": "https://ariake-arena.tokyo/event/",
+     "location": ""
+    },
+    {
+     "name": "三井不動産カップ 2026 (東京大会)  女子日本代表国際試合",
+     "startDate": "2026-08-13",
+     "endDate": "2026-08-14",
+     "url": "https://ariake-arena.tokyo/event/",
+     "location": ""
+    },
+    {
+     "name": "買取大吉カップ 2026 (東京大会)  男子日本代表国際試合",
+     "startDate": "2026-08-15",
+     "endDate": "2026-08-15",
+     "url": "https://ariake-arena.tokyo/event/",
+     "location": ""
+    },
+    {
+     "name": "SoftBank CUP 2026 (東京大会)  男子日本代表国際試合",
+     "startDate": "2026-08-16",
+     "endDate": "2026-08-16",
+     "url": "https://ariake-arena.tokyo/event/",
+     "location": ""
+    },
+    {
+     "name": "KEY TO LIT",
+     "startDate": "2026-08-20",
+     "endDate": "2026-08-23",
+     "url": "https://ariake-arena.tokyo/event/",
+     "location": ""
+    },
+    {
+     "name": "2026バレーボール男子日本代表国際親善試合（東京大会）",
+     "startDate": "2026-08-25",
+     "endDate": "2026-08-25",
+     "url": "https://ariake-arena.tokyo/event/",
+     "location": ""
+    },
+    {
+     "name": "Roselia",
+     "startDate": "2026-08-29",
+     "endDate": "2026-08-30",
+     "url": "https://ariake-arena.tokyo/event/",
+     "location": ""
+    }
+   ]
+  },
+  "ariake-gym-ex": {
+   "name": "有明GYM-EX",
+   "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
+   "fetchedAt": "2026-08-02",
+   "events": [
+    {
+     "name": "アマチュア無線フェスティバル ハムフェア2026",
+     "startDate": "2026-08-29",
+     "endDate": "2026-08-30",
+     "url": "https://hamfair.jp/",
+     "location": ""
+    },
+    {
+     "name": "Japan Bike Show 2026",
+     "startDate": "2026-09-30",
+     "endDate": "2026-10-01",
+     "url": "http://japanbikeshow.jp/",
+     "location": ""
+    },
+    {
+     "name": "第67回サインアンドディスプレイショウ",
+     "startDate": "2026-10-21",
+     "endDate": "2026-10-23",
+     "url": "https://tokobi.or.jp/sds/",
+     "location": ""
+    },
+    {
+     "name": "第3回 バックオフィスDXPO東京’26【秋】",
+     "startDate": "2026-11-17",
+     "endDate": "2026-11-18",
+     "url": "https://dxpo.jp/real/box/tokyo2/",
+     "location": ""
+    },
+    {
+     "name": "第1回 【管理部門】AIエージェントDXPO東京’26【秋】",
+     "startDate": "2026-11-17",
+     "endDate": "2026-11-18",
+     "url": "https://dxpo.jp/real/box/tokyo2/aiagent/",
+     "location": ""
+    },
+    {
+     "name": "第3回 営業・マーケDXPO東京’26【秋】",
+     "startDate": "2026-11-19",
+     "endDate": "2026-11-20",
+     "url": "https://dxpo.jp/real/fox/tokyo2/sales/",
+     "location": ""
+    },
+    {
+     "name": "第1回 【営業・マーケ・DX推進】AIエージェントDXPO東京’26【秋】",
+     "startDate": "2026-11-19",
+     "endDate": "2026-11-20",
+     "url": "https://dxpo.jp/real/fox/tokyo2/aiagent/",
+     "location": ""
+    },
+    {
+     "name": "第2回 IT・情シスDXPO東京’26【秋】",
+     "startDate": "2026-11-19",
+     "endDate": "2026-11-20",
+     "url": "https://dxpo.jp/real/fox/tokyo2/system/",
+     "location": ""
+    }
+   ]
   }
  }
 }
