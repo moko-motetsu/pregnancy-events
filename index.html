@@ -333,6 +333,7 @@
  * ============================================================ */
 const DATA_URL = "events.json";
 const VENUE_SCHEDULE_URL = "venue_schedules.json";
+const HANABI_EVENTS_URL = "hanabi_events.json";
 
 // events.json を file:// で開けない・取得できない場合の最小フォールバック
 const FALLBACK_DATA = {
@@ -500,8 +501,30 @@ async function loadEvents() {
     venueSchedules = {}; // 未取得でもアプリ自体は動く（公式リンクのみ表示にフォールバック）
   }
 
+  try {
+    const hres = await fetch(HANABI_EVENTS_URL, { cache: "no-cache" });
+    if (hres.ok) {
+      const hdata = await hres.json();
+      applyHanabiConfirmations((hdata && hdata.events) || {});
+    }
+  } catch (e) {
+    // 未取得でもevents.json記載の日程のまま動く
+  }
+
   buildCategoryChips();
   renderAll();
+}
+
+// 花火大会の開催日を公式サイトで自動確認できた分だけ、events.json の日程に上書きする。
+// 取得できていないイベントはevents.jsonの手動入力値がそのまま使われる。
+function applyHanabiConfirmations(confirmations) {
+  for (const ev of eventData.events || []) {
+    const c = confirmations[ev.id];
+    if (!c || !c.confirmedStartDate) continue;
+    ev.startDate = c.confirmedStartDate;
+    ev.endDate = c.confirmedEndDate || c.confirmedStartDate;
+    ev.officialConfirmedAt = c.fetchedAt;
+  }
 }
 
 /* ============================================================
@@ -823,7 +846,7 @@ function openModal(id) {
     ${trafficBlock}
     ${dealsBlock}
 
-    <div class="official-note">情報源: ${esc(ev.source || "不明")}${ev.updatedAt ? " ・ 最終更新: " + esc(ev.updatedAt) : ""}。日程・料金は変更される場合があるため、必ず公式サイトでご確認ください。</div>
+    <div class="official-note">情報源: ${esc(ev.source || "不明")}${ev.updatedAt ? " ・ 最終更新: " + esc(ev.updatedAt) : ""}${ev.officialConfirmedAt ? ` ・ 開催日を公式サイトで自動確認済み(${esc(ev.officialConfirmedAt)}時点)` : ""}。日程・料金は変更される場合があるため、必ず公式サイトでご確認ください。</div>
     </div>
   </div>`;
   overlay.style.display = "flex";
