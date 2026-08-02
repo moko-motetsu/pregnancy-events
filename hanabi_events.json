@@ -1,5 +1,5 @@
 {
-  "_comment": "pregnancy-events/scripts/fetch_hanabi_events.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。events.json 側の日程が正になり、ここでの確認が取れたイベントだけ上書きされます。",
-  "updatedAt": "",
-  "events": {}
+ "_comment": "pregnancy-events/scripts/fetch_hanabi_events.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。events.json 側の日程が正になり、ここでの確認が取れたイベントだけ上書きされます。",
+ "updatedAt": "2026-08-02",
+ "events": {}
 }
