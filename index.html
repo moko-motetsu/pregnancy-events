@@ -167,6 +167,8 @@
   .badge.official { background: var(--text-muted); }
   .badge.recommend { background: var(--accent); }
   .badge.season { background: var(--season-badge); }
+  .badge.ended { background: var(--text-muted); }
+  .card.is-ended { opacity: 0.55; }
 
   .empty { text-align: center; color: var(--text-muted); padding: 40px 0; }
 
@@ -307,6 +309,10 @@
       <option value="distance">近い順</option>
       <option value="date">開催日が近い順</option>
     </select>
+    <select id="periodFilter">
+      <option value="upcoming" selected>開催予定のみ</option>
+      <option value="all">終了イベントも含む</option>
+    </select>
   </div>
   <div class="chips" id="categoryChips"></div>
 
@@ -402,7 +408,7 @@ let settings = loadSettings();
 let eventData = { categories: [], events: [] };
 let venueSchedules = {}; // venueId -> { fetchedAt, sourceUrl, events: [...] }（GitHub Actionsが自動生成）
 let usingFallback = false;
-let filter = { q: "", cats: new Set(), price: "all", maxDist: 100, sort: "distance" };
+let filter = { q: "", cats: new Set(), price: "all", maxDist: 100, sort: "distance", period: "upcoming" };
 
 /* ============================================================
  * ユーティリティ
@@ -434,6 +440,10 @@ function currentWeek() {
   const diffDays = Math.floor((edd - todayJST()) / 86400000);
   const week = 40 - Math.floor(diffDays / 7);
   return Math.max(1, Math.min(42, week));
+}
+function todayDateStr() {
+  const d = todayJST();
+  return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}-${String(d.getUTCDate()).padStart(2, "0")}`;
 }
 function trimesterLabel(week) {
   if (week < 14) return "妊娠初期";
@@ -603,6 +613,7 @@ function filteredEvents() {
     if (filter.cats.size > 0 && !filter.cats.has(ev.category)) return false;
     if (filter.price === "free" && ev.price?.type !== "free") return false;
     if (filter.price === "paid" && ev.price?.type !== "paid") return false;
+    if (filter.period === "upcoming" && (ev.endDate || ev.startDate) < todayDateStr()) return false;
     if (q) {
       const hay = [ev.name, ev.venue, ev.description, ev.category, ...(ev.tags || [])].join(" ").toLowerCase();
       if (!hay.includes(q)) return false;
@@ -722,7 +733,8 @@ function renderGrid() {
   grid.innerHTML = list.map(ev => {
     const dist = distanceOf(ev);
     const priceType = ev.price?.type;
-    return `<div class="card" data-id="${esc(ev.id)}">
+    const ended = (ev.endDate || ev.startDate) < todayDateStr();
+    return `<div class="card${ended ? " is-ended" : ""}" data-id="${esc(ev.id)}">
       <div class="thumb">${CATEGORY_EMOJI[ev.category] || "📍"}</div>
       <div class="body">
         <div class="cat">${esc(ev.category)}${dist != null ? " ・ 約" + dist.toFixed(0) + "km" : ""}</div>
@@ -730,6 +742,7 @@ function renderGrid() {
         <div class="meta">${esc(dateRangeLabel(ev))}</div>
         <div class="meta">${esc(ev.venue || "")}</div>
         <div class="badges">
+          ${ended ? '<span class="badge ended">終了</span>' : ""}
           ${priceType === "free" ? '<span class="badge free">無料</span>' : priceType === "paid" ? '<span class="badge paid">有料</span>' : ""}
           ${ev.source ? '<span class="badge official">公式情報</span>' : ""}
           ${isRecommended(ev, week) ? '<span class="badge recommend">今の週数にオススメ</span>' : ""}
@@ -952,6 +965,7 @@ document.getElementById("searchInput").addEventListener("input", e => { filter.q
 document.getElementById("priceFilter").addEventListener("change", e => { filter.price = e.target.value; renderAll(); });
 document.getElementById("distanceFilter").addEventListener("change", e => { filter.maxDist = Number(e.target.value); renderAll(); });
 document.getElementById("sortSelect").addEventListener("change", e => { filter.sort = e.target.value; renderAll(); });
+document.getElementById("periodFilter").addEventListener("change", e => { filter.period = e.target.value; renderAll(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape") { closeModal(); closeSettings(); } });
 
 /* ============================================================
