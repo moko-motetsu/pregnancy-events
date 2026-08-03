@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>マタニティおでかけイベントガイド</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <style>
   :root {
     --surface-1: #fcfcfb;
@@ -151,6 +152,10 @@
   }
   .chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 
+  /* ---- map ---- */
+  #mapContainer { height: 420px; border-radius: 12px; overflow: hidden; margin-bottom: 12px; border: 1px solid var(--border); }
+  .leaflet-popup-content a { color: var(--accent); }
+
   /* ---- grid ---- */
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
   .card {
@@ -181,6 +186,9 @@
   .badge.recommend { background: var(--accent); }
   .badge.season { background: var(--season-badge); }
   .badge.ended { background: var(--text-muted); }
+  .badge.ongoing { background: var(--good); }
+  .badge.soon { background: var(--warn); }
+  .badge.facility { background: var(--page); color: var(--text-secondary); border: 1px solid var(--hairline); }
   .card.is-ended { opacity: 0.55; }
 
   .empty { text-align: center; color: var(--text-muted); padding: 40px 0; }
@@ -345,7 +353,13 @@
       <input type="checkbox" id="bookmarkedOnlyFilter"> ⭐ 気になるのみ
     </label>
   </div>
+  <div class="chips" id="quickDateChips"></div>
   <div class="chips" id="categoryChips"></div>
+
+  <div style="display:flex; justify-content:flex-end; margin-bottom:8px;">
+    <button class="btn small" id="mapToggleBtn">🗺 地図で見る</button>
+  </div>
+  <div id="mapContainer" style="display:none"></div>
 
   <div id="hanabiBanner" class="banner-warn" style="display:none">
     🎆 花火大会は夏の間、関東だけでも毎週99件以上開催されます。ここに載っているのは一部の代表例のみです。近くの全ての花火大会を探すには
@@ -364,6 +378,7 @@
 <div class="modal-overlay" id="modalOverlay" style="display:none"></div>
 <div class="modal-overlay" id="settingsOverlay" style="display:none"></div>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
 /* ============================================================
  * データ層
@@ -454,7 +469,7 @@ let bookmarks = loadBookmarks();
 let eventData = { categories: [], events: [] };
 let venueSchedules = {}; // venueId -> { fetchedAt, sourceUrl, events: [...] }（GitHub Actionsが自動生成）
 let usingFallback = false;
-let filter = { q: "", cats: new Set(), price: "all", maxDist: 100, sort: "distance", period: "upcoming", bookmarkedOnly: false };
+let filter = { q: "", cats: new Set(), price: "all", maxDist: 100, sort: "distance", period: "upcoming", bookmarkedOnly: false, quickDate: null };
 
 /* ============================================================
  * ユーティリティ
@@ -516,6 +531,69 @@ function dateRangeLabel(ev) {
   if (!ev.startDate) return "";
   if (!ev.endDate || ev.endDate === ev.startDate) return ev.startDate;
   return ev.startDate + " 〜 " + ev.endDate;
+}
+
+// "YYYY-MM-DD" 文字列同士の日数差（to - from）。UTC基準で計算するため
+// タイムゾーンやサマータイムの影響を受けない。
+function daysBetweenYmd(fromStr, toStr) {
+  const from = new Date(fromStr + "T00:00:00Z");
+  const to = new Date(toStr + "T00:00:00Z");
+  return Math.round((to - from) / 86400000);
+}
+
+function ymdAddDays(ymd, days) {
+  const [y, m, d] = ymd.split("-").map(Number);
+  const dt = new Date(Date.UTC(y, m - 1, d));
+  dt.setUTCDate(dt.getUTCDate() + days);
+  return `${dt.getUTCFullYear()}-${String(dt.getUTCMonth() + 1).padStart(2, "0")}-${String(dt.getUTCDate()).padStart(2, "0")}`;
+}
+
+// 直近の土日（今日が土日ならその週末）の[土曜日, 日曜日]を返す。
+function upcomingWeekendRange(todayStr) {
+  const [y, m, d] = todayStr.split("-").map(Number);
+  const dow = new Date(Date.UTC(y, m - 1, d)).getUTCDay(); // 0=日 ... 6=土
+  let satOffset;
+  if (dow === 6) satOffset = 0;
+  else if (dow === 0) satOffset = -1;
+  else satOffset = 6 - dow;
+  const sat = ymdAddDays(todayStr, satOffset);
+  return [sat, ymdAddDays(sat, 1)];
+}
+
+// クイック日付フィルタ("today"/"tomorrow"/"weekend")に対応する[開始日, 終了日]を返す。
+function quickDateRange(kind, todayStr) {
+  todayStr = todayStr || todayDateStr();
+  if (kind === "today") return [todayStr, todayStr];
+  if (kind === "tomorrow") { const t = ymdAddDays(todayStr, 1); return [t, t]; }
+  if (kind === "weekend") return upcomingWeekendRange(todayStr);
+  return null;
+}
+
+// イベントの開催状況。"ended"(終了) / "ongoing"(開催中) / "soon"(7日以内に開催) / "upcoming"(それ以降)。
+function eventStatus(ev, todayStr) {
+  todayStr = todayStr || todayDateStr();
+  const start = ev.startDate;
+  if (!start) return "unknown";
+  const end = ev.endDate || start;
+  if (end < todayStr) return "ended";
+  if (start <= todayStr && todayStr <= end) return "ongoing";
+  if (daysBetweenYmd(todayStr, start) <= 7) return "soon";
+  return "upcoming";
+}
+
+// tags のうち、設備アイコンとして表示できる既知のキーワードだけを抽出する。
+const FACILITY_TAG_ICONS = {
+  "ベビーカーOK": "🚼",
+  "屋外": "🌳",
+  "屋内": "🏠",
+  "全天候型": "☔",
+  "授乳室あり": "🍼",
+  "ベビールームあり": "🍼",
+  "雨天決行": "☂️",
+  "荒天中止": "⚠️",
+};
+function facilityTags(ev) {
+  return (ev.tags || []).filter(t => FACILITY_TAG_ICONS[t]);
 }
 
 /* ============================================================
@@ -584,6 +662,44 @@ function distanceOf(ev) {
   return haversineKm(settings.location.lat, settings.location.lng, ev.lat, ev.lng);
 }
 
+/* ============================================================
+ * 天気予報（Open-Meteo、APIキー不要。予報は先の日付まで対応していないため
+ * 直近16日以内の開催日のみ表示する）
+ * ============================================================ */
+const WEATHER_CODE_MAP = {
+  0: ["☀️", "快晴"], 1: ["🌤️", "晴れ"], 2: ["⛅", "晴れ時々曇り"], 3: ["☁️", "曇り"],
+  45: ["🌫️", "霧"], 48: ["🌫️", "霧"],
+  51: ["🌦️", "小雨"], 53: ["🌦️", "小雨"], 55: ["🌧️", "雨"],
+  61: ["🌧️", "雨"], 63: ["🌧️", "雨"], 65: ["🌧️", "大雨"],
+  71: ["🌨️", "雪"], 73: ["🌨️", "雪"], 75: ["❄️", "大雪"],
+  80: ["🌦️", "にわか雨"], 81: ["🌧️", "にわか雨"], 82: ["⛈️", "激しいにわか雨"],
+  95: ["⛈️", "雷雨"], 96: ["⛈️", "雷雨"], 99: ["⛈️", "雷雨"],
+};
+function weatherCodeLabel(code) {
+  const entry = WEATHER_CODE_MAP[code];
+  return entry ? { emoji: entry[0], label: entry[1] } : null;
+}
+function weatherForecastUrl(lat, lng, dateStr) {
+  return `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}` +
+    `&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Asia%2FTokyo` +
+    `&start_date=${dateStr}&end_date=${dateStr}`;
+}
+async function fetchEventWeather(ev) {
+  if (ev.lat == null || ev.lng == null || !ev.startDate) return null;
+  const today = todayDateStr();
+  if (ev.startDate < today || daysBetweenYmd(today, ev.startDate) > 15) return null;
+  try {
+    const res = await fetch(weatherForecastUrl(ev.lat, ev.lng, ev.startDate));
+    if (!res.ok) return null;
+    const data = await res.json();
+    const info = weatherCodeLabel(data?.daily?.weathercode?.[0]);
+    if (!info) return null;
+    return { ...info, tmax: data.daily.temperature_2m_max?.[0], tmin: data.daily.temperature_2m_min?.[0] };
+  } catch (e) {
+    return null;
+  }
+}
+
 function isRecommended(ev, week) {
   const r = ev.pregnancyRecommend;
   if (!r) return false;
@@ -638,8 +754,10 @@ async function loadEvents() {
     // 未取得でもevents.json記載分だけで動く
   }
 
+  buildQuickDateChips();
   buildCategoryChips();
   renderAll();
+  openEventFromHash();
 }
 
 // イベントの開催日を公式サイトで自動確認できた分だけ、events.json の日程に上書きする。
@@ -716,6 +834,22 @@ function renderLocationBar() {
 /* ============================================================
  * フィルタ・並び替え
  * ============================================================ */
+const QUICK_DATE_LABELS = { today: "今日", tomorrow: "明日", weekend: "今週末" };
+function buildQuickDateChips() {
+  const wrap = document.getElementById("quickDateChips");
+  wrap.innerHTML = Object.entries(QUICK_DATE_LABELS)
+    .map(([key, label]) => `<div class="chip ${filter.quickDate === key ? "active" : ""}" data-quick="${key}">${label}</div>`)
+    .join("");
+  wrap.querySelectorAll(".chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      const key = chip.dataset.quick;
+      filter.quickDate = filter.quickDate === key ? null : key;
+      buildQuickDateChips();
+      renderAll();
+    });
+  });
+}
+
 function buildCategoryChips() {
   const wrap = document.getElementById("categoryChips");
   const cats = eventData.categories || [];
@@ -745,6 +879,11 @@ function filteredEvents() {
     if (filter.price === "paid" && ev.price?.type !== "paid") return false;
     if (filter.period === "upcoming" && (ev.endDate || ev.startDate) < todayDateStr()) return false;
     if (filter.bookmarkedOnly && !bookmarks.has(ev.id)) return false;
+    if (filter.quickDate) {
+      const range = quickDateRange(filter.quickDate);
+      const evStart = ev.startDate, evEnd = ev.endDate || ev.startDate;
+      if (!evStart || evEnd < range[0] || evStart > range[1]) return false;
+    }
     if (q) {
       const hay = [ev.name, ev.venue, ev.description, ev.category, ...(ev.tags || [])].join(" ").toLowerCase();
       if (!hay.includes(q)) return false;
@@ -874,14 +1013,14 @@ function renderGrid() {
   grid.innerHTML = list.map(ev => {
     const dist = distanceOf(ev);
     const priceType = ev.price?.type;
-    const ended = (ev.endDate || ev.startDate) < todayDateStr();
+    const status = eventStatus(ev);
     const bookmarked = bookmarks.has(ev.id);
     const fallbackEmoji = CATEGORY_EMOJI[ev.category] || "📍";
     const thumbHtml = ev.image
       ? `<img src="${esc(ev.image)}" alt="" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
          <div class="thumb-fallback" style="display:none">${fallbackEmoji}</div>`
       : fallbackEmoji;
-    return `<div class="card${ended ? " is-ended" : ""}" data-id="${esc(ev.id)}">
+    return `<div class="card${status === "ended" ? " is-ended" : ""}" data-id="${esc(ev.id)}">
       <button class="bookmark-toggle${bookmarked ? " active" : ""}" data-bookmark-id="${esc(ev.id)}" aria-label="気になるに追加">${bookmarked ? "★" : "☆"}</button>
       <div class="thumb">${thumbHtml}</div>
       <div class="body">
@@ -890,11 +1029,14 @@ function renderGrid() {
         <div class="meta">${esc(dateRangeLabel(ev))}</div>
         <div class="meta">${esc(ev.venue || "")}</div>
         <div class="badges">
-          ${ended ? '<span class="badge ended">終了</span>' : ""}
+          ${status === "ended" ? '<span class="badge ended">終了</span>' : ""}
+          ${status === "ongoing" ? '<span class="badge ongoing">開催中</span>' : ""}
+          ${status === "soon" ? `<span class="badge soon">まもなく開催（あと${daysBetweenYmd(todayDateStr(), ev.startDate)}日）</span>` : ""}
           ${priceType === "free" ? '<span class="badge free">無料</span>' : priceType === "paid" ? '<span class="badge paid">有料</span>' : ""}
           ${ev.source ? '<span class="badge official">公式情報</span>' : ""}
           ${isRecommended(ev, week) ? '<span class="badge recommend">今の週数にオススメ</span>' : ""}
           ${isSeasonRecommended(ev) ? `<span class="badge season">${esc(currentSeason())}にオススメ</span>` : ""}
+          ${facilityTags(ev).map(t => `<span class="badge facility">${FACILITY_TAG_ICONS[t]} ${esc(t)}</span>`).join("")}
         </div>
       </div>
     </div>`;
@@ -919,6 +1061,56 @@ function renderAll() {
   renderRecommend();
   renderHanabiBanner();
   renderGrid();
+  if (mapViewActive) renderMap();
+}
+
+/* ============================================================
+ * 地図表示（Leaflet + OpenStreetMap。リスト表示と切り替え可能）
+ * ============================================================ */
+let mapViewActive = false;
+let leafletMap = null;
+let mapMarkersLayer = null;
+
+function toggleMapView() {
+  mapViewActive = !mapViewActive;
+  document.getElementById("mapContainer").style.display = mapViewActive ? "block" : "none";
+  document.getElementById("grid").style.display = mapViewActive ? "none" : "grid";
+  document.getElementById("mapToggleBtn").textContent = mapViewActive ? "📋 リストで見る" : "🗺 地図で見る";
+  if (mapViewActive) {
+    renderMap();
+    // display:none から復帰した直後はLeafletがコンテナサイズを誤認識するため、
+    // レイアウト確定後に再計算させる。
+    if (leafletMap) setTimeout(() => leafletMap.invalidateSize(), 0);
+  }
+}
+
+function renderMap() {
+  const list = sortEvents(filteredEvents()).filter(ev => ev.lat != null && ev.lng != null);
+  if (!leafletMap) {
+    leafletMap = L.map("mapContainer");
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "&copy; OpenStreetMap contributors", maxZoom: 18,
+    }).addTo(leafletMap);
+    mapMarkersLayer = L.layerGroup().addTo(leafletMap);
+  }
+  mapMarkersLayer.clearLayers();
+  if (list.length === 0) {
+    leafletMap.setView([35.6812, 139.7671], 9);
+    return;
+  }
+  const bounds = [];
+  list.forEach(ev => {
+    const marker = L.marker([ev.lat, ev.lng]).addTo(mapMarkersLayer);
+    marker.bindPopup(
+      `<strong>${esc(ev.name)}</strong><br>${esc(dateRangeLabel(ev))}<br><a href="#" data-open-id="${esc(ev.id)}">詳細を見る</a>`
+    );
+    marker.on("popupopen", () => {
+      const link = document.querySelector(`.leaflet-popup a[data-open-id="${CSS.escape(ev.id)}"]`);
+      if (link) link.addEventListener("click", e => { e.preventDefault(); openModal(ev.id); });
+    });
+    bounds.push([ev.lat, ev.lng]);
+  });
+  leafletMap.fitBounds(bounds, { padding: [24, 24], maxZoom: 14 });
 }
 
 /* ============================================================
@@ -929,9 +1121,36 @@ function starString(rating) {
   return "★".repeat(Math.max(0, Math.min(5, full))) + "☆".repeat(5 - Math.max(0, Math.min(5, full)));
 }
 
+// 家族へのシェア。Web Share APIに対応した端末はネイティブ共有シートを、
+// 非対応環境（PCブラウザ等）はLINEへの共有リンクを開く。
+function eventShareUrl(ev) {
+  return location.origin + location.pathname + "#event=" + encodeURIComponent(ev.id);
+}
+function shareEvent(ev) {
+  const url = eventShareUrl(ev);
+  const text = `${ev.name}（${dateRangeLabel(ev)}）`;
+  if (navigator.share) {
+    navigator.share({ title: ev.name, text, url }).catch(() => {});
+  } else {
+    const lineUrl = "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(url) + "&text=" + encodeURIComponent(text);
+    window.open(lineUrl, "_blank", "noopener");
+  }
+}
+
+// URLの #event=id を見て、共有リンク経由のアクセスなら該当イベントのモーダルを自動的に開く。
+function openEventFromHash() {
+  const m = location.hash.match(/#event=([^&]+)/);
+  if (!m) return;
+  const id = decodeURIComponent(m[1]);
+  if ((eventData.events || []).some(e => e.id === id)) openModal(id);
+}
+
+let currentModalEventId = null;
+
 function openModal(id) {
   const ev = (eventData.events || []).find(e => e.id === id);
   if (!ev) return;
+  currentModalEventId = id;
   const week = currentWeek();
   const dist = distanceOf(ev);
   const overlay = document.getElementById("modalOverlay");
@@ -1001,7 +1220,7 @@ function openModal(id) {
     </section>
 
     <section>
-      <div class="row"><span class="k">開催日</span><span class="v">${esc(dateRangeLabel(ev))}${ev.startTime ? "　" + esc(ev.startTime) + (ev.endTime ? "〜" + esc(ev.endTime) : "") : ""}</span></div>
+      <div class="row"><span class="k">開催日</span><span class="v">${esc(dateRangeLabel(ev))}${ev.startTime ? "　" + esc(ev.startTime) + (ev.endTime ? "〜" + esc(ev.endTime) : "") : ""}<span id="modalWeather"></span></span></div>
       <div class="row"><span class="k">会場</span><span class="v">${esc(ev.venue || "")}</span></div>
       <div class="row"><span class="k">住所</span><span class="v">${esc(ev.address || "")}</span></div>
       ${priceRow}
@@ -1009,6 +1228,7 @@ function openModal(id) {
         ${ev.officialUrl ? `<a class="btn small" href="${esc(ev.officialUrl)}" target="_blank" rel="noopener">公式サイト</a>` : ""}
         ${mapUrl ? `<a class="btn small" href="${mapUrl}" target="_blank" rel="noopener">地図を開く</a>` : ""}
         ${ev.startDate ? `<button class="btn small" id="modalIcsBtn">📅 カレンダーに追加</button>` : ""}
+        <button class="btn small" id="modalShareBtn">📤 家族に共有</button>
         ${ev.price?.type === "paid" && ev.price.purchaseUrl ? `<a class="btn small primary" href="${esc(ev.price.purchaseUrl)}" target="_blank" rel="noopener">チケット購入サイトへ</a>` : ""}
       </div>
     </section>
@@ -1031,7 +1251,14 @@ function openModal(id) {
   });
   const icsBtn = document.getElementById("modalIcsBtn");
   if (icsBtn) icsBtn.addEventListener("click", () => downloadIcs(ev));
+  document.getElementById("modalShareBtn").addEventListener("click", () => shareEvent(ev));
   overlay.addEventListener("click", e => { if (e.target === overlay) closeModal(); });
+
+  fetchEventWeather(ev).then(w => {
+    if (!w || currentModalEventId !== id) return; // 別のイベントに切り替わっていたら反映しない
+    const el = document.getElementById("modalWeather");
+    if (el) el.textContent = `　${w.emoji}${w.label}（${Math.round(w.tmin)}〜${Math.round(w.tmax)}℃）`;
+  });
 }
 function closeModal() { document.getElementById("modalOverlay").style.display = "none"; }
 
@@ -1134,6 +1361,7 @@ document.getElementById("distanceFilter").addEventListener("change", e => { filt
 document.getElementById("sortSelect").addEventListener("change", e => { filter.sort = e.target.value; renderAll(); });
 document.getElementById("periodFilter").addEventListener("change", e => { filter.period = e.target.value; renderAll(); });
 document.getElementById("bookmarkedOnlyFilter").addEventListener("change", e => { filter.bookmarkedOnly = e.target.checked; renderAll(); });
+document.getElementById("mapToggleBtn").addEventListener("click", toggleMapView);
 document.addEventListener("keydown", e => { if (e.key === "Escape") { closeModal(); closeSettings(); } });
 
 /* ============================================================
