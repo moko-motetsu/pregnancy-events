@@ -1,11 +1,11 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-08-09",
+ "updatedAt": "2026-08-10",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-08-09",
+   "fetchedAt": "2026-08-10",
    "events": [
     {
      "name": "HEY-SMITH 【GUEST】8/10：10-FEET / and more 8/11：SHANK / and more HEY-SMITH “ALL OVER JAPAN TOUR”",
@@ -76,7 +76,7 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-08-09",
+   "fetchedAt": "2026-08-10",
    "events": [
     {
      "name": "CANNONBALL外伝",
@@ -139,7 +139,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-08-09",
+   "fetchedAt": "2026-08-10",
    "events": [
     {
      "name": "アマチュア無線フェスティバル ハムフェア2026",
