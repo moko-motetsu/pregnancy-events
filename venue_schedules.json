@@ -1,20 +1,12 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-08-10",
+ "updatedAt": "2026-08-11",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-08-10",
+   "fetchedAt": "2026-08-11",
    "events": [
-    {
-     "name": "HEY-SMITH 【GUEST】8/10：10-FEET / and more 8/11：SHANK / and more HEY-SMITH “ALL OVER JAPAN TOUR”",
-     "startDate": "2026-08-10",
-     "endDate": "2026-08-11",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/4434/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "めざましWANGANフェス～人気バラエティと夏の最強コラボ～",
      "startDate": "2026-08-13",
@@ -70,22 +62,22 @@
      "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5409/",
      "location": "",
      "image": ""
+    },
+    {
+     "name": "AVEX PRESENTS DANCE CLUB CHAMPIONSHIP 第14回全国高等学校ダンス部選手権",
+     "startDate": "2026-08-26",
+     "endDate": "2026-08-26",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5404/",
+     "location": "",
+     "image": ""
     }
    ]
   },
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-08-10",
+   "fetchedAt": "2026-08-11",
    "events": [
-    {
-     "name": "CANNONBALL外伝",
-     "startDate": "2026-08-09",
-     "endDate": "2026-08-10",
-     "url": "https://ariake-arena.tokyo/event/",
-     "location": "",
-     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdXdCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f7ceec5876fa844e411453b0e796b62eec400ada/%E5%86%8D_%E5%B7%AE%E3%81%97%E6%9B%BF%E3%81%88_Cannonball_%E3%82%AD%E3%83%BC%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB_%E9%BB%92%E3%83%90%E3%83%83%E3%82%AF.jpg"
-    },
     {
      "name": "三井不動産カップ 2026 (東京大会)  女子日本代表国際試合",
      "startDate": "2026-08-13",
@@ -139,7 +131,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-08-10",
+   "fetchedAt": "2026-08-11",
    "events": [
     {
      "name": "アマチュア無線フェスティバル ハムフェア2026",
