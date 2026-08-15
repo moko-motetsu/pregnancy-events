@@ -1,11 +1,11 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-08-14",
+ "updatedAt": "2026-08-15",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-08-14",
+   "fetchedAt": "2026-08-15",
    "events": [
     {
      "name": "うらたぬき Uratanuki Birthday Live 2026 -Black Rose-",
@@ -76,16 +76,8 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-08-14",
+   "fetchedAt": "2026-08-15",
    "events": [
-    {
-     "name": "三井不動産カップ 2026 (東京大会)  女子日本代表国際試合",
-     "startDate": "2026-08-13",
-     "endDate": "2026-08-14",
-     "url": "https://ariake-arena.tokyo/event/",
-     "location": "",
-     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdk1CIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5e2095fdb05a546b95157e461172a2cdba2bc30d/0813-14%E4%B8%89%E4%BA%95%E4%B8%8D%E5%8B%95%E7%94%A3%E3%82%AB%E3%83%83%E3%83%97%202026.png"
-    },
     {
      "name": "買取大吉カップ 2026 (東京大会)  男子日本代表国際試合",
      "startDate": "2026-08-15",
@@ -131,7 +123,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-08-14",
+   "fetchedAt": "2026-08-15",
    "events": [
     {
      "name": "アマチュア無線フェスティバル ハムフェア2026",
