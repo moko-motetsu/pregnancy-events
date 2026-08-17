@@ -1,20 +1,12 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-08-16",
+ "updatedAt": "2026-08-17",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-08-16",
+   "fetchedAt": "2026-08-17",
    "events": [
-    {
-     "name": "DOH KYUNG SOO 2026 DOH KYUNG SOO JAPAN FANMEETING ‘This station is SUMMER’",
-     "startDate": "2026-08-16",
-     "endDate": "2026-08-16",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5265/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "CNBLUE 2026 CNBLUE LIVE ‘3LOGY’ IN JAPAN 追加公演",
      "startDate": "2026-08-17",
@@ -70,22 +62,22 @@
      "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5078/",
      "location": "",
      "image": ""
+    },
+    {
+     "name": "Yu-Gi-Oh! WORLD CHAMPIONSHIP 2026",
+     "startDate": "2026-08-30",
+     "endDate": "2026-08-30",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5218/",
+     "location": "",
+     "image": ""
     }
    ]
   },
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-08-16",
+   "fetchedAt": "2026-08-17",
    "events": [
-    {
-     "name": "SoftBank CUP 2026 (東京大会)  男子日本代表国際試合",
-     "startDate": "2026-08-16",
-     "endDate": "2026-08-16",
-     "url": "https://ariake-arena.tokyo/event/",
-     "location": "",
-     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdlVCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a761673a9dae20393112d02114efb04d4d117de7/0816SoftBank%20CUP%202026.png"
-    },
     {
      "name": "KEY TO LIT",
      "startDate": "2026-08-20",
@@ -115,7 +107,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-08-16",
+   "fetchedAt": "2026-08-17",
    "events": [
     {
      "name": "アマチュア無線フェスティバル ハムフェア2026",
@@ -124,6 +116,22 @@
      "url": "https://hamfair.jp/",
      "location": "",
      "image": "https://www.bigsight.jp/visitor/event/img/thumbnail/25028301J.jpg"
+    },
+    {
+     "name": "Maker Faire Tokyo 2026",
+     "startDate": "2026-09-05",
+     "endDate": "2026-09-06",
+     "url": "https://makezine.jp/event/mft2026/",
+     "location": "",
+     "image": "https://www.bigsight.jp/visitor/event/img/thumbnail/25025801J.jpg"
+    },
+    {
+     "name": "エンディング産業展2026",
+     "startDate": "2026-09-10",
+     "endDate": "2026-09-11",
+     "url": "https://www.tokyohakuzen.co.jp/endex-exhibition/",
+     "location": "",
+     "image": "https://www.bigsight.jp/visitor/event/img/thumbnail/26023401J.jpg"
     },
     {
      "name": "Japan Bike Show 2026",
@@ -162,22 +170,6 @@
      "startDate": "2026-11-19",
      "endDate": "2026-11-20",
      "url": "https://dxpo.jp/real/fox/tokyo2/sales/",
-     "location": "",
-     "image": ""
-    },
-    {
-     "name": "第1回 【営業・マーケ・DX推進】AIエージェントDXPO東京’26【秋】",
-     "startDate": "2026-11-19",
-     "endDate": "2026-11-20",
-     "url": "https://dxpo.jp/real/fox/tokyo2/aiagent/",
-     "location": "",
-     "image": ""
-    },
-    {
-     "name": "第2回 IT・情シスDXPO東京’26【秋】",
-     "startDate": "2026-11-19",
-     "endDate": "2026-11-20",
-     "url": "https://dxpo.jp/real/fox/tokyo2/system/",
      "location": "",
      "image": ""
     }
