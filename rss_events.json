@@ -1,4 +1,49 @@
 {
- "updatedAt": "2026-08-17",
- "events": []
+ "updatedAt": "2026-08-18",
+ "events": [
+  {
+   "id": "toyosu-tokyo-397025971",
+   "name": "お台場で噴水とドローンの特別ショー！水・光・音の東京アクアシンフォニーが2日間開催へ",
+   "category": "音楽・ライブ",
+   "description": "2026年8月29日（土）・30日（日）の2日間、お台場海浜公園にて噴水「東京アクアシンフォニー」とドローンが連動したショーが開催されます！ 各日2回実施。実施時間は19:00～19:10と、21:00～21:10です。",
+   "venue": "お台場海浜公園",
+   "address": "",
+   "lat": 35.6320348,
+   "lng": 139.7774865,
+   "startDate": "2026-08-29",
+   "endDate": "2026-08-30",
+   "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/toyosu-20260818-odaibadrone4.jpg",
+   "officialUrl": "https://toyosu.tokyo/event/tokyoaquasymphony-drone-show-summer-2026-info/",
+   "source": "とよすと（豊洲エリア地域情報サイト）",
+   "updatedAt": "2026-08-18"
+  },
+  {
+   "id": "toyosu-tokyo-528300120",
+   "name": "豊洲公園で『マダガスカル』を無料上映！「TOYOSU MOVIE NIGHT 2026」、ワークショップやドリンク配布も",
+   "category": "体験・ワークショップ",
+   "description": "2026年8月22日（土）、豊洲公園を会場に「TOYOSU MOVIE NIGHT 2026」が開催となります！ 夏の野外上映会として今年で3回目を迎える今回は、人気アニメーション映画『マダガスカル』を上映。 レジャーシ",
+   "venue": "豊洲・有明・お台場エリア",
+   "address": "",
+   "startDate": "2026-08-22",
+   "endDate": "2026-08-22",
+   "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/toyosu-20250823-toyosupark-11.jpg",
+   "officialUrl": "https://toyosu.tokyo/event/toyosu-movie-night-2026-info/",
+   "source": "とよすと（豊洲エリア地域情報サイト）",
+   "updatedAt": "2026-08-18"
+  },
+  {
+   "id": "toyosu-tokyo-1951553559",
+   "name": "誰でも参加OK！芝浦工業大学＆URが「インテリアデザイン教室」を開催",
+   "category": "体験・ワークショップ",
+   "description": "芝浦工業大学とUR都市機構は「インテリアデザイン教室 〜あなたならどんな部屋にする？〜」を2026年8月18日（火）と8月27日（木）に開催します！ 先生によるミニ講座で暮らしに関するレクチャーを受けつつ、家具の模型を使",
+   "venue": "豊洲・有明・お台場エリア",
+   "address": "",
+   "startDate": "2026-08-18",
+   "endDate": "2026-08-18",
+   "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/th_2026-08-10-9.49.12.jpg",
+   "officialUrl": "https://toyosu.tokyo/event/interior-design-workshop-info/",
+   "source": "とよすと（豊洲エリア地域情報サイト）",
+   "updatedAt": "2026-08-18"
+  }
+ ]
 }
