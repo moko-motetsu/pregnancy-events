@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-08-22",
+ "updatedAt": "2026-08-23",
  "events": [
   {
    "id": "toyosu-tokyo-1921082503",
@@ -13,7 +13,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/th_2026-08-21-11.24.33.jpg",
    "officialUrl": "https://toyosu.tokyo/event/kodomoshokuikuasobiichi-summer-2026/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-08-22"
+   "updatedAt": "2026-08-23"
   },
   {
    "id": "toyosu-tokyo-967780281",
@@ -27,7 +27,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/th_2026-08-21-10.09.43.jpg",
    "officialUrl": "https://toyosu.tokyo/event/muji-ur-bosai-event-2026/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-08-22"
+   "updatedAt": "2026-08-23"
   },
   {
    "id": "toyosu-tokyo-397025971",
@@ -43,21 +43,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/toyosu-20260818-odaibadrone4.jpg",
    "officialUrl": "https://toyosu.tokyo/event/tokyoaquasymphony-drone-show-summer-2026-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-08-22"
-  },
-  {
-   "id": "toyosu-tokyo-528300120",
-   "name": "豊洲公園で『マダガスカル』を無料上映！「TOYOSU MOVIE NIGHT 2026」、ワークショップやドリンク配布も",
-   "category": "体験・ワークショップ",
-   "description": "2026年8月22日（土）、豊洲公園を会場に「TOYOSU MOVIE NIGHT 2026」が開催となります！ 【追記】22日（土）は雨天予報のため、開催は翌日の8月23日（日）に延期となりました。 夏の野外上映会とし",
-   "venue": "豊洲・有明・お台場エリア",
-   "address": "",
-   "startDate": "2026-08-22",
-   "endDate": "2026-08-22",
-   "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/toyosu-20250823-toyosupark-11.jpg",
-   "officialUrl": "https://toyosu.tokyo/event/toyosu-movie-night-2026-info/",
-   "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-08-22"
+   "updatedAt": "2026-08-23"
   }
  ]
 }
