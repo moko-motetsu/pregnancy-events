@@ -1,6 +1,6 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_event_confirmations.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。events.json 側の日程が正になり、ここでの確認が取れたイベントだけ上書きされます。",
- "updatedAt": "2026-08-22",
+ "updatedAt": "2026-08-23",
  "events": {
   "okutama-noryo-hanabi-2026": {
    "name": "第49回 奥多摩納涼花火大会",
@@ -12,7 +12,7 @@
   "ninaru-festa-suitengu-2026": {
    "name": "ninaruフェスタ マタニティ＆ベビー（水天宮）",
    "sourceUrl": "https://festa.ninaru-app.com/suitengu/202609",
-   "fetchedAt": "2026-08-22",
+   "fetchedAt": "2026-08-23",
    "confirmedStartDate": "2026-09-21",
    "confirmedEndDate": "2026-09-21"
   }
