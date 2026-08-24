@@ -1,20 +1,12 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-08-23",
+ "updatedAt": "2026-08-24",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-08-23",
+   "fetchedAt": "2026-08-24",
    "events": [
-    {
-     "name": "【1部】出演者：高野正成（きしたかの）、吉住、ぐんぴぃ（春とヒコーキ）、Den（リンダカラー∞） ほか 【2部】MC：川島明(麒麟) 出演者：村上（マヂカルラブリー）、佐久間宣行、松丸亮吾、サーヤ（ラランド）、松田好花、蓮見翔（ダウ90000）ほか 【1部】辞書で呑むPREライブ ～いとめろ有明！一か八か サバイバル飲み会～ 【2部】川島明の辞書で呑むTHEライブ４～たぎれ有明！たっぷり7000人で呑みましょう～",
-     "startDate": "2026-08-23",
-     "endDate": "2026-08-23",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5318/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "Private",
      "startDate": "2026-08-24",
@@ -60,16 +52,8 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-08-23",
+   "fetchedAt": "2026-08-24",
    "events": [
-    {
-     "name": "KEY TO LIT",
-     "startDate": "2026-08-20",
-     "endDate": "2026-08-23",
-     "url": "https://ariake-arena.tokyo/event/",
-     "location": "",
-     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdG9CIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a5030ac620cde107b5d6fe2368b760586dcf9b53/%E7%94%BB%E5%83%8F2.png"
-    },
     {
      "name": "2026バレーボール男子日本代表国際親善試合（東京大会）",
      "startDate": "2026-08-25",
@@ -91,7 +75,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-08-23",
+   "fetchedAt": "2026-08-24",
    "events": [
     {
      "name": "アマチュア無線フェスティバル ハムフェア2026",
