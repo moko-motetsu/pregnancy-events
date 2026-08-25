@@ -1,20 +1,12 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-08-24",
+ "updatedAt": "2026-08-25",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-08-24",
+   "fetchedAt": "2026-08-25",
    "events": [
-    {
-     "name": "Private",
-     "startDate": "2026-08-24",
-     "endDate": "2026-08-24",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5409/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "AVEX PRESENTS DANCE CLUB CHAMPIONSHIP 第14回全国高等学校ダンス部選手権",
      "startDate": "2026-08-26",
@@ -52,7 +44,7 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-08-24",
+   "fetchedAt": "2026-08-25",
    "events": [
     {
      "name": "2026バレーボール男子日本代表国際親善試合（東京大会）",
@@ -75,7 +67,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-08-24",
+   "fetchedAt": "2026-08-25",
    "events": [
     {
      "name": "アマチュア無線フェスティバル ハムフェア2026",
