@@ -1372,7 +1372,7 @@ document.addEventListener("keydown", e => { if (e.key === "Escape") { closeModal
  * 「不特定多数への公開」を避けるための軽い障壁という位置づけ。
  * ============================================================ */
 const GATE_KEY = "pregnancyEventsGuide_gate_v1";
-const GATE_HASH = "67983208cf988896fa120e04108e33e7cea107ec6325754250532d351cc57cfe";
+const GATE_HASH = "6628a1003bf7593ec4eccdd0aec12ead671fd43cdb24b66da42b77860b0b4b4a";
 
 async function sha256Hex(text) {
   const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
