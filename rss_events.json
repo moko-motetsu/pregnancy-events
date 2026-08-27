@@ -1,6 +1,20 @@
 {
- "updatedAt": "2026-08-25",
+ "updatedAt": "2026-08-27",
  "events": [
+  {
+   "id": "toyosu-tokyo-780505391",
+   "name": "盆踊りや子ども神輿も！「有明まつり2026」が9月12日開催へ",
+   "category": "祭り・花火",
+   "description": "有明街づくりプロジェクトは「有明まつり2026」を今年も開催します！ 開催日は2026年9月12日（土）で、時間は14:00〜20:30。 会場は有明ガーデンの屋外、スポーツエンタテインメント広場です。 盆踊りをはじめ、",
+   "venue": "豊洲・有明・お台場エリア",
+   "address": "",
+   "startDate": "2026-09-12",
+   "endDate": "2026-09-12",
+   "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/xn_toyosu-0909-ariakematsuri-15.webp",
+   "officialUrl": "https://toyosu.tokyo/event/ariake-fes-2026-info/",
+   "source": "とよすと（豊洲エリア地域情報サイト）",
+   "updatedAt": "2026-08-27"
+  },
   {
    "id": "toyosu-tokyo-1921082503",
    "name": "お魚を食べたり、自分だけの竹箸作りも！「コドモ食育あそび市」、豊洲千客万来で開催！夕方からは盆踊り",
@@ -13,7 +27,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/th_2026-08-21-11.24.33.jpg",
    "officialUrl": "https://toyosu.tokyo/event/kodomoshokuikuasobiichi-summer-2026/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-08-25"
+   "updatedAt": "2026-08-27"
   },
   {
    "id": "toyosu-tokyo-967780281",
@@ -27,7 +41,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/th_2026-08-21-10.09.43.jpg",
    "officialUrl": "https://toyosu.tokyo/event/muji-ur-bosai-event-2026/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-08-25"
+   "updatedAt": "2026-08-27"
   },
   {
    "id": "toyosu-tokyo-397025971",
@@ -43,7 +57,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/toyosu-20260818-odaibadrone4.jpg",
    "officialUrl": "https://toyosu.tokyo/event/tokyoaquasymphony-drone-show-summer-2026-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-08-25"
+   "updatedAt": "2026-08-27"
   }
  ]
 }
