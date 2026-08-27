@@ -1,20 +1,12 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-08-25",
+ "updatedAt": "2026-08-27",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-08-25",
+   "fetchedAt": "2026-08-27",
    "events": [
-    {
-     "name": "AVEX PRESENTS DANCE CLUB CHAMPIONSHIP 第14回全国高等学校ダンス部選手権",
-     "startDate": "2026-08-26",
-     "endDate": "2026-08-26",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5404/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "水谷千重子 水谷千重子の宴ジョインコンサート2026",
      "startDate": "2026-08-27",
@@ -44,16 +36,8 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-08-25",
+   "fetchedAt": "2026-08-27",
    "events": [
-    {
-     "name": "2026バレーボール男子日本代表国際親善試合（東京大会）",
-     "startDate": "2026-08-25",
-     "endDate": "2026-08-25",
-     "url": "https://ariake-arena.tokyo/event/",
-     "location": "",
-     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdEVCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b84e7f11436542722717a494e4540b0f0ed7f96d/no-image-banner.jpg"
-    },
     {
      "name": "Roselia",
      "startDate": "2026-08-29",
@@ -67,7 +51,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-08-25",
+   "fetchedAt": "2026-08-27",
    "events": [
     {
      "name": "アマチュア無線フェスティバル ハムフェア2026",
