@@ -1,11 +1,11 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-08-29",
+ "updatedAt": "2026-08-30",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-08-29",
+   "fetchedAt": "2026-08-30",
    "events": [
     {
      "name": "Yu-Gi-Oh! WORLD CHAMPIONSHIP 2026",
@@ -28,7 +28,7 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-08-29",
+   "fetchedAt": "2026-08-30",
    "events": [
     {
      "name": "Roselia",
@@ -43,16 +43,8 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-08-29",
+   "fetchedAt": "2026-08-30",
    "events": [
-    {
-     "name": "アマチュア無線フェスティバル ハムフェア2026",
-     "startDate": "2026-08-29",
-     "endDate": "2026-08-30",
-     "url": "https://hamfair.jp/",
-     "location": "",
-     "image": "https://www.bigsight.jp/visitor/event/img/thumbnail/25028301J.jpg"
-    },
     {
      "name": "Maker Faire Tokyo 2026",
      "startDate": "2026-09-05",
@@ -106,6 +98,14 @@
      "startDate": "2026-11-19",
      "endDate": "2026-11-20",
      "url": "https://dxpo.jp/real/fox/tokyo2/sales/",
+     "location": "",
+     "image": ""
+    },
+    {
+     "name": "第1回 【営業・マーケ・DX推進】AIエージェントDXPO東京’26【秋】",
+     "startDate": "2026-11-19",
+     "endDate": "2026-11-20",
+     "url": "https://dxpo.jp/real/fox/tokyo2/aiagent/",
      "location": "",
      "image": ""
     }
