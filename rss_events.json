@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-08-30",
+ "updatedAt": "2026-09-01",
  "events": [
   {
    "id": "toyosu-tokyo-780505391",
@@ -13,37 +13,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/xn_toyosu-0909-ariakematsuri-15.webp",
    "officialUrl": "https://toyosu.tokyo/event/ariake-fes-2026-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-08-30"
-  },
-  {
-   "id": "toyosu-tokyo-967780281",
-   "name": "防災備蓄プレゼントも！無印良品の「防災イベント」が有明で開催へ",
-   "category": "体験・ワークショップ",
-   "description": "2026年8月30日（日）、無印良品とURの防災イベント「いつもの暮らし、もしもの備え 〜意外と知らないもしものこと。〜」が開催されます！ 時間は11:00〜16:00。 場所は「無印良品 東京有明」の2階、MUJI×U",
-   "venue": "豊洲・有明・お台場エリア",
-   "address": "",
-   "startDate": "2026-08-30",
-   "endDate": "2026-08-30",
-   "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/th_2026-08-21-10.09.43.jpg",
-   "officialUrl": "https://toyosu.tokyo/event/muji-ur-bosai-event-2026/",
-   "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-08-30"
-  },
-  {
-   "id": "toyosu-tokyo-397025971",
-   "name": "お台場で噴水とドローンの特別ショー！水・光・音の東京アクアシンフォニーが2日間開催へ",
-   "category": "音楽・ライブ",
-   "description": "2026年8月29日（土）・30日（日）の2日間、お台場海浜公園にて噴水「東京アクアシンフォニー」とドローンが連動したショーが開催されます！ 各日2回実施。実施時間は19:00～19:10と、21:00～21:10です。",
-   "venue": "お台場海浜公園",
-   "address": "",
-   "lat": 35.6320348,
-   "lng": 139.7774865,
-   "startDate": "2026-08-29",
-   "endDate": "2026-08-30",
-   "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/toyosu-20260818-odaibadrone4.jpg",
-   "officialUrl": "https://toyosu.tokyo/event/tokyoaquasymphony-drone-show-summer-2026-info/",
-   "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-08-30"
+   "updatedAt": "2026-09-01"
   }
  ]
 }
