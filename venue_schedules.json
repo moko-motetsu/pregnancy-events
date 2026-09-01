@@ -1,25 +1,73 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-08-30",
+ "updatedAt": "2026-09-01",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-08-30",
+   "fetchedAt": "2026-09-01",
    "events": [
     {
-     "name": "Yu-Gi-Oh! WORLD CHAMPIONSHIP 2026",
-     "startDate": "2026-08-30",
-     "endDate": "2026-08-30",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5218/",
+     "name": "Private",
+     "startDate": "2026-09-03",
+     "endDate": "2026-09-03",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5565/",
      "location": "",
      "image": ""
     },
     {
-     "name": "ELECTRIC CALLBOY TANZNEID WORLD TOUR JAPAN",
-     "startDate": "2026-08-31",
-     "endDate": "2026-08-31",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5093/",
+     "name": "ano ano Hall Tour 2026 DUAL DINER 追加公演",
+     "startDate": "2026-09-04",
+     "endDate": "2026-09-04",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5066/",
+     "location": "",
+     "image": ""
+    },
+    {
+     "name": "聖飢魔Ⅱ 聖飢魔Ⅱ GREAT BLACK MASS TOUR「SEASONⅡ」",
+     "startDate": "2026-09-05",
+     "endDate": "2026-09-05",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/4178/",
+     "location": "",
+     "image": ""
+    },
+    {
+     "name": "黒夢 ザ パーフェクト デイズ トゥ ダイ",
+     "startDate": "2026-09-06",
+     "endDate": "2026-09-06",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/4270/",
+     "location": "",
+     "image": ""
+    },
+    {
+     "name": "9月11日(金) : Juice=Juice／NiziU／FRUITS ZIPPER 9月12日(土) : INI／IMP.／GENERATIONS 9月13日(日) : BUDDiiS／MAZZEL／LIL LEAGUE CDTVライブ！ライブ！秋の大感謝祭2026",
+     "startDate": "2026-09-11",
+     "endDate": "2026-09-13",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5397/",
+     "location": "",
+     "image": ""
+    },
+    {
+     "name": "莉犬（すとぷり）、てるとくん（騎士X - Knight X - ）、ぷりっつ（AMPTAKxCOLORS）、メルト・ダ・テンシ（めておら - Meteorites - ）、やなと（すにすて-SneakerStep） 莉犬のSTPRadio! Presents STPR文化祭",
+     "startDate": "2026-09-20",
+     "endDate": "2026-09-20",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5168/",
+     "location": "",
+     "image": ""
+    },
+    {
+     "name": "JUNG HAEIN 2026 JUNG HAEIN FANMEETING IN JAPAN～HAEINISM～of the HAEINESS, by the HAEINESS, for the HAEINESS",
+     "startDate": "2026-09-22",
+     "endDate": "2026-09-22",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5360/",
+     "location": "",
+     "image": ""
+    },
+    {
+     "name": "kanekoayano World Tour 2026",
+     "startDate": "2026-09-25",
+     "endDate": "2026-09-25",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/4474/",
      "location": "",
      "image": ""
     }
@@ -28,22 +76,70 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-08-30",
+   "fetchedAt": "2026-09-01",
    "events": [
     {
-     "name": "Roselia",
-     "startDate": "2026-08-29",
-     "endDate": "2026-08-30",
+     "name": "JOURNEY",
+     "startDate": "2026-09-01",
+     "endDate": "2026-09-01",
      "url": "https://ariake-arena.tokyo/event/",
      "location": "",
-     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdHNCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--444541ee370bff8e70e1935cce0ef975de45f7f4/Web%E7%94%A8_Roselia_%E3%82%AD%E3%83%BC%E3%83%B4%E3%82%A3%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB.jpg"
+     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdmtCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7ba3a1410d2ec0fa5dffe628b9e6e4ebf3cab5af/Web%E7%94%A8_JOURNEY-1080-x-1350.jpg"
+    },
+    {
+     "name": "TREASURE",
+     "startDate": "2026-09-05",
+     "endDate": "2026-09-06",
+     "url": "https://ariake-arena.tokyo/event/",
+     "location": "",
+     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdGtCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--adcc45c0fd759edd5af2a165a539363c2b0b01e7/Web%E7%94%A8%5BTR%5DTHE-STAGE-2026-%5BNEW-ERA-LIVE%5D_Web.jpg"
+    },
+    {
+     "name": "NEWS",
+     "startDate": "2026-09-11",
+     "endDate": "2026-09-12",
+     "url": "https://ariake-arena.tokyo/event/",
+     "location": "",
+     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdDhCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--637b71f4db94b4b70902a2a0279ebc8663a9adff/2_NEWS%20LIVE%20TOUR%202026_LOGO.png"
+    },
+    {
+     "name": "HIROMITSU KITAYAMA",
+     "startDate": "2026-09-19",
+     "endDate": "2026-09-20",
+     "url": "https://ariake-arena.tokyo/event/",
+     "location": "",
+     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdGdCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--369babc8586e2236287efb8ddf9b9178b677de6f/Web%E7%94%A8_%E3%83%AD%E3%82%B4%E7%94%BB%E5%83%8F2.jpg"
+    },
+    {
+     "name": "スピッツ, Teenage Fanclub, 羊文学,  Ride",
+     "startDate": "2026-09-22",
+     "endDate": "2026-09-22",
+     "url": "https://ariake-arena.tokyo/event/",
+     "location": "",
+     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdHdCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2de73409e9d51a0161aee1acbd0272c4f3cdfab5/%E7%94%BB%E5%83%8F.jpg"
+    },
+    {
+     "name": "ねぽっくす！ 〜ねぽらぼ×秘密結社holoX〜",
+     "startDate": "2026-09-26",
+     "endDate": "2026-09-27",
+     "url": "https://ariake-arena.tokyo/event/",
+     "location": "",
+     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdkVCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--70b868aa193c91cb1e77bee4e818dfb17a21fa17/Web%E7%94%A8_%E5%86%8D%E5%B7%AE%E3%81%97%E6%9B%BF%E3%81%88_%E3%81%AD%E3%81%BB%E3%82%9A%E3%81%A3%E3%81%8F%E3%81%99_%E3%82%AD%E3%83%BC%E3%83%92%E3%82%99%E3%82%B7%E3%82%99%E3%83%A5%E3%82%A2%E3%83%AB%EF%BC%886_17%E6%9B%B4%E6%96%B0%EF%BC%89.jpg"
+    },
+    {
+     "name": "CUTIE STREET",
+     "startDate": "2026-09-29",
+     "endDate": "2026-09-30",
+     "url": "https://ariake-arena.tokyo/event/",
+     "location": "",
+     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdWdCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--57028f52a60989c2d20dae22acca09d1bf057f41/Web%E7%94%A8_%E5%B7%AE%E3%81%97%E6%9B%BF%E3%81%88_CUTIE-STREET_artistphoto.jpg"
     }
    ]
   },
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-08-30",
+   "fetchedAt": "2026-09-01",
    "events": [
     {
      "name": "Maker Faire Tokyo 2026",
