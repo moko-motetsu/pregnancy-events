@@ -1,6 +1,20 @@
 {
- "updatedAt": "2026-09-01",
+ "updatedAt": "2026-09-02",
  "events": [
+  {
+   "id": "toyosu-tokyo-560287052",
+   "name": "豊洲でワンちゃんと一緒に水遊び！「HOBIE DOG DAY」が東電堀で開催です",
+   "category": "体験・ワークショップ",
+   "description": "ワンちゃんと一緒に水遊び！「HOBIE DOG DAY 2026 Summer」が2026年9月19日（土）に開催となります。 場所は東電堀（豊洲ぐるり公園乗船場）。 アメリカ西海岸発祥のHOBIEは日本では珍しい足漕ぎ",
+   "venue": "豊洲・有明・お台場エリア",
+   "address": "",
+   "startDate": "2026-09-19",
+   "endDate": "2026-09-19",
+   "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/20260606_162522-1024x768-1.webp",
+   "officialUrl": "https://toyosu.tokyo/event/hobie-dog-day-2026-summer-info/",
+   "source": "とよすと（豊洲エリア地域情報サイト）",
+   "updatedAt": "2026-09-02"
+  },
   {
    "id": "toyosu-tokyo-780505391",
    "name": "盆踊りや子ども神輿も！「有明まつり2026」が9月12日開催へ",
@@ -13,7 +27,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/xn_toyosu-0909-ariakematsuri-15.webp",
    "officialUrl": "https://toyosu.tokyo/event/ariake-fes-2026-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-09-01"
+   "updatedAt": "2026-09-02"
   }
  ]
 }
