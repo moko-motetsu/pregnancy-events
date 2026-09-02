@@ -1,11 +1,11 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-09-01",
+ "updatedAt": "2026-09-02",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-09-01",
+   "fetchedAt": "2026-09-02",
    "events": [
     {
      "name": "Private",
@@ -76,16 +76,8 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-09-01",
+   "fetchedAt": "2026-09-02",
    "events": [
-    {
-     "name": "JOURNEY",
-     "startDate": "2026-09-01",
-     "endDate": "2026-09-01",
-     "url": "https://ariake-arena.tokyo/event/",
-     "location": "",
-     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdmtCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7ba3a1410d2ec0fa5dffe628b9e6e4ebf3cab5af/Web%E7%94%A8_JOURNEY-1080-x-1350.jpg"
-    },
     {
      "name": "TREASURE",
      "startDate": "2026-09-05",
@@ -139,7 +131,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-09-01",
+   "fetchedAt": "2026-09-02",
    "events": [
     {
      "name": "Maker Faire Tokyo 2026",
