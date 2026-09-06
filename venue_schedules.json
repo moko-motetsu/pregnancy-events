@@ -1,20 +1,12 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-09-05",
+ "updatedAt": "2026-09-06",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-09-05",
+   "fetchedAt": "2026-09-06",
    "events": [
-    {
-     "name": "聖飢魔Ⅱ 聖飢魔Ⅱ GREAT BLACK MASS TOUR「SEASONⅡ」",
-     "startDate": "2026-09-05",
-     "endDate": "2026-09-05",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/4178/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "黒夢 ザ パーフェクト デイズ トゥ ダイ",
      "startDate": "2026-09-06",
@@ -68,7 +60,7 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-09-05",
+   "fetchedAt": "2026-09-06",
    "events": [
     {
      "name": "TREASURE",
@@ -123,16 +115,8 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-09-05",
+   "fetchedAt": "2026-09-06",
    "events": [
-    {
-     "name": "Maker Faire Tokyo 2026",
-     "startDate": "2026-09-05",
-     "endDate": "2026-09-06",
-     "url": "https://makezine.jp/event/mft2026/",
-     "location": "",
-     "image": "https://www.bigsight.jp/visitor/event/img/thumbnail/25025801J.jpg"
-    },
     {
      "name": "エンディング産業展2026",
      "startDate": "2026-09-10",
@@ -188,6 +172,14 @@
      "url": "https://dxpo.jp/real/fox/tokyo2/aiagent/",
      "location": "",
      "image": "https://www.bigsight.jp/visitor/event/img/thumbnail/26010604J.jpg"
+    },
+    {
+     "name": "第2回 IT・情シスDXPO東京’26【秋】",
+     "startDate": "2026-11-19",
+     "endDate": "2026-11-20",
+     "url": "https://dxpo.jp/real/fox/tokyo2/system/",
+     "location": "",
+     "image": "https://www.bigsight.jp/visitor/event/img/thumbnail/26010605J.jpg"
     }
    ]
   }
