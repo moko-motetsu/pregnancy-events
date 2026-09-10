@@ -1,11 +1,11 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-09-09",
+ "updatedAt": "2026-09-10",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-09-09",
+   "fetchedAt": "2026-09-10",
    "events": [
     {
      "name": "9月11日(金) : Juice=Juice／NiziU／FRUITS ZIPPER 9月12日(土) : INI／IMP.／GENERATIONS 9月13日(日) : BUDDiiS／MAZZEL／LIL LEAGUE CDTVライブ！ライブ！秋の大感謝祭2026",
@@ -68,7 +68,7 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-09-09",
+   "fetchedAt": "2026-09-10",
    "events": [
     {
      "name": "NEWS",
@@ -115,7 +115,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-09-09",
+   "fetchedAt": "2026-09-10",
    "events": [
     {
      "name": "エンディング産業展2026",
