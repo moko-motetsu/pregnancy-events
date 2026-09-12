@@ -1,20 +1,12 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-09-11",
+ "updatedAt": "2026-09-12",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-09-11",
+   "fetchedAt": "2026-09-12",
    "events": [
-    {
-     "name": "9月11日(金) : Juice=Juice／NiziU／FRUITS ZIPPER 9月12日(土) : INI／IMP.／GENERATIONS 9月13日(日) : BUDDiiS／MAZZEL／LIL LEAGUE CDTVライブ！ライブ！秋の大感謝祭2026",
-     "startDate": "2026-09-11",
-     "endDate": "2026-09-13",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5397/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "莉犬（すとぷり）、てるとくん（騎士X - Knight X - ）、ぷりっつ（AMPTAKxCOLORS）、メルト・ダ・テンシ（めておら - Meteorites - ）、やなと（すにすて-SneakerStep） 莉犬のSTPRadio! Presents STPR文化祭",
      "startDate": "2026-09-20",
@@ -68,7 +60,7 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-09-11",
+   "fetchedAt": "2026-09-12",
    "events": [
     {
      "name": "NEWS",
@@ -115,7 +107,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-09-11",
+   "fetchedAt": "2026-09-12",
    "events": [
     {
      "name": "Japan Bike Show 2026",
