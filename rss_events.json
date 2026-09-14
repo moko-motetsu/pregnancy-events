@@ -1,6 +1,20 @@
 {
- "updatedAt": "2026-09-13",
+ "updatedAt": "2026-09-14",
  "events": [
+  {
+   "id": "toyosu-tokyo-769869054",
+   "name": "一夜限り！豊洲で「新豊洲クラフトビールフェス」が開催",
+   "category": "体験・ワークショップ",
+   "description": "新豊洲エリアマネジメント協議会は「新豊洲クラフトビールフェス2026」を開催します！ 開催日時は2026年9月18日（金）の17:00〜21:00。 会場はCITABRIA BAYPARK GRILL amp; BAR",
+   "venue": "豊洲・有明・お台場エリア",
+   "address": "",
+   "startDate": "2026-09-18",
+   "endDate": "2026-09-18",
+   "image": "https://toyosu.tokyo/wp-content/uploads/2026/09/xn_2026-09-14-11.18.08.webp",
+   "officialUrl": "https://toyosu.tokyo/event/shintoyosu-craftbeer-fes-2026-info/",
+   "source": "とよすと（豊洲エリア地域情報サイト）",
+   "updatedAt": "2026-09-14"
+  },
   {
    "id": "toyosu-tokyo-560287052",
    "name": "豊洲でワンちゃんと一緒に水遊び！「HOBIE DOG DAY」が東電堀で開催です",
@@ -13,7 +27,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/08/20260606_162522-1024x768-1.webp",
    "officialUrl": "https://toyosu.tokyo/event/hobie-dog-day-2026-summer-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-09-13"
+   "updatedAt": "2026-09-14"
   }
  ]
 }
