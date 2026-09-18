@@ -1,11 +1,11 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-09-17",
+ "updatedAt": "2026-09-18",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-09-17",
+   "fetchedAt": "2026-09-18",
    "events": [
     {
      "name": "亀梨和也 KAZUYA KAMENASHI LIVE TOUR 2026 -FROM HERE-",
@@ -68,7 +68,7 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-09-17",
+   "fetchedAt": "2026-09-18",
    "events": [
     {
      "name": "HIROMITSU KITAYAMA",
@@ -101,21 +101,13 @@
      "url": "https://ariake-arena.tokyo/event/",
      "location": "",
      "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdWdCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--57028f52a60989c2d20dae22acca09d1bf057f41/Web%E7%94%A8_%E5%B7%AE%E3%81%97%E6%9B%BF%E3%81%88_CUTIE-STREET_artistphoto.jpg"
-    },
-    {
-     "name": "LUNA SEA",
-     "startDate": "2026-12-19",
-     "endDate": "2026-09-20",
-     "url": "https://ariake-arena.tokyo/event/",
-     "location": "",
-     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaHdDIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f74b41b5e1d095c5163357ef5290b5abf72628f3/Web%E7%94%A8_TO_RISE_%E3%83%8F%E3%82%99%E3%83%8A%E3%83%BC_HD_20260528_0.jpg"
     }
    ]
   },
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-09-17",
+   "fetchedAt": "2026-09-18",
    "events": [
     {
      "name": "Japan Bike Show 2026",
