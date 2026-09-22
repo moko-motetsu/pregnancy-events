@@ -1,28 +1,12 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-09-20",
+ "updatedAt": "2026-09-22",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-09-20",
+   "fetchedAt": "2026-09-22",
    "events": [
-    {
-     "name": "莉犬（すとぷり）、てるとくん（騎士X - Knight X - ）、ぷりっつ（AMPTAKxCOLORS）、メルト・ダ・テンシ（めておら - Meteorites - ）、やなと（すにすて-SneakerStep） 莉犬のSTPRadio! Presents STPR文化祭",
-     "startDate": "2026-09-20",
-     "endDate": "2026-09-20",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5168/",
-     "location": "",
-     "image": ""
-    },
-    {
-     "name": "Private",
-     "startDate": "2026-09-21",
-     "endDate": "2026-09-21",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5636/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "JUNG HAEIN 2026 JUNG HAEIN FANMEETING IN JAPAN～HAEINISM～of the HAEINESS, by the HAEINESS, for the HAEINESS",
      "startDate": "2026-09-22",
@@ -60,16 +44,8 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-09-20",
+   "fetchedAt": "2026-09-22",
    "events": [
-    {
-     "name": "HIROMITSU KITAYAMA",
-     "startDate": "2026-09-19",
-     "endDate": "2026-09-20",
-     "url": "https://ariake-arena.tokyo/event/",
-     "location": "",
-     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdGdCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--369babc8586e2236287efb8ddf9b9178b677de6f/Web%E7%94%A8_%E3%83%AD%E3%82%B4%E7%94%BB%E5%83%8F2.jpg"
-    },
     {
      "name": "スピッツ, Teenage Fanclub, 羊文学,  Ride",
      "startDate": "2026-09-22",
@@ -99,7 +75,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-09-20",
+   "fetchedAt": "2026-09-22",
    "events": [
     {
      "name": "Japan Bike Show 2026",
