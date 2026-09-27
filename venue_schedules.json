@@ -1,20 +1,12 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-09-26",
+ "updatedAt": "2026-09-27",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-09-26",
+   "fetchedAt": "2026-09-27",
    "events": [
-    {
-     "name": "FTISLAND 2026 FTISLAND TOUR 0 — XIX — III ‘FaTe’ in JAPAN",
-     "startDate": "2026-09-26",
-     "endDate": "2026-09-27",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5155/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "iLiFE! / のんふぃく！ / AdamLilith / iON! / TENRIN / MEGAFON / 夜光性アミューズ / ドレスコード / Ill / テンシンランマン / chuLa / ラストシーン / O.A. ウメコマチ / なう♡すとれーじ HEROINES LEAGUE THE FINAL",
      "startDate": "2026-09-29",
@@ -28,7 +20,7 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-09-26",
+   "fetchedAt": "2026-09-27",
    "events": [
     {
      "name": "ねぽっくす！ 〜ねぽらぼ×秘密結社holoX〜",
@@ -51,7 +43,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-09-26",
+   "fetchedAt": "2026-09-27",
    "events": [
     {
      "name": "Japan Bike Show 2026",
