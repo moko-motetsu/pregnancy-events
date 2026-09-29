@@ -1,11 +1,11 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-09-27",
+ "updatedAt": "2026-09-29",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-09-27",
+   "fetchedAt": "2026-09-29",
    "events": [
     {
      "name": "iLiFE! / のんふぃく！ / AdamLilith / iON! / TENRIN / MEGAFON / 夜光性アミューズ / ドレスコード / Ill / テンシンランマン / chuLa / ラストシーン / O.A. ウメコマチ / なう♡すとれーじ HEROINES LEAGUE THE FINAL",
@@ -20,16 +20,8 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-09-27",
+   "fetchedAt": "2026-09-29",
    "events": [
-    {
-     "name": "ねぽっくす！ 〜ねぽらぼ×秘密結社holoX〜",
-     "startDate": "2026-09-26",
-     "endDate": "2026-09-27",
-     "url": "https://ariake-arena.tokyo/event/",
-     "location": "",
-     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdkVCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--70b868aa193c91cb1e77bee4e818dfb17a21fa17/Web%E7%94%A8_%E5%86%8D%E5%B7%AE%E3%81%97%E6%9B%BF%E3%81%88_%E3%81%AD%E3%81%BB%E3%82%9A%E3%81%A3%E3%81%8F%E3%81%99_%E3%82%AD%E3%83%BC%E3%83%92%E3%82%99%E3%82%B7%E3%82%99%E3%83%A5%E3%82%A2%E3%83%AB%EF%BC%886_17%E6%9B%B4%E6%96%B0%EF%BC%89.jpg"
-    },
     {
      "name": "CUTIE STREET",
      "startDate": "2026-09-29",
@@ -43,7 +35,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-09-27",
+   "fetchedAt": "2026-09-29",
    "events": [
     {
      "name": "Japan Bike Show 2026",
