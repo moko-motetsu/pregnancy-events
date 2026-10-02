@@ -1,20 +1,12 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-10-01",
+ "updatedAt": "2026-10-02",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-10-01",
+   "fetchedAt": "2026-10-02",
    "events": [
-    {
-     "name": "TOMORA 2026 LIVE IN TOKYO",
-     "startDate": "2026-10-01",
-     "endDate": "2026-10-01",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5662/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "Private",
      "startDate": "2026-10-02",
@@ -70,13 +62,21 @@
      "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5484/",
      "location": "",
      "image": ""
+    },
+    {
+     "name": "オモコロチャンネル(永田、原宿、加藤、ARuFa、ダ・ヴィンチ・恐山) 『オモコロチャンネル 爆走ワンダフルパレード！』",
+     "startDate": "2026-10-24",
+     "endDate": "2026-10-24",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5673/",
+     "location": "",
+     "image": ""
     }
    ]
   },
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-10-01",
+   "fetchedAt": "2026-10-02",
    "events": [
     {
      "name": "りそなグループ B.LEAGUE 2026-27 SEASON B.LEAGUE ONE",
@@ -147,16 +147,8 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-10-01",
+   "fetchedAt": "2026-10-02",
    "events": [
-    {
-     "name": "Japan Bike Show 2026",
-     "startDate": "2026-09-30",
-     "endDate": "2026-10-01",
-     "url": "http://japanbikeshow.jp/",
-     "location": "",
-     "image": "https://www.bigsight.jp/visitor/event/img/thumbnail/25025901J.jpg"
-    },
     {
      "name": "第67回サインアンドディスプレイショウ",
      "startDate": "2026-10-21",
@@ -212,6 +204,14 @@
      "url": "https://dxpo.jp/real/fox/tokyo2/store/",
      "location": "",
      "image": "https://www.bigsight.jp/visitor/event/img/thumbnail/26010606J.jpg"
+    },
+    {
+     "name": "グロース就活DXPO’26【秋】",
+     "startDate": "2026-11-21",
+     "endDate": "2026-11-21",
+     "url": "https://growth.dxpo.jp/real/",
+     "location": "",
+     "image": ""
     }
    ]
   }
