@@ -1,20 +1,12 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-10-02",
+ "updatedAt": "2026-10-03",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-10-02",
+   "fetchedAt": "2026-10-03",
    "events": [
-    {
-     "name": "Private",
-     "startDate": "2026-10-02",
-     "endDate": "2026-10-02",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5683/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "QuizKnock10周年パーティー！ 〜メンバー全員でクリアを目指せエイトアンサー〜 伊沢拓司、ふくらP、須貝駿貴、河村拓哉、山本祥彰、鶴崎修功、東問、東言",
      "startDate": "2026-10-03",
@@ -70,13 +62,21 @@
      "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5673/",
      "location": "",
      "image": ""
+    },
+    {
+     "name": "A.B.C-Z A.B.C-Z Concert Tour 2026 The Way of L.O.V-E",
+     "startDate": "2026-10-31",
+     "endDate": "2026-11-01",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5472/",
+     "location": "",
+     "image": ""
     }
    ]
   },
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-10-02",
+   "fetchedAt": "2026-10-03",
    "events": [
     {
      "name": "りそなグループ B.LEAGUE 2026-27 SEASON B.LEAGUE ONE",
@@ -147,7 +147,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-10-02",
+   "fetchedAt": "2026-10-03",
    "events": [
     {
      "name": "第67回サインアンドディスプレイショウ",
