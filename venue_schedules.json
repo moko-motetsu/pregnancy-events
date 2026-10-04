@@ -1,25 +1,25 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-10-03",
+ "updatedAt": "2026-10-04",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-10-03",
+   "fetchedAt": "2026-10-04",
    "events": [
-    {
-     "name": "QuizKnock10周年パーティー！ 〜メンバー全員でクリアを目指せエイトアンサー〜 伊沢拓司、ふくらP、須貝駿貴、河村拓哉、山本祥彰、鶴崎修功、東問、東言",
-     "startDate": "2026-10-03",
-     "endDate": "2026-10-03",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5338/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "Sung Si Kyung Sung Si Kyung Japan Concert [A Song For You 2026]",
      "startDate": "2026-10-04",
      "endDate": "2026-10-04",
      "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5162/",
+     "location": "",
+     "image": ""
+    },
+    {
+     "name": "横山裕 ROCK FOR YOU LIVE TOUR",
+     "startDate": "2026-10-07",
+     "endDate": "2026-10-07",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5798/",
      "location": "",
      "image": ""
     },
@@ -76,7 +76,7 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-10-03",
+   "fetchedAt": "2026-10-04",
    "events": [
     {
      "name": "りそなグループ B.LEAGUE 2026-27 SEASON B.LEAGUE ONE",
@@ -147,7 +147,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-10-03",
+   "fetchedAt": "2026-10-04",
    "events": [
     {
      "name": "第67回サインアンドディスプレイショウ",
