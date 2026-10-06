@@ -1,20 +1,12 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-10-04",
+ "updatedAt": "2026-10-06",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-10-04",
+   "fetchedAt": "2026-10-06",
    "events": [
-    {
-     "name": "Sung Si Kyung Sung Si Kyung Japan Concert [A Song For You 2026]",
-     "startDate": "2026-10-04",
-     "endDate": "2026-10-04",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5162/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "横山裕 ROCK FOR YOU LIVE TOUR",
      "startDate": "2026-10-07",
@@ -76,16 +68,8 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-10-04",
+   "fetchedAt": "2026-10-06",
    "events": [
-    {
-     "name": "りそなグループ B.LEAGUE 2026-27 SEASON B.LEAGUE ONE",
-     "startDate": "2026-10-03",
-     "endDate": "2026-10-04",
-     "url": "https://ariake-arena.tokyo/event/",
-     "location": "",
-     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaDRDIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--36a0cd2db28a376d26dd5baa2f47020d30181f0f/bakuage_fes_1920_d51_suntory.png"
-    },
     {
      "name": "LANY",
      "startDate": "2026-10-07",
@@ -141,13 +125,21 @@
      "url": "https://ariake-arena.tokyo/event/",
      "location": "",
      "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc1FCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e74b11b908132a81d70609a95c80ca3342bf9b4a/Web%E7%94%A8_260114_0432_mono+.jpg"
+    },
+    {
+     "name": "Mr.Children",
+     "startDate": "2026-10-31",
+     "endDate": "2026-11-01",
+     "url": "https://ariake-arena.tokyo/event/",
+     "location": "",
+     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdWtCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--26ada7636765aad240d7dec7e0c3b973cd4dfe93/Web%E7%94%A8_Mr.Children.jpg"
     }
    ]
   },
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-10-04",
+   "fetchedAt": "2026-10-06",
    "events": [
     {
      "name": "第67回サインアンドディスプレイショウ",
