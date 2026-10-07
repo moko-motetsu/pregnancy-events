@@ -1,6 +1,20 @@
 {
- "updatedAt": "2026-10-06",
+ "updatedAt": "2026-10-07",
  "events": [
+  {
+   "id": "toyosu-tokyo-1292207755",
+   "name": "ちびっこ力士、集まれ！「相撲　豊洲 千客万来場所」、無料でホンモノの力士と相撲体験できる！",
+   "category": "体験・ワークショップ",
+   "description": "2026年10月10日（土）・11日（日）、「相撲 豊洲 千客万来場所」が開催されます。 大島部屋の若手力士がやってきて、日本の伝統文化である相撲を間近で体験できる二日間。 なんと、子どもが実際に土俵に上がり、本物の力士",
+   "venue": "豊洲・有明・お台場エリア",
+   "address": "",
+   "startDate": "2026-10-10",
+   "endDate": "2026-10-11",
+   "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_2026-10-05-13.13.42.webp",
+   "officialUrl": "https://toyosu.tokyo/event/sumou-toyosusenkyakubanrai-october-2026-info/",
+   "source": "とよすと（豊洲エリア地域情報サイト）",
+   "updatedAt": "2026-10-07"
+  },
   {
    "id": "toyosu-tokyo-1142137801",
    "name": "やった〜！「ハイボールガーデン in 豊洲 2026」が今年も開催です",
@@ -13,7 +27,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2024/07/toyosu-20230726-highballgarden-18.jpg",
    "officialUrl": "https://toyosu.tokyo/event/highdallgarden-in-toyosu-2026-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-06"
+   "updatedAt": "2026-10-07"
   }
  ]
 }
