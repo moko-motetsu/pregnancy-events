@@ -1,6 +1,20 @@
 {
- "updatedAt": "2026-10-07",
+ "updatedAt": "2026-10-08",
  "events": [
+  {
+   "id": "toyosu-tokyo-323396926",
+   "name": "第44回江東シーサイドマラソン大会に参加します！走ったことのないハーフの部（約21km）を・・・",
+   "category": "スポーツ",
+   "description": "2026年11月29日（日）に開催される「第44回江東シーサイドマラソン大会」。 豊洲にお住まいの方でエントリーされた方も少なくないのではないでしょうか！ もうすでに申込期間は終了しているのですが、筆者はこれの“ハーフマ",
+   "venue": "豊洲・有明・お台場エリア",
+   "address": "",
+   "startDate": "2026-11-29",
+   "endDate": "2026-11-29",
+   "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_toyosu-20261004-running-3.webp",
+   "officialUrl": "https://toyosu.tokyo/event/koto-seaside-marathon-2026-info/",
+   "source": "とよすと（豊洲エリア地域情報サイト）",
+   "updatedAt": "2026-10-08"
+  },
   {
    "id": "toyosu-tokyo-1292207755",
    "name": "ちびっこ力士、集まれ！「相撲　豊洲 千客万来場所」、無料でホンモノの力士と相撲体験できる！",
@@ -13,21 +27,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_2026-10-05-13.13.42.webp",
    "officialUrl": "https://toyosu.tokyo/event/sumou-toyosusenkyakubanrai-october-2026-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-07"
-  },
-  {
-   "id": "toyosu-tokyo-1142137801",
-   "name": "やった〜！「ハイボールガーデン in 豊洲 2026」が今年も開催です",
-   "category": "体験・ワークショップ",
-   "description": "豊洲2・3丁目地区まちづくり協議会は「ハイボールガーデン in 豊洲 2026」を開催します！ 2026年10月7日（水）〜9日（金）の三日間。時間は16:30〜21:00です。 場所は豊洲フォレシアと豊洲キュービックガ",
-   "venue": "豊洲・有明・お台場エリア",
-   "address": "",
-   "startDate": "2026-10-07",
-   "endDate": "2026-10-07",
-   "image": "https://toyosu.tokyo/wp-content/uploads/2024/07/toyosu-20230726-highballgarden-18.jpg",
-   "officialUrl": "https://toyosu.tokyo/event/highdallgarden-in-toyosu-2026-info/",
-   "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-07"
+   "updatedAt": "2026-10-08"
   }
  ]
 }
