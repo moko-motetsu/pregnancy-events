@@ -1,11 +1,11 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-10-08",
+ "updatedAt": "2026-10-09",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-10-08",
+   "fetchedAt": "2026-10-09",
    "events": [
     {
      "name": "Poppin'Party BanG Dream! 13th☆LIVE DAY1 : Poppin’Party「Now Roading♪♪」",
@@ -32,10 +32,18 @@
      "image": ""
     },
     {
-     "name": "Private",
+     "name": "&TEAM 2026-2027 &TEAM CONCERT TOUR ‘Mark on You’",
+     "startDate": "2026-10-15",
+     "endDate": "2026-10-16",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5834/",
+     "location": "",
+     "image": ""
+    },
+    {
+     "name": "milet milet live tour “Made of Glass”",
      "startDate": "2026-10-17",
      "endDate": "2026-10-17",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5825/",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5811/",
      "location": "",
      "image": ""
     },
@@ -68,7 +76,7 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-10-08",
+   "fetchedAt": "2026-10-09",
    "events": [
     {
      "name": "浦島坂田船",
@@ -131,7 +139,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-10-08",
+   "fetchedAt": "2026-10-09",
    "events": [
     {
      "name": "第67回サインアンドディスプレイショウ",
