@@ -1,20 +1,12 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-10-11",
+ "updatedAt": "2026-10-12",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-10-11",
+   "fetchedAt": "2026-10-12",
    "events": [
-    {
-     "name": "夢限大みゅーたいぷ BanG Dream! 13th☆LIVE DAY2 : 夢限大みゅーたいぷ「DIMENSIONAL OVERLAP」",
-     "startDate": "2026-10-11",
-     "endDate": "2026-10-11",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5732/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "RAISE A SUILEN BanG Dream! 13th☆LIVE DAY3 : RAISE A SUILEN「EXTREME EXPRESS」",
      "startDate": "2026-10-12",
@@ -68,16 +60,8 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-10-11",
+   "fetchedAt": "2026-10-12",
    "events": [
-    {
-     "name": "浦島坂田船",
-     "startDate": "2026-10-10",
-     "endDate": "2026-10-11",
-     "url": "https://ariake-arena.tokyo/event/",
-     "location": "",
-     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaGNDIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d7166244addcc4dad68718046d730228e9e0d9cc/USSS-HW2026_Banner_0907_v1_1.jpg"
-    },
     {
      "name": "りそなグループ B.LEAGUE 2026-27 SEASON B.LEAGUE ONE",
      "startDate": "2026-10-13",
@@ -131,7 +115,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-10-11",
+   "fetchedAt": "2026-10-12",
    "events": [
     {
      "name": "第67回サインアンドディスプレイショウ",
