@@ -2,6 +2,34 @@
  "updatedAt": "2026-10-15",
  "events": [
   {
+   "id": "toyosu-tokyo-1368769183",
+   "name": "東京湾大華火祭2026、どこで見る？豊洲千客万来の足湯？ららぽーと？サイタブリア？",
+   "category": "祭り・花火",
+   "description": "11年ぶりとなる「東京湾大華火祭」がいよいよ2026年10月24日（土）に開催となります。今からとても楽しみですね！ 鑑賞エリアのひとつになっている豊洲では、すでに当日の交通規制や立入禁止をアナウンスする看板があちこちに",
+   "venue": "豊洲・有明・お台場エリア",
+   "address": "",
+   "startDate": "2026-10-24",
+   "endDate": "2026-10-24",
+   "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_toyosu-20261015-hanabispot-4_3b.webp",
+   "officialUrl": "https://toyosu.tokyo/access/tokyowandaihanabisai-2026-spot/",
+   "source": "とよすと（豊洲エリア地域情報サイト）",
+   "updatedAt": "2026-10-15"
+  },
+  {
+   "id": "toyosu-tokyo-1939620421",
+   "name": "メブクス豊洲の屋上農園で野菜を収穫＆サンドイッチ作りも！「豊洲場外マルシェ」が開催",
+   "category": "マルシェ・フリマ",
+   "description": "豊洲市場のお隣、ミチノテラス豊洲で毎月開催の「豊洲場外マルシェ」。今回は2026年10月17日（土）に開催となります！ 今回は鳥取県・鳥取市から特産品の販売や伝統文化のパフォーマンスがあるほか、なんと、メブクス豊洲の屋上",
+   "venue": "豊洲・有明・お台場エリア",
+   "address": "",
+   "startDate": "2026-10-17",
+   "endDate": "2026-10-17",
+   "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_IMG_202610151369.webp",
+   "officialUrl": "https://toyosu.tokyo/event/mebks-toyosu-marche-2026-10/",
+   "source": "とよすと（豊洲エリア地域情報サイト）",
+   "updatedAt": "2026-10-15"
+  },
+  {
    "id": "toyosu-tokyo-790264109",
    "name": "豊洲のクラフトビール4種類が味わえる！「TOYOSU MOMENT ’26」が今年も開催へ　前売りセット券がおトク！",
    "category": "体験・ワークショップ",
@@ -13,7 +41,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_toyosu-20231026-toyosumoment-5.webp",
    "officialUrl": "https://toyosu.tokyo/event/toyosu-moment-2026-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-14"
+   "updatedAt": "2026-10-15"
   },
   {
    "id": "toyosu-tokyo-128923403",
@@ -27,7 +55,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_2026-10-08-22.20.03.webp",
    "officialUrl": "https://toyosu.tokyo/event/sunsetcruise-cafe-autumn-2026-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-14"
+   "updatedAt": "2026-10-15"
   },
   {
    "id": "toyosu-tokyo-323396926",
@@ -41,7 +69,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_toyosu-20261004-running-3.webp",
    "officialUrl": "https://toyosu.tokyo/event/koto-seaside-marathon-2026-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-14"
+   "updatedAt": "2026-10-15"
   }
  ]
 }
