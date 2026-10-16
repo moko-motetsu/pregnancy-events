@@ -1,20 +1,12 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-10-15",
+ "updatedAt": "2026-10-16",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-10-15",
+   "fetchedAt": "2026-10-16",
    "events": [
-    {
-     "name": "&TEAM 2026-2027 &TEAM CONCERT TOUR ‘Mark on You’",
-     "startDate": "2026-10-15",
-     "endDate": "2026-10-16",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5834/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "milet milet live tour “Made of Glass”",
      "startDate": "2026-10-17",
@@ -40,6 +32,14 @@
      "image": ""
     },
     {
+     "name": "Private",
+     "startDate": "2026-10-25",
+     "endDate": "2026-10-25",
+     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5922/",
+     "location": "",
+     "image": ""
+    },
+    {
      "name": "A.B.C-Z A.B.C-Z Concert Tour 2026 The Way of L.O.V-E",
      "startDate": "2026-10-31",
      "endDate": "2026-11-01",
@@ -52,7 +52,7 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-10-15",
+   "fetchedAt": "2026-10-16",
    "events": [
     {
      "name": "ONE",
@@ -99,7 +99,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-10-15",
+   "fetchedAt": "2026-10-16",
    "events": [
     {
      "name": "第67回サインアンドディスプレイショウ",
