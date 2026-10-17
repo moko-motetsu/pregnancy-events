@@ -1,11 +1,11 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-10-16",
+ "updatedAt": "2026-10-17",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-10-16",
+   "fetchedAt": "2026-10-17",
    "events": [
     {
      "name": "milet milet live tour “Made of Glass”",
@@ -52,7 +52,7 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-10-16",
+   "fetchedAt": "2026-10-17",
    "events": [
     {
      "name": "ONE",
@@ -99,7 +99,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-10-16",
+   "fetchedAt": "2026-10-17",
    "events": [
     {
      "name": "第67回サインアンドディスプレイショウ",
