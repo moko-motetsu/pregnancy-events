@@ -1,20 +1,12 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-10-17",
+ "updatedAt": "2026-10-18",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-10-17",
+   "fetchedAt": "2026-10-18",
    "events": [
-    {
-     "name": "milet milet live tour “Made of Glass”",
-     "startDate": "2026-10-17",
-     "endDate": "2026-10-17",
-     "url": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5811/",
-     "location": "",
-     "image": ""
-    },
     {
      "name": "TMG TMG LIVE 2026 “SAYONARA”",
      "startDate": "2026-10-23",
@@ -52,16 +44,8 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-10-17",
+   "fetchedAt": "2026-10-18",
    "events": [
-    {
-     "name": "ONE",
-     "startDate": "2026-10-17",
-     "endDate": "2026-10-17",
-     "url": "https://ariake-arena.tokyo/event/",
-     "location": "",
-     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdmNCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4e66c3e0875d735227fe3a8c816f047d5d6022cb/%E7%94%BB%E5%83%8F1.jpg"
-    },
     {
      "name": "りそなグループ B.LEAGUE 2026-27 SEASON B.LEAGUE ONE",
      "startDate": "2026-10-18",
@@ -99,7 +83,7 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-10-17",
+   "fetchedAt": "2026-10-18",
    "events": [
     {
      "name": "第67回サインアンドディスプレイショウ",
