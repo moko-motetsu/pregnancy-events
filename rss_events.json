@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-17",
+ "updatedAt": "2026-10-18",
  "events": [
   {
    "id": "toyosu-tokyo-661160456",
@@ -15,7 +15,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_2026-10-17-18.24.18.webp",
    "officialUrl": "https://toyosu.tokyo/event/toyosu-style-market-october-2026-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-17"
+   "updatedAt": "2026-10-18"
   },
   {
    "id": "toyosu-tokyo-1368769183",
@@ -29,21 +29,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_toyosu-20261015-hanabispot-4_3b.webp",
    "officialUrl": "https://toyosu.tokyo/access/tokyowandaihanabisai-2026-spot/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-17"
-  },
-  {
-   "id": "toyosu-tokyo-1939620421",
-   "name": "メブクス豊洲の屋上農園で野菜を収穫＆サンドイッチ作りも！「豊洲場外マルシェ」が開催",
-   "category": "マルシェ・フリマ",
-   "description": "豊洲市場のお隣、ミチノテラス豊洲で毎月開催の「豊洲場外マルシェ」。今回は2026年10月17日（土）に開催となります！ 今回は鳥取県・鳥取市から特産品の販売や伝統文化のパフォーマンスがあるほか、なんと、メブクス豊洲の屋上",
-   "venue": "豊洲・有明・お台場エリア",
-   "address": "",
-   "startDate": "2026-10-17",
-   "endDate": "2026-10-17",
-   "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_IMG_202610151369.webp",
-   "officialUrl": "https://toyosu.tokyo/event/mebks-toyosu-marche-2026-10/",
-   "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-17"
+   "updatedAt": "2026-10-18"
   },
   {
    "id": "toyosu-tokyo-128923403",
@@ -57,7 +43,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_2026-10-08-22.20.03.webp",
    "officialUrl": "https://toyosu.tokyo/event/sunsetcruise-cafe-autumn-2026-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-17"
+   "updatedAt": "2026-10-18"
   },
   {
    "id": "toyosu-tokyo-323396926",
@@ -71,7 +57,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_toyosu-20261004-running-3.webp",
    "officialUrl": "https://toyosu.tokyo/event/koto-seaside-marathon-2026-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-17"
+   "updatedAt": "2026-10-18"
   }
  ]
 }
