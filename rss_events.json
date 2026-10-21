@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-20",
+ "updatedAt": "2026-10-21",
  "events": [
   {
    "id": "toyosu-tokyo-1368769183",
@@ -13,7 +13,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_toyosu-20261015-hanabispot-4_3b.webp",
    "officialUrl": "https://toyosu.tokyo/access/tokyowandaihanabisai-2026-spot/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-20"
+   "updatedAt": "2026-10-21"
   },
   {
    "id": "toyosu-tokyo-128923403",
@@ -27,21 +27,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_2026-10-08-22.20.03.webp",
    "officialUrl": "https://toyosu.tokyo/event/sunsetcruise-cafe-autumn-2026-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-20"
-  },
-  {
-   "id": "toyosu-tokyo-323396926",
-   "name": "第44回江東シーサイドマラソン大会に参加します！走ったことのないハーフの部（約21km）を・・・",
-   "category": "スポーツ",
-   "description": "2026年11月29日（日）に開催される「第44回江東シーサイドマラソン大会」。 豊洲にお住まいの方でエントリーされた方も少なくないのではないでしょうか！ もうすでに申込期間は終了しているのですが、筆者はこれの“ハーフマ",
-   "venue": "豊洲・有明・お台場エリア",
-   "address": "",
-   "startDate": "2026-11-29",
-   "endDate": "2026-11-29",
-   "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_toyosu-20261004-running-3.webp",
-   "officialUrl": "https://toyosu.tokyo/event/koto-seaside-marathon-2026-info/",
-   "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-20"
+   "updatedAt": "2026-10-21"
   }
  ]
 }
