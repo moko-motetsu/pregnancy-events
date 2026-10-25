@@ -1,33 +1,19 @@
 {
- "updatedAt": "2026-10-24",
+ "updatedAt": "2026-10-25",
  "events": [
   {
-   "id": "toyosu-tokyo-1304876716",
-   "name": "【東京湾大華火祭2026会場レポート】11年前には存在しなかった豊洲ぐるり公園で見てきました",
-   "category": "祭り・花火",
-   "description": "2026年10月24日（土）、「東京湾大華火祭」が開催されました！中央区制80周年記念・港区政80周年記念として復活し、11年ぶりに開催となった東京湾大華火祭です。 SNSを見るとなぜかお台場で打ち上げと思っている方も多",
+   "id": "toyosu-tokyo-584100562",
+   "name": "豊洲のわくわくが詰まった「第33回 豊洲フェスタ」、10月31日(土)に開催！",
+   "category": "体験・ワークショップ",
+   "description": "江東区豊洲文化センターは毎年恒例のビッグイベント「第33回 豊洲フェスタ」を開催します！ 開催日は2026年10月31日（土）。会場は豊洲シビックセンターをはじめ、深川消防署豊洲出張所、豊洲公園です。 誰でも参加できる無",
    "venue": "豊洲・有明・お台場エリア",
    "address": "",
-   "startDate": "2026-10-24",
-   "endDate": "2026-10-24",
-   "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_toyosu-20261024-tokyowandaihanabisai-26.webp",
-   "officialUrl": "https://toyosu.tokyo/event/tokyowandaihanabisai-2026-photos/",
+   "startDate": "2026-10-31",
+   "endDate": "2026-10-31",
+   "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/20261025-toyosufesta-b-1.jpg",
+   "officialUrl": "https://toyosu.tokyo/event/toyosu-festa-2026-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-24"
-  },
-  {
-   "id": "toyosu-tokyo-1368769183",
-   "name": "東京湾大華火祭2026、どこで見る？豊洲千客万来の足湯？ららぽーと？サイタブリア？",
-   "category": "祭り・花火",
-   "description": "11年ぶりとなる「東京湾大華火祭」がいよいよ2026年10月24日（土）に開催となります。今からとても楽しみですね！ 鑑賞エリアのひとつになっている豊洲では、すでに当日の交通規制や立入禁止をアナウンスする看板があちこちに",
-   "venue": "豊洲・有明・お台場エリア",
-   "address": "",
-   "startDate": "2026-10-24",
-   "endDate": "2026-10-24",
-   "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/xn_toyosu-20261015-hanabispot-4_3b.webp",
-   "officialUrl": "https://toyosu.tokyo/access/tokyowandaihanabisai-2026-spot/",
-   "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-24"
+   "updatedAt": "2026-10-25"
   }
  ]
 }
