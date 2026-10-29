@@ -1,11 +1,11 @@
 {
  "_comment": "pregnancy-events/scripts/fetch_venue_schedules.mjs が GitHub Actions から自動生成・更新するファイルです。手動編集しないでください。まだ一度も取得が成功していない施設は venues に含まれません。",
- "updatedAt": "2026-10-28",
+ "updatedAt": "2026-10-29",
  "venues": {
   "tokyo-garden-theater": {
    "name": "有明ガーデンシアター（TOKYO GARDEN THEATER）",
    "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/",
-   "fetchedAt": "2026-10-28",
+   "fetchedAt": "2026-10-29",
    "events": [
     {
      "name": "YouTube Fanfest Japan 2026 Live Show",
@@ -28,16 +28,8 @@
   "ariake-arena": {
    "name": "有明アリーナ",
    "sourceUrl": "https://ariake-arena.tokyo/event/",
-   "fetchedAt": "2026-10-28",
+   "fetchedAt": "2026-10-29",
    "events": [
-    {
-     "name": "BUMP OF CHICKEN",
-     "startDate": "2026-10-27",
-     "endDate": "2026-10-28",
-     "url": "https://ariake-arena.tokyo/event/",
-     "location": "",
-     "image": "https://reserve.ariake-arena.tokyo/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc1FCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e74b11b908132a81d70609a95c80ca3342bf9b4a/Web%E7%94%A8_260114_0432_mono+.jpg"
-    },
     {
      "name": "Mr.Children",
      "startDate": "2026-10-31",
@@ -51,16 +43,8 @@
   "ariake-gym-ex": {
    "name": "有明GYM-EX",
    "sourceUrl": "https://www.bigsight.jp/organizer/buildings/gym-ex/event/",
-   "fetchedAt": "2026-10-22",
+   "fetchedAt": "2026-10-29",
    "events": [
-    {
-     "name": "第67回サインアンドディスプレイショウ",
-     "startDate": "2026-10-21",
-     "endDate": "2026-10-23",
-     "url": "https://tokobi.or.jp/sds/",
-     "location": "",
-     "image": "https://www.bigsight.jp/visitor/event/img/thumbnail/25024601J.jpg"
-    },
     {
      "name": "第3回 バックオフィスDXPO東京’26【秋】",
      "startDate": "2026-11-17",
@@ -116,6 +100,14 @@
      "url": "https://growth.dxpo.jp/real/",
      "location": "",
      "image": ""
+    },
+    {
+     "name": "第1回 ホスピタリティテックEXPO",
+     "startDate": "2026-12-02",
+     "endDate": "2026-12-04",
+     "url": "https://www.hospitality-show.jp/tokyo/ja-jp.html",
+     "location": "",
+     "image": "https://www.bigsight.jp/visitor/event/img/thumbnail/25033901J.jpg"
     }
    ]
   }
