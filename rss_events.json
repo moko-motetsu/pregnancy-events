@@ -1,6 +1,20 @@
 {
- "updatedAt": "2026-10-30",
+ "updatedAt": "2026-10-31",
  "events": [
+  {
+   "id": "toyosu-tokyo-96934717",
+   "name": "豊洲などで活躍するグループが集合！「秋の地域交流会」、豊洲 千客万来で開催",
+   "category": "体験・ワークショップ",
+   "description": "2026年11月1日（日）、豊洲 千客万来にて「秋の地域交流会」が開催されます。 名前のとおり、豊洲をはじめ周辺地域で活動しているグループを中心にしたステージイベントです！ ダンスや音楽、和太鼓、少林寺拳法など、全8組の",
+   "venue": "豊洲・有明・お台場エリア",
+   "address": "",
+   "startDate": "2026-11-01",
+   "endDate": "2026-11-01",
+   "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/th_2026-10-27-18.34.54.jpg",
+   "officialUrl": "https://toyosu.tokyo/event/toyosusenkyakubanrai-local-party-autumn-2026/",
+   "source": "とよすと（豊洲エリア地域情報サイト）",
+   "updatedAt": "2026-10-31"
+  },
   {
    "id": "toyosu-tokyo-1318459279",
    "name": "ららぽーと豊洲、2026年のブラックフライデーは毎日当たる抽選会でミニプロジェクターや自動調理ポットも",
@@ -13,7 +27,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/th_toyosu-2026102710.jpg",
    "officialUrl": "https://toyosu.tokyo/event/lalaport-toyosu-black-friday-2026/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-30"
+   "updatedAt": "2026-10-31"
   },
   {
    "id": "toyosu-tokyo-584100562",
@@ -27,7 +41,7 @@
    "image": "https://toyosu.tokyo/wp-content/uploads/2026/10/20261025-toyosufesta-b-1.jpg",
    "officialUrl": "https://toyosu.tokyo/event/toyosu-festa-2026-info/",
    "source": "とよすと（豊洲エリア地域情報サイト）",
-   "updatedAt": "2026-10-30"
+   "updatedAt": "2026-10-31"
   }
  ]
 }
